@@ -1,13 +1,17 @@
-module data_path(input clk, rst,
-					  input pc_src, reg_write, alu_src, mem_reg, reg_src, mov_src,
-					  input logic [1:0] alu_control, imm_src, 
+module data_path(input clk, rst, 
 					  input logic [21:0] instruction, read_data,
-					  output logic [3:0] alu_flags,
+					  output logic mem_write,
 					  output logic [21:0] pc, alu_result_dir, write_data);
 					  
 	logic carry_out, carry_out1;
 	logic [3:0] reg1_in;
 	logic [21:0] pc_plus_4, pc_plus_8, pc_mux, rd1, rd2, rd3, imm_ext, mux2_out, read_data_mux, mov_mux_out;
+	
+	// Cables que salen de la unidad de control hacia el datapath
+	logic pc_src_previous, pc_src, reg_write_previous, reg_write, mem_write_previous;
+	logic mem_reg, alu_src, reg_src, mov_src, no_write, flag_write;
+	logic [1:0] imm_src, alu_control;
+	logic [3:0] alu_flags;
 					  
 	generic_adder #(22) adder1(pc, 22'b0000000000000000000100, 1'b0, pc_plus_4, carry_out);
    generic_adder #(22) adder2(pc_plus_4, 22'b0000000000000000000100, 1'b0, pc_plus_8, carry_out1);
@@ -29,6 +33,15 @@ module data_path(input clk, rst,
 	// sume con 0 y el inmediato
 							
 	ALU #(22) alu(mov_mux_out, mux2_out, alu_control, alu_result_dir, alu_flags);
+	
+	// Unidad de decodificacion de instruccion
+	decode_unit decode(instruction[20:19], instruction[18:15], instruction[10:7], pc_src_previous, reg_write_previous, 
+							 mem_write_previous, mem_reg, alu_src, no_write, mov_src, reg_src, flag_write,
+							 alu_control, imm_src);
+							 
+	// Unidad de ejecucion condicional de instruccion
+	cond_logic cl(clk, rst, pc_src_previous, reg_write_previous, mem_write_previous, no_write, instruction[21], flag_write,
+					  alu_flags[2], pc_src, reg_write, mem_write);
 							
 	assign write_data = rd3;
 	
