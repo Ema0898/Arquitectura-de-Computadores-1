@@ -16,12 +16,12 @@ module data_path(input clk, rst,
 	generic_adder #(22) adder1(pc, 22'b0000000000000000000100, 1'b0, pc_plus_4, carry_out);
    generic_adder #(22) adder2(pc_plus_4, 22'b0000000000000000000100, 1'b0, pc_plus_8, carry_out1);
 	
-	mux_2_x_1 #(22) mux0(pc_plus_4, read_data, pc_src, pc_mux);
+	mux_2_x_1 #(22) mux0(pc_plus_4, read_data_mux, pc_src, pc_mux);
 	mux_2_x_1 #(22) mux1(alu_result_dir, read_data, mem_reg, read_data_mux);
 	
 	flip_flop_D #(22) ff(clk, rst, 1'b1, pc_mux, pc); 
 	
-	mux_2_x_1 #(4) mux_reg1(instruction[14:11], 4'b1111, reg_src, reg1_in);
+	mux_2_x_1 #(4) mux_reg1(instruction[14:11], 4'b1011, reg_src, reg1_in);
 	
 	register_file rf(clk, rst, reg_write, reg1_in, instruction[6:3], instruction[10:7], instruction[10:7], 
 							read_data_mux, pc_plus_8, rd1, rd2, rd3);
