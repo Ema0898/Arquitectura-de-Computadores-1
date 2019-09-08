@@ -20,38 +20,45 @@ module pipelined_processor(input logic clk, rst,
 	logic flag_write_d_o, cond_d_o;
 	logic [1:0] alu_control_d_o;	
 	logic flag_zero_p_d, branch_d;
+	logic [3:0] ra1_d, ra2_d;
 	
 	// Declaracion logics para la etapa de Execute
 	logic [21:0] alu_result_execute, alu_exec_out, data_exec_out;
 	logic [3:0] wre_out;
 	logic pc_src_e, reg_write_e, mem_write_e, pc_src_e_o, reg_write_e_o, mem_reg_e_o, mem_write_e_o;
 	logic flag_zero_p_e, branch_e, branch_taken_e;
+	logic [1:0] forwardAE, forwardBE;
+	logic [3:0] ra1_e, ra2_e;
 	
 	// Declaracion logics para la etapa de Memory
 	logic [21:0] read_data_memory, read_out, alu_out_mem;
 	logic [3:0] wrm_out;
 	logic pc_src_m_o, reg_write_m_o, mem_reg_m_o;
 	
-	fetch ft(pc_src_write_back, branch_taken_e, clk, rst, result_write_back, alu_result_execute, instruction_fetch, pc_plus_8);
-	flip_flop_D #(22) first(clk, rst, 1'b1, instruction_fetch, instruction_decode);
+	// Declaracion logics para la etapa de HazardUnit
+	logic [4:0] match;
+	logic stallF, stallD, flushE, flushD;
+	
+	fetch ft(pc_src_write_back, branch_taken_e, stallF, clk, rst, result_write_back, alu_result_execute, instruction_fetch, pc_plus_8);
+	flip_flop_D #(22) first(clk, flushD | rst, ~stallD, instruction_fetch, instruction_decode);
 	
 	decode dcd(clk, rst, reg_write_write_back, instruction_decode, pc_plus_8, result_write_back, register_write_back, 
 				  rd1, rd2, rd3, imm_ext, pc_src_d, reg_write_d, mem_write_d, mem_reg_d, alu_src_d, 
-				  no_write_d, mov_src_d, flag_write_d, alu_control_d, branch_d);			  
+				  no_write_d, mov_src_d, flag_write_d, alu_control_d, branch_d, ra1_d, ra2_d);			  
 	
 				  
-	flip_flop_D #(105) second(clk, rst, 1'b1, 
+	flip_flop_D #(113) second(clk, flushE | rst, 1'b1, 
 	{rd1, rd2, rd3, imm_ext, instruction_decode[10:7],
 	pc_src_d, reg_write_d, mem_write_d, mem_reg_d, alu_src_d, no_write_d, mov_src_d, flag_write_d, alu_control_d, 
-	instruction_decode[21], flag_zero_p_d, branch_d}, 
+	instruction_decode[21], flag_zero_p_d, branch_d, ra1_d, ra2_d}, 
 	{rd1_out, rd2_out, rd3_out, imm_ext_out, wrd_out, 
 	pc_src_d_o, reg_write_d_o, mem_write_d_o, mem_reg_d_o, alu_src_d_o, no_write_d_o, mov_src_d_o, flag_write_d_o, alu_control_d_o, 
-	cond_d_o, flag_zero_p_e, branch_e});
+	cond_d_o, flag_zero_p_e, branch_e, ra1_e, ra2_e});
 									 
 	execute ex(clk, rst, flag_zero_p_e, branch_e, pc_src_d_o, reg_write_d_o, mem_write_d_o, alu_src_d_o, 
-				  no_write_d_o, mov_src_d_o, flag_write_d_o,
-				  cond_d_o, alu_control_d_o, rd1_out, rd2_out, imm_ext_out, alu_result_execute, 
-				  pc_src_e, reg_write_e, mem_write_e, flag_zero_p_d, branch_taken_e);
+				  no_write_d_o, mov_src_d_o, flag_write_d_o, cond_d_o, alu_control_d_o, rd1_out, rd2_out, 
+				  imm_ext_out, result_write_back, alu_exec_out, forwardAE, forwardBE,
+				  alu_result_execute, pc_src_e, reg_write_e, mem_write_e, flag_zero_p_d, branch_taken_e);
 				  
 	flip_flop_D #(52) third(clk, rst, 1'b1, 
 	{rd3_out, alu_result_execute, wrd_out, pc_src_e, reg_write_e, mem_reg_d_o, mem_write_e},
@@ -65,6 +72,12 @@ module pipelined_processor(input logic clk, rst,
 								  
 	write_back wb(read_out, alu_out_mem, wrm_out, mem_reg_m_o, result_write_back, register_write_back);
 	
+	assign match = {ra1_e == wre_out, ra1_e == register_write_back, ra2_e == wre_out,
+						ra2_e == register_write_back, (ra1_d == wrd_out) | (ra2_d == wrd_out)};
+	
+	hazard_unit hu(reg_write_e_o, reg_write_m_o, mem_reg_d_o, branch_taken_e, pc_src_d, pc_src_d_o, pc_src_e_o, 
+						pc_src_write_back, match,  
+						forwardAE, forwardBE, stallF, stallD, flushE, flushD);	
 	
 	assign reg_write_write_back = reg_write_m_o;
 	assign pc_src_write_back = pc_src_m_o;
