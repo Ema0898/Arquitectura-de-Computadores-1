@@ -10,7 +10,7 @@ module instruction_memory(input logic [21:0] a,
   assign memory[4] = 22'b1000110000100000010000; // COMP R1, R2
   assign memory[5] = 22'b1000000000000000010000; // SUM R0, R0, R2*/
   
-  assign memory[0] = 22'b1001101000000010001000; // MOVER R1, #8
+  /*assign memory[0] = 22'b1001101000000010001000; // MOVER R1, #8
   assign memory[1] = 22'b1001101000000010001000; // MOVER R1, #8
   assign memory[2] = 22'b1001101000000100001001; // MOVER R2, #9
   assign memory[3] = 22'b1000000000100000010000; // SUM R0, R1, R2
@@ -25,7 +25,18 @@ module instruction_memory(input logic [21:0] a,
   assign memory[12] = 22'b1000111011100000110010; // CMP R7, #50
   assign memory[13] = 22'b1001101000010000000000; // MOVER R8, #0
   assign memory[14] = 22'b0000001011110000000010; // SUMIG R8, R7, #2 // Si se ejecuta
-  assign memory[15] = 22'b1000001100010000000001; // SUM R8, R8, #1
+  assign memory[15] = 22'b1000001100010000000001; // SUM R8, R8, #1*/
+  
+  assign memory[0] = 22'b1001101000000010001000; // MOVER R1, #8
+  assign memory[1] = 22'b1001101000000010001000; // MOVER R1, #8
+  assign memory[2] = 22'b1001101000000100001001; // MOVER R2, #9
+  assign memory[3] = 22'b1001101000000110110010; // MOVER R3, #50
+  assign memory[4] = 22'b1001101000001000111100; // MOVER R4, #60
+  assign memory[5] = 22'b1011101001100010000000; // STORE R1, [R3]
+  assign memory[6] = 22'b1011101010000100000000; // STORE R2, [R4]
+  assign memory[7] = 22'b1011111001101010000000; // LOAD R5, [R3]
+  assign memory[8] = 22'b1011111010001100000000; // LOAD R6, [R4]
+  
   
   /*assign memory[0] = 22'b1001101000000110000000; // MOVER R3, #0 : Init
   assign memory[1] = 22'b1001101000000010000000; // MOVER R1, #0

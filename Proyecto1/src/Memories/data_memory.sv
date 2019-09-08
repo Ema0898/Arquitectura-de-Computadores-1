@@ -4,8 +4,9 @@ module data_memory(input logic clk, we,
 						 
   logic [21:0] RAM [127:0];
   assign rd = RAM[a[21:2]]; // word aligned
-  
+    
   always_ff @(negedge clk)
     if (we) RAM[a[21:2]] <= wd;
+		
 	
 endmodule 

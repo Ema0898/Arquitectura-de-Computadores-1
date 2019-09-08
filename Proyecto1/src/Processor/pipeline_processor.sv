@@ -36,8 +36,7 @@ module pipeline_processor(input logic clk, rst,
 	
 	flip_flop_D #(22) fetch_pipe(clk, rst, 1'b1, {instruction_fetch}, {instruction_decode});
 	
-	// Segunda etapa del pipeline Decode
-	
+	// Segunda etapa del pipeline Decode	
 	/*decode_unit decode(instruction_decode[20:19], instruction_decode[18:15], instruction_decode[10:7],
 							 pc_src_d, reg_write_d, mem_write_d, mem_reg_d, alu_src_d, no_write_d, mov_src_d,
 							 reg_src_d, flag_write_d, alu_control_d, imm_src_d);*/
@@ -49,8 +48,9 @@ module pipeline_processor(input logic clk, rst,
 						  
 	extend ext(instruction_decode[18:0], imm_src, imm_ext);
 	
-	flip_flop_D #(92) decode_pipe(clk, rst, 1'b1, {rd1, rd2, rd3, imm_ext, instruction_decode[10:7]}, 
-											{rd1_execute, rd2_execute, rd3_execute, extened_execute, write_register_execute});
+	flip_flop_D #(92) decode_pipe(clk, rst, 1'b1, 
+	{rd1, rd2, rd3, imm_ext, instruction_decode[10:7]}, 
+	{rd1_execute, rd2_execute, rd3_execute, extened_execute, write_register_execute});
 
 	// Tercera etapa del pipeline Execute
 	mux_2_x_1 #(22) mux2(rd2_execute, extened_execute, alu_src, mux2_out);

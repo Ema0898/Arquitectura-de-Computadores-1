@@ -2,6 +2,7 @@ module decode_unit(input logic [1:0] op,
 						input logic [3:0] funct,
 						input logic [3:0] rd,
 						output logic pc_src, reg_write, mem_write, mem_reg, alu_src, no_write, mov_src, reg_src, flag_write,
+						output logic branch_taken,
 						output logic [1:0] alu_control, imm_src);
 						
 						
@@ -19,6 +20,8 @@ module decode_unit(input logic [1:0] op,
 	assign alu_src = ((mem_op | dataprocess_op) & funct[0]) | branch_op;
 	assign reg_write = dataprocess_op | mem_reg; // Escribe en registros si hace un LOAD o una operacion de datos
 	assign pc_src = branch_op | (rd11 & reg_write);
+	//assign pc_src = (rd11 & reg_write);
+	assign branch_taken = branch_op;
 	assign imm_src = op;
 	assign reg_src = branch_op;
 	

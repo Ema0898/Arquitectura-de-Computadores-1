@@ -1,8 +1,8 @@
 module cond_logic(input logic clk, reset,
 							input logic pc_src, reg_write, mem_write, no_write, cond,
 							input logic flag_write,
-							input logic alu_flag_zero,
-							output logic pc_src_p, reg_write_p, mem_write_p);
+							input logic alu_flag_zero, branch_e,
+							output logic pc_src_p, reg_write_p, mem_write_p, branch_taken);
 							
   logic flag_write_p;
   logic flag_zero;
@@ -16,5 +16,6 @@ module cond_logic(input logic clk, reset,
   assign reg_write_p = reg_write & cond_ex & ~no_write;
   assign mem_write_p = mem_write & cond_ex;
   assign pc_src_p = pc_src & cond_ex;
+  assign branch_taken = branch_e & cond_ex;
 							
 endmodule 
