@@ -3,20 +3,20 @@
 //`include "../pkg/utils_pkg.sv"
 module test();
 
-	logic	[13:0]  A;
+	logic	[18:0]  A;
 	logic	  CLK;
-	logic	[21:0]  D;
+	logic	[7:0]  D;
 	logic	  RD;
 	logic	  WR;
-	logic	[21:0]  S;
+	logic	[7:0]  S;
 
 	
-	RAM_Port_1 DUT(A, CLK,D, RD, WR, S);
+	RAM DUT(A, CLK,D, RD, WR, S);
 	
 	initial begin
-		A = 0;
+		
 
-		CLK = 0; WR = 0; D = 22'hAAA; #10;
+		CLK = 0; A = 19'h0; WR = 0; D = 19'h0; #10;
 		CLK = 1; #10;
 		CLK = 0; #10;
 		CLK = 1; #10;
@@ -24,9 +24,10 @@ module test();
 		CLK = 1; #10;
 		CLK = 0; #10;
 
+		
+		
 
-
-		CLK =  1; WR = 1; D = 22'hBBB; RD = 1; #10;
+		CLK =  1; A = 19'h0; WR = 0; D = 19'h0; RD = 1; #10;
 		CLK = 0; #10;
 		CLK = 1; #10;
 		CLK = 0; #10;
@@ -34,15 +35,16 @@ module test();
 		CLK = 0; #10;
 		CLK = 1; #10;
 		
-		CLK = 0; WR = 0; D = 22'hAEF; #10;
+		CLK = 0; A = 19'h15762; WR = 0; D = 19'h0; #10;
 		CLK = 1; #10;
 		CLK = 0; #10;
 		CLK = 1; #10;
 		CLK = 0; #10;
 		CLK = 1; #10;
 		CLK = 0; #10;
+
 		
-		CLK =  1; WR = 1; D = 12'h001; RD = 1; #10;
+		CLK =  1; A = 19'h15762; WR = 0; D = 19'h0; RD = 1; #10;
 		CLK = 0; #10;
 		CLK = 1; #10;
 		CLK = 0; #10;
