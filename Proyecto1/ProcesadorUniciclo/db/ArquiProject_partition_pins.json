@@ -4,183 +4,119 @@
 			"name" : "Top",
 			"pins" : [
 				{
-					"name" : "mem_write",
+					"name" : "vga_hs",
 					"strict" : false
 				},
 				{
-					"name" : "write_data[0]",
+					"name" : "vga_vs",
 					"strict" : false
 				},
 				{
-					"name" : "write_data[1]",
+					"name" : "vga_blank_n",
 					"strict" : false
 				},
 				{
-					"name" : "write_data[2]",
+					"name" : "clockVGA",
 					"strict" : false
 				},
 				{
-					"name" : "write_data[3]",
+					"name" : "red[0]",
 					"strict" : false
 				},
 				{
-					"name" : "write_data[4]",
+					"name" : "red[1]",
 					"strict" : false
 				},
 				{
-					"name" : "write_data[5]",
+					"name" : "red[2]",
 					"strict" : false
 				},
 				{
-					"name" : "write_data[6]",
+					"name" : "red[3]",
 					"strict" : false
 				},
 				{
-					"name" : "write_data[7]",
+					"name" : "red[4]",
 					"strict" : false
 				},
 				{
-					"name" : "write_data[8]",
+					"name" : "red[5]",
 					"strict" : false
 				},
 				{
-					"name" : "write_data[9]",
+					"name" : "red[6]",
 					"strict" : false
 				},
 				{
-					"name" : "write_data[10]",
+					"name" : "red[7]",
 					"strict" : false
 				},
 				{
-					"name" : "write_data[11]",
+					"name" : "green[0]",
 					"strict" : false
 				},
 				{
-					"name" : "write_data[12]",
+					"name" : "green[1]",
 					"strict" : false
 				},
 				{
-					"name" : "write_data[13]",
+					"name" : "green[2]",
 					"strict" : false
 				},
 				{
-					"name" : "write_data[14]",
+					"name" : "green[3]",
 					"strict" : false
 				},
 				{
-					"name" : "write_data[15]",
+					"name" : "green[4]",
 					"strict" : false
 				},
 				{
-					"name" : "write_data[16]",
+					"name" : "green[5]",
 					"strict" : false
 				},
 				{
-					"name" : "write_data[17]",
+					"name" : "green[6]",
 					"strict" : false
 				},
 				{
-					"name" : "write_data[18]",
+					"name" : "green[7]",
 					"strict" : false
 				},
 				{
-					"name" : "write_data[19]",
+					"name" : "blue[0]",
 					"strict" : false
 				},
 				{
-					"name" : "write_data[20]",
+					"name" : "blue[1]",
 					"strict" : false
 				},
 				{
-					"name" : "write_data[21]",
+					"name" : "blue[2]",
 					"strict" : false
 				},
 				{
-					"name" : "data_adr[0]",
+					"name" : "blue[3]",
 					"strict" : false
 				},
 				{
-					"name" : "data_adr[1]",
+					"name" : "blue[4]",
 					"strict" : false
 				},
 				{
-					"name" : "data_adr[2]",
+					"name" : "blue[5]",
 					"strict" : false
 				},
 				{
-					"name" : "data_adr[3]",
+					"name" : "blue[6]",
 					"strict" : false
 				},
 				{
-					"name" : "data_adr[4]",
+					"name" : "blue[7]",
 					"strict" : false
 				},
 				{
-					"name" : "data_adr[5]",
-					"strict" : false
-				},
-				{
-					"name" : "data_adr[6]",
-					"strict" : false
-				},
-				{
-					"name" : "data_adr[7]",
-					"strict" : false
-				},
-				{
-					"name" : "data_adr[8]",
-					"strict" : false
-				},
-				{
-					"name" : "data_adr[9]",
-					"strict" : false
-				},
-				{
-					"name" : "data_adr[10]",
-					"strict" : false
-				},
-				{
-					"name" : "data_adr[11]",
-					"strict" : false
-				},
-				{
-					"name" : "data_adr[12]",
-					"strict" : false
-				},
-				{
-					"name" : "data_adr[13]",
-					"strict" : false
-				},
-				{
-					"name" : "data_adr[14]",
-					"strict" : false
-				},
-				{
-					"name" : "data_adr[15]",
-					"strict" : false
-				},
-				{
-					"name" : "data_adr[16]",
-					"strict" : false
-				},
-				{
-					"name" : "data_adr[17]",
-					"strict" : false
-				},
-				{
-					"name" : "data_adr[18]",
-					"strict" : false
-				},
-				{
-					"name" : "data_adr[19]",
-					"strict" : false
-				},
-				{
-					"name" : "data_adr[20]",
-					"strict" : false
-				},
-				{
-					"name" : "data_adr[21]",
+					"name" : "reset",
 					"strict" : false
 				},
 				{
@@ -188,7 +124,7 @@
 					"strict" : false
 				},
 				{
-					"name" : "reset",
+					"name" : "btn",
 					"strict" : false
 				}
 			]

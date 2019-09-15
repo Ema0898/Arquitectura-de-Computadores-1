@@ -1,11 +1,11 @@
-Analysis & Synthesis Status : Successful - Fri Sep 13 12:00:47 2019
+Analysis & Synthesis Status : Successful - Sat Sep 14 19:51:25 2019
 Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 Revision Name : ArquiProject
-Top-level Entity Name : processor_memories
+Top-level Entity Name : top
 Family : Cyclone V
 Logic utilization (in ALMs) : N/A
-Total registers : 1604
-Total pins : 47
+Total registers : 1511
+Total pins : 31
 Total virtual pins : 0
 Total block memory bits : 2,457,600
 Total DSP Blocks : 0

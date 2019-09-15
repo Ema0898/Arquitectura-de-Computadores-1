@@ -1,54 +1,38 @@
-|processor_memories
-clk => clk.IN3
+|top
+clk => clk.IN6
 reset => reset.IN1
-mem_write << data_path:CPU.port4
-write_data[0] << write_data[0].DB_MAX_OUTPUT_PORT_TYPE
-write_data[1] << write_data[1].DB_MAX_OUTPUT_PORT_TYPE
-write_data[2] << write_data[2].DB_MAX_OUTPUT_PORT_TYPE
-write_data[3] << write_data[3].DB_MAX_OUTPUT_PORT_TYPE
-write_data[4] << write_data[4].DB_MAX_OUTPUT_PORT_TYPE
-write_data[5] << write_data[5].DB_MAX_OUTPUT_PORT_TYPE
-write_data[6] << write_data[6].DB_MAX_OUTPUT_PORT_TYPE
-write_data[7] << write_data[7].DB_MAX_OUTPUT_PORT_TYPE
-write_data[8] << write_data[8].DB_MAX_OUTPUT_PORT_TYPE
-write_data[9] << write_data[9].DB_MAX_OUTPUT_PORT_TYPE
-write_data[10] << write_data[10].DB_MAX_OUTPUT_PORT_TYPE
-write_data[11] << write_data[11].DB_MAX_OUTPUT_PORT_TYPE
-write_data[12] << write_data[12].DB_MAX_OUTPUT_PORT_TYPE
-write_data[13] << write_data[13].DB_MAX_OUTPUT_PORT_TYPE
-write_data[14] << write_data[14].DB_MAX_OUTPUT_PORT_TYPE
-write_data[15] << write_data[15].DB_MAX_OUTPUT_PORT_TYPE
-write_data[16] << write_data[16].DB_MAX_OUTPUT_PORT_TYPE
-write_data[17] << write_data[17].DB_MAX_OUTPUT_PORT_TYPE
-write_data[18] << write_data[18].DB_MAX_OUTPUT_PORT_TYPE
-write_data[19] << write_data[19].DB_MAX_OUTPUT_PORT_TYPE
-write_data[20] << write_data[20].DB_MAX_OUTPUT_PORT_TYPE
-write_data[21] << write_data[21].DB_MAX_OUTPUT_PORT_TYPE
-data_adr[0] << data_adr[0].DB_MAX_OUTPUT_PORT_TYPE
-data_adr[1] << data_adr[1].DB_MAX_OUTPUT_PORT_TYPE
-data_adr[2] << data_adr[2].DB_MAX_OUTPUT_PORT_TYPE
-data_adr[3] << data_adr[3].DB_MAX_OUTPUT_PORT_TYPE
-data_adr[4] << data_adr[4].DB_MAX_OUTPUT_PORT_TYPE
-data_adr[5] << data_adr[5].DB_MAX_OUTPUT_PORT_TYPE
-data_adr[6] << data_adr[6].DB_MAX_OUTPUT_PORT_TYPE
-data_adr[7] << data_adr[7].DB_MAX_OUTPUT_PORT_TYPE
-data_adr[8] << data_adr[8].DB_MAX_OUTPUT_PORT_TYPE
-data_adr[9] << data_adr[9].DB_MAX_OUTPUT_PORT_TYPE
-data_adr[10] << data_adr[10].DB_MAX_OUTPUT_PORT_TYPE
-data_adr[11] << data_adr[11].DB_MAX_OUTPUT_PORT_TYPE
-data_adr[12] << data_adr[12].DB_MAX_OUTPUT_PORT_TYPE
-data_adr[13] << data_adr[13].DB_MAX_OUTPUT_PORT_TYPE
-data_adr[14] << data_adr[14].DB_MAX_OUTPUT_PORT_TYPE
-data_adr[15] << data_adr[15].DB_MAX_OUTPUT_PORT_TYPE
-data_adr[16] << data_adr[16].DB_MAX_OUTPUT_PORT_TYPE
-data_adr[17] << data_adr[17].DB_MAX_OUTPUT_PORT_TYPE
-data_adr[18] << data_adr[18].DB_MAX_OUTPUT_PORT_TYPE
-data_adr[19] << data_adr[19].DB_MAX_OUTPUT_PORT_TYPE
-data_adr[20] << data_adr[20].DB_MAX_OUTPUT_PORT_TYPE
-data_adr[21] << data_adr[21].DB_MAX_OUTPUT_PORT_TYPE
+btn => _.IN1
+vga_hs << VGA:vga.port2
+vga_vs << VGA:vga.port3
+vga_blank_n << VGA:vga.port4
+clockVGA << VGA:vga.port5
+red[0] << mux_2_x_1:mux1.port3
+red[1] << mux_2_x_1:mux1.port3
+red[2] << mux_2_x_1:mux1.port3
+red[3] << mux_2_x_1:mux1.port3
+red[4] << mux_2_x_1:mux1.port3
+red[5] << mux_2_x_1:mux1.port3
+red[6] << mux_2_x_1:mux1.port3
+red[7] << mux_2_x_1:mux1.port3
+green[0] << mux_2_x_1:mux1.port3
+green[1] << mux_2_x_1:mux1.port3
+green[2] << mux_2_x_1:mux1.port3
+green[3] << mux_2_x_1:mux1.port3
+green[4] << mux_2_x_1:mux1.port3
+green[5] << mux_2_x_1:mux1.port3
+green[6] << mux_2_x_1:mux1.port3
+green[7] << mux_2_x_1:mux1.port3
+blue[0] << mux_2_x_1:mux1.port3
+blue[1] << mux_2_x_1:mux1.port3
+blue[2] << mux_2_x_1:mux1.port3
+blue[3] << mux_2_x_1:mux1.port3
+blue[4] << mux_2_x_1:mux1.port3
+blue[5] << mux_2_x_1:mux1.port3
+blue[6] << mux_2_x_1:mux1.port3
+blue[7] << mux_2_x_1:mux1.port3
 
 
-|processor_memories|data_path:CPU
+|top|data_path:CPU
 clk => clk.IN3
 rst => rst.IN3
 instruction[0] => instruction[0].IN1
@@ -164,7 +148,7 @@ write_data[20] <= register_file:rf.port11
 write_data[21] <= register_file:rf.port11
 
 
-|processor_memories|data_path:CPU|generic_adder:adder1
+|top|data_path:CPU|generic_adder:adder1
 a[0] => a[0].IN1
 a[1] => a[1].IN1
 a[2] => a[2].IN1
@@ -235,7 +219,7 @@ s[21] <= generic_full_adder:generate_N_bit_Adder[21].f.port3
 carry_out <= generic_full_adder:generate_N_bit_Adder[21].f.port4
 
 
-|processor_memories|data_path:CPU|generic_adder:adder1|generic_full_adder:generate_N_bit_Adder[0].f
+|top|data_path:CPU|generic_adder:adder1|generic_full_adder:generate_N_bit_Adder[0].f
 x => s.IN0
 x => c_out.IN0
 x => c_out.IN0
@@ -249,7 +233,7 @@ s <= s.DB_MAX_OUTPUT_PORT_TYPE
 c_out <= c_out.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|processor_memories|data_path:CPU|generic_adder:adder1|generic_full_adder:generate_N_bit_Adder[1].f
+|top|data_path:CPU|generic_adder:adder1|generic_full_adder:generate_N_bit_Adder[1].f
 x => s.IN0
 x => c_out.IN0
 x => c_out.IN0
@@ -263,7 +247,7 @@ s <= s.DB_MAX_OUTPUT_PORT_TYPE
 c_out <= c_out.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|processor_memories|data_path:CPU|generic_adder:adder1|generic_full_adder:generate_N_bit_Adder[2].f
+|top|data_path:CPU|generic_adder:adder1|generic_full_adder:generate_N_bit_Adder[2].f
 x => s.IN0
 x => c_out.IN0
 x => c_out.IN0
@@ -277,7 +261,7 @@ s <= s.DB_MAX_OUTPUT_PORT_TYPE
 c_out <= c_out.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|processor_memories|data_path:CPU|generic_adder:adder1|generic_full_adder:generate_N_bit_Adder[3].f
+|top|data_path:CPU|generic_adder:adder1|generic_full_adder:generate_N_bit_Adder[3].f
 x => s.IN0
 x => c_out.IN0
 x => c_out.IN0
@@ -291,7 +275,7 @@ s <= s.DB_MAX_OUTPUT_PORT_TYPE
 c_out <= c_out.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|processor_memories|data_path:CPU|generic_adder:adder1|generic_full_adder:generate_N_bit_Adder[4].f
+|top|data_path:CPU|generic_adder:adder1|generic_full_adder:generate_N_bit_Adder[4].f
 x => s.IN0
 x => c_out.IN0
 x => c_out.IN0
@@ -305,7 +289,7 @@ s <= s.DB_MAX_OUTPUT_PORT_TYPE
 c_out <= c_out.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|processor_memories|data_path:CPU|generic_adder:adder1|generic_full_adder:generate_N_bit_Adder[5].f
+|top|data_path:CPU|generic_adder:adder1|generic_full_adder:generate_N_bit_Adder[5].f
 x => s.IN0
 x => c_out.IN0
 x => c_out.IN0
@@ -319,7 +303,7 @@ s <= s.DB_MAX_OUTPUT_PORT_TYPE
 c_out <= c_out.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|processor_memories|data_path:CPU|generic_adder:adder1|generic_full_adder:generate_N_bit_Adder[6].f
+|top|data_path:CPU|generic_adder:adder1|generic_full_adder:generate_N_bit_Adder[6].f
 x => s.IN0
 x => c_out.IN0
 x => c_out.IN0
@@ -333,7 +317,7 @@ s <= s.DB_MAX_OUTPUT_PORT_TYPE
 c_out <= c_out.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|processor_memories|data_path:CPU|generic_adder:adder1|generic_full_adder:generate_N_bit_Adder[7].f
+|top|data_path:CPU|generic_adder:adder1|generic_full_adder:generate_N_bit_Adder[7].f
 x => s.IN0
 x => c_out.IN0
 x => c_out.IN0
@@ -347,7 +331,7 @@ s <= s.DB_MAX_OUTPUT_PORT_TYPE
 c_out <= c_out.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|processor_memories|data_path:CPU|generic_adder:adder1|generic_full_adder:generate_N_bit_Adder[8].f
+|top|data_path:CPU|generic_adder:adder1|generic_full_adder:generate_N_bit_Adder[8].f
 x => s.IN0
 x => c_out.IN0
 x => c_out.IN0
@@ -361,7 +345,7 @@ s <= s.DB_MAX_OUTPUT_PORT_TYPE
 c_out <= c_out.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|processor_memories|data_path:CPU|generic_adder:adder1|generic_full_adder:generate_N_bit_Adder[9].f
+|top|data_path:CPU|generic_adder:adder1|generic_full_adder:generate_N_bit_Adder[9].f
 x => s.IN0
 x => c_out.IN0
 x => c_out.IN0
@@ -375,7 +359,7 @@ s <= s.DB_MAX_OUTPUT_PORT_TYPE
 c_out <= c_out.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|processor_memories|data_path:CPU|generic_adder:adder1|generic_full_adder:generate_N_bit_Adder[10].f
+|top|data_path:CPU|generic_adder:adder1|generic_full_adder:generate_N_bit_Adder[10].f
 x => s.IN0
 x => c_out.IN0
 x => c_out.IN0
@@ -389,7 +373,7 @@ s <= s.DB_MAX_OUTPUT_PORT_TYPE
 c_out <= c_out.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|processor_memories|data_path:CPU|generic_adder:adder1|generic_full_adder:generate_N_bit_Adder[11].f
+|top|data_path:CPU|generic_adder:adder1|generic_full_adder:generate_N_bit_Adder[11].f
 x => s.IN0
 x => c_out.IN0
 x => c_out.IN0
@@ -403,7 +387,7 @@ s <= s.DB_MAX_OUTPUT_PORT_TYPE
 c_out <= c_out.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|processor_memories|data_path:CPU|generic_adder:adder1|generic_full_adder:generate_N_bit_Adder[12].f
+|top|data_path:CPU|generic_adder:adder1|generic_full_adder:generate_N_bit_Adder[12].f
 x => s.IN0
 x => c_out.IN0
 x => c_out.IN0
@@ -417,7 +401,7 @@ s <= s.DB_MAX_OUTPUT_PORT_TYPE
 c_out <= c_out.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|processor_memories|data_path:CPU|generic_adder:adder1|generic_full_adder:generate_N_bit_Adder[13].f
+|top|data_path:CPU|generic_adder:adder1|generic_full_adder:generate_N_bit_Adder[13].f
 x => s.IN0
 x => c_out.IN0
 x => c_out.IN0
@@ -431,7 +415,7 @@ s <= s.DB_MAX_OUTPUT_PORT_TYPE
 c_out <= c_out.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|processor_memories|data_path:CPU|generic_adder:adder1|generic_full_adder:generate_N_bit_Adder[14].f
+|top|data_path:CPU|generic_adder:adder1|generic_full_adder:generate_N_bit_Adder[14].f
 x => s.IN0
 x => c_out.IN0
 x => c_out.IN0
@@ -445,7 +429,7 @@ s <= s.DB_MAX_OUTPUT_PORT_TYPE
 c_out <= c_out.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|processor_memories|data_path:CPU|generic_adder:adder1|generic_full_adder:generate_N_bit_Adder[15].f
+|top|data_path:CPU|generic_adder:adder1|generic_full_adder:generate_N_bit_Adder[15].f
 x => s.IN0
 x => c_out.IN0
 x => c_out.IN0
@@ -459,7 +443,7 @@ s <= s.DB_MAX_OUTPUT_PORT_TYPE
 c_out <= c_out.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|processor_memories|data_path:CPU|generic_adder:adder1|generic_full_adder:generate_N_bit_Adder[16].f
+|top|data_path:CPU|generic_adder:adder1|generic_full_adder:generate_N_bit_Adder[16].f
 x => s.IN0
 x => c_out.IN0
 x => c_out.IN0
@@ -473,7 +457,7 @@ s <= s.DB_MAX_OUTPUT_PORT_TYPE
 c_out <= c_out.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|processor_memories|data_path:CPU|generic_adder:adder1|generic_full_adder:generate_N_bit_Adder[17].f
+|top|data_path:CPU|generic_adder:adder1|generic_full_adder:generate_N_bit_Adder[17].f
 x => s.IN0
 x => c_out.IN0
 x => c_out.IN0
@@ -487,7 +471,7 @@ s <= s.DB_MAX_OUTPUT_PORT_TYPE
 c_out <= c_out.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|processor_memories|data_path:CPU|generic_adder:adder1|generic_full_adder:generate_N_bit_Adder[18].f
+|top|data_path:CPU|generic_adder:adder1|generic_full_adder:generate_N_bit_Adder[18].f
 x => s.IN0
 x => c_out.IN0
 x => c_out.IN0
@@ -501,7 +485,7 @@ s <= s.DB_MAX_OUTPUT_PORT_TYPE
 c_out <= c_out.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|processor_memories|data_path:CPU|generic_adder:adder1|generic_full_adder:generate_N_bit_Adder[19].f
+|top|data_path:CPU|generic_adder:adder1|generic_full_adder:generate_N_bit_Adder[19].f
 x => s.IN0
 x => c_out.IN0
 x => c_out.IN0
@@ -515,7 +499,7 @@ s <= s.DB_MAX_OUTPUT_PORT_TYPE
 c_out <= c_out.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|processor_memories|data_path:CPU|generic_adder:adder1|generic_full_adder:generate_N_bit_Adder[20].f
+|top|data_path:CPU|generic_adder:adder1|generic_full_adder:generate_N_bit_Adder[20].f
 x => s.IN0
 x => c_out.IN0
 x => c_out.IN0
@@ -529,7 +513,7 @@ s <= s.DB_MAX_OUTPUT_PORT_TYPE
 c_out <= c_out.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|processor_memories|data_path:CPU|generic_adder:adder1|generic_full_adder:generate_N_bit_Adder[21].f
+|top|data_path:CPU|generic_adder:adder1|generic_full_adder:generate_N_bit_Adder[21].f
 x => s.IN0
 x => c_out.IN0
 x => c_out.IN0
@@ -543,7 +527,7 @@ s <= s.DB_MAX_OUTPUT_PORT_TYPE
 c_out <= c_out.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|processor_memories|data_path:CPU|generic_adder:adder2
+|top|data_path:CPU|generic_adder:adder2
 a[0] => a[0].IN1
 a[1] => a[1].IN1
 a[2] => a[2].IN1
@@ -614,7 +598,7 @@ s[21] <= generic_full_adder:generate_N_bit_Adder[21].f.port3
 carry_out <= generic_full_adder:generate_N_bit_Adder[21].f.port4
 
 
-|processor_memories|data_path:CPU|generic_adder:adder2|generic_full_adder:generate_N_bit_Adder[0].f
+|top|data_path:CPU|generic_adder:adder2|generic_full_adder:generate_N_bit_Adder[0].f
 x => s.IN0
 x => c_out.IN0
 x => c_out.IN0
@@ -628,7 +612,7 @@ s <= s.DB_MAX_OUTPUT_PORT_TYPE
 c_out <= c_out.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|processor_memories|data_path:CPU|generic_adder:adder2|generic_full_adder:generate_N_bit_Adder[1].f
+|top|data_path:CPU|generic_adder:adder2|generic_full_adder:generate_N_bit_Adder[1].f
 x => s.IN0
 x => c_out.IN0
 x => c_out.IN0
@@ -642,7 +626,7 @@ s <= s.DB_MAX_OUTPUT_PORT_TYPE
 c_out <= c_out.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|processor_memories|data_path:CPU|generic_adder:adder2|generic_full_adder:generate_N_bit_Adder[2].f
+|top|data_path:CPU|generic_adder:adder2|generic_full_adder:generate_N_bit_Adder[2].f
 x => s.IN0
 x => c_out.IN0
 x => c_out.IN0
@@ -656,7 +640,7 @@ s <= s.DB_MAX_OUTPUT_PORT_TYPE
 c_out <= c_out.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|processor_memories|data_path:CPU|generic_adder:adder2|generic_full_adder:generate_N_bit_Adder[3].f
+|top|data_path:CPU|generic_adder:adder2|generic_full_adder:generate_N_bit_Adder[3].f
 x => s.IN0
 x => c_out.IN0
 x => c_out.IN0
@@ -670,7 +654,7 @@ s <= s.DB_MAX_OUTPUT_PORT_TYPE
 c_out <= c_out.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|processor_memories|data_path:CPU|generic_adder:adder2|generic_full_adder:generate_N_bit_Adder[4].f
+|top|data_path:CPU|generic_adder:adder2|generic_full_adder:generate_N_bit_Adder[4].f
 x => s.IN0
 x => c_out.IN0
 x => c_out.IN0
@@ -684,7 +668,7 @@ s <= s.DB_MAX_OUTPUT_PORT_TYPE
 c_out <= c_out.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|processor_memories|data_path:CPU|generic_adder:adder2|generic_full_adder:generate_N_bit_Adder[5].f
+|top|data_path:CPU|generic_adder:adder2|generic_full_adder:generate_N_bit_Adder[5].f
 x => s.IN0
 x => c_out.IN0
 x => c_out.IN0
@@ -698,7 +682,7 @@ s <= s.DB_MAX_OUTPUT_PORT_TYPE
 c_out <= c_out.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|processor_memories|data_path:CPU|generic_adder:adder2|generic_full_adder:generate_N_bit_Adder[6].f
+|top|data_path:CPU|generic_adder:adder2|generic_full_adder:generate_N_bit_Adder[6].f
 x => s.IN0
 x => c_out.IN0
 x => c_out.IN0
@@ -712,7 +696,7 @@ s <= s.DB_MAX_OUTPUT_PORT_TYPE
 c_out <= c_out.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|processor_memories|data_path:CPU|generic_adder:adder2|generic_full_adder:generate_N_bit_Adder[7].f
+|top|data_path:CPU|generic_adder:adder2|generic_full_adder:generate_N_bit_Adder[7].f
 x => s.IN0
 x => c_out.IN0
 x => c_out.IN0
@@ -726,7 +710,7 @@ s <= s.DB_MAX_OUTPUT_PORT_TYPE
 c_out <= c_out.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|processor_memories|data_path:CPU|generic_adder:adder2|generic_full_adder:generate_N_bit_Adder[8].f
+|top|data_path:CPU|generic_adder:adder2|generic_full_adder:generate_N_bit_Adder[8].f
 x => s.IN0
 x => c_out.IN0
 x => c_out.IN0
@@ -740,7 +724,7 @@ s <= s.DB_MAX_OUTPUT_PORT_TYPE
 c_out <= c_out.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|processor_memories|data_path:CPU|generic_adder:adder2|generic_full_adder:generate_N_bit_Adder[9].f
+|top|data_path:CPU|generic_adder:adder2|generic_full_adder:generate_N_bit_Adder[9].f
 x => s.IN0
 x => c_out.IN0
 x => c_out.IN0
@@ -754,7 +738,7 @@ s <= s.DB_MAX_OUTPUT_PORT_TYPE
 c_out <= c_out.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|processor_memories|data_path:CPU|generic_adder:adder2|generic_full_adder:generate_N_bit_Adder[10].f
+|top|data_path:CPU|generic_adder:adder2|generic_full_adder:generate_N_bit_Adder[10].f
 x => s.IN0
 x => c_out.IN0
 x => c_out.IN0
@@ -768,7 +752,7 @@ s <= s.DB_MAX_OUTPUT_PORT_TYPE
 c_out <= c_out.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|processor_memories|data_path:CPU|generic_adder:adder2|generic_full_adder:generate_N_bit_Adder[11].f
+|top|data_path:CPU|generic_adder:adder2|generic_full_adder:generate_N_bit_Adder[11].f
 x => s.IN0
 x => c_out.IN0
 x => c_out.IN0
@@ -782,7 +766,7 @@ s <= s.DB_MAX_OUTPUT_PORT_TYPE
 c_out <= c_out.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|processor_memories|data_path:CPU|generic_adder:adder2|generic_full_adder:generate_N_bit_Adder[12].f
+|top|data_path:CPU|generic_adder:adder2|generic_full_adder:generate_N_bit_Adder[12].f
 x => s.IN0
 x => c_out.IN0
 x => c_out.IN0
@@ -796,7 +780,7 @@ s <= s.DB_MAX_OUTPUT_PORT_TYPE
 c_out <= c_out.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|processor_memories|data_path:CPU|generic_adder:adder2|generic_full_adder:generate_N_bit_Adder[13].f
+|top|data_path:CPU|generic_adder:adder2|generic_full_adder:generate_N_bit_Adder[13].f
 x => s.IN0
 x => c_out.IN0
 x => c_out.IN0
@@ -810,7 +794,7 @@ s <= s.DB_MAX_OUTPUT_PORT_TYPE
 c_out <= c_out.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|processor_memories|data_path:CPU|generic_adder:adder2|generic_full_adder:generate_N_bit_Adder[14].f
+|top|data_path:CPU|generic_adder:adder2|generic_full_adder:generate_N_bit_Adder[14].f
 x => s.IN0
 x => c_out.IN0
 x => c_out.IN0
@@ -824,7 +808,7 @@ s <= s.DB_MAX_OUTPUT_PORT_TYPE
 c_out <= c_out.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|processor_memories|data_path:CPU|generic_adder:adder2|generic_full_adder:generate_N_bit_Adder[15].f
+|top|data_path:CPU|generic_adder:adder2|generic_full_adder:generate_N_bit_Adder[15].f
 x => s.IN0
 x => c_out.IN0
 x => c_out.IN0
@@ -838,7 +822,7 @@ s <= s.DB_MAX_OUTPUT_PORT_TYPE
 c_out <= c_out.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|processor_memories|data_path:CPU|generic_adder:adder2|generic_full_adder:generate_N_bit_Adder[16].f
+|top|data_path:CPU|generic_adder:adder2|generic_full_adder:generate_N_bit_Adder[16].f
 x => s.IN0
 x => c_out.IN0
 x => c_out.IN0
@@ -852,7 +836,7 @@ s <= s.DB_MAX_OUTPUT_PORT_TYPE
 c_out <= c_out.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|processor_memories|data_path:CPU|generic_adder:adder2|generic_full_adder:generate_N_bit_Adder[17].f
+|top|data_path:CPU|generic_adder:adder2|generic_full_adder:generate_N_bit_Adder[17].f
 x => s.IN0
 x => c_out.IN0
 x => c_out.IN0
@@ -866,7 +850,7 @@ s <= s.DB_MAX_OUTPUT_PORT_TYPE
 c_out <= c_out.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|processor_memories|data_path:CPU|generic_adder:adder2|generic_full_adder:generate_N_bit_Adder[18].f
+|top|data_path:CPU|generic_adder:adder2|generic_full_adder:generate_N_bit_Adder[18].f
 x => s.IN0
 x => c_out.IN0
 x => c_out.IN0
@@ -880,7 +864,7 @@ s <= s.DB_MAX_OUTPUT_PORT_TYPE
 c_out <= c_out.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|processor_memories|data_path:CPU|generic_adder:adder2|generic_full_adder:generate_N_bit_Adder[19].f
+|top|data_path:CPU|generic_adder:adder2|generic_full_adder:generate_N_bit_Adder[19].f
 x => s.IN0
 x => c_out.IN0
 x => c_out.IN0
@@ -894,7 +878,7 @@ s <= s.DB_MAX_OUTPUT_PORT_TYPE
 c_out <= c_out.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|processor_memories|data_path:CPU|generic_adder:adder2|generic_full_adder:generate_N_bit_Adder[20].f
+|top|data_path:CPU|generic_adder:adder2|generic_full_adder:generate_N_bit_Adder[20].f
 x => s.IN0
 x => c_out.IN0
 x => c_out.IN0
@@ -908,7 +892,7 @@ s <= s.DB_MAX_OUTPUT_PORT_TYPE
 c_out <= c_out.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|processor_memories|data_path:CPU|generic_adder:adder2|generic_full_adder:generate_N_bit_Adder[21].f
+|top|data_path:CPU|generic_adder:adder2|generic_full_adder:generate_N_bit_Adder[21].f
 x => s.IN0
 x => c_out.IN0
 x => c_out.IN0
@@ -922,7 +906,7 @@ s <= s.DB_MAX_OUTPUT_PORT_TYPE
 c_out <= c_out.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|processor_memories|data_path:CPU|mux_2_x_1:mux0
+|top|data_path:CPU|mux_2_x_1:mux0
 a[0] => z.DATAA
 a[1] => z.DATAA
 a[2] => z.DATAA
@@ -1013,7 +997,7 @@ z[20] <= z.DB_MAX_OUTPUT_PORT_TYPE
 z[21] <= z.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|processor_memories|data_path:CPU|mux_2_x_1:mux1
+|top|data_path:CPU|mux_2_x_1:mux1
 a[0] => z.DATAA
 a[1] => z.DATAA
 a[2] => z.DATAA
@@ -1104,7 +1088,7 @@ z[20] <= z.DB_MAX_OUTPUT_PORT_TYPE
 z[21] <= z.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|processor_memories|data_path:CPU|flip_flop_D:ff
+|top|data_path:CPU|flip_flop_D:ff
 clk => q[0]~reg0.CLK
 clk => q[1]~reg0.CLK
 clk => q[2]~reg0.CLK
@@ -1217,7 +1201,7 @@ q[20] <= q[20]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 q[21] <= q[21]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|processor_memories|data_path:CPU|mux_2_x_1:mux_reg1
+|top|data_path:CPU|mux_2_x_1:mux_reg1
 a[0] => z.DATAA
 a[1] => z.DATAA
 a[2] => z.DATAA
@@ -1236,7 +1220,7 @@ z[2] <= z.DB_MAX_OUTPUT_PORT_TYPE
 z[3] <= z.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|processor_memories|data_path:CPU|register_file:rf
+|top|data_path:CPU|register_file:rf
 clk => rf[0][0].CLK
 clk => rf[0][1].CLK
 clk => rf[0][2].CLK
@@ -2619,7 +2603,7 @@ rd3[20] <= rd3.DB_MAX_OUTPUT_PORT_TYPE
 rd3[21] <= rd3.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|processor_memories|data_path:CPU|extend:ext
+|top|data_path:CPU|extend:ext
 imm[0] => imm_branch[0].IN3
 imm[1] => imm_branch[1].IN3
 imm[2] => imm_branch[2].IN3
@@ -2665,7 +2649,7 @@ imm_ext[20] <= mux_4_x_1:mux0.port5
 imm_ext[21] <= mux_4_x_1:mux0.port5
 
 
-|processor_memories|data_path:CPU|extend:ext|mux_4_x_1:mux0
+|top|data_path:CPU|extend:ext|mux_4_x_1:mux0
 a[0] => a[0].IN1
 a[1] => a[1].IN1
 a[2] => a[2].IN1
@@ -2780,7 +2764,7 @@ z[20] <= mux_2_x_1:mux2.port3
 z[21] <= mux_2_x_1:mux2.port3
 
 
-|processor_memories|data_path:CPU|extend:ext|mux_4_x_1:mux0|mux_2_x_1:mux0
+|top|data_path:CPU|extend:ext|mux_4_x_1:mux0|mux_2_x_1:mux0
 a[0] => z.DATAA
 a[1] => z.DATAA
 a[2] => z.DATAA
@@ -2871,7 +2855,7 @@ z[20] <= z.DB_MAX_OUTPUT_PORT_TYPE
 z[21] <= z.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|processor_memories|data_path:CPU|extend:ext|mux_4_x_1:mux0|mux_2_x_1:mux1
+|top|data_path:CPU|extend:ext|mux_4_x_1:mux0|mux_2_x_1:mux1
 a[0] => z.DATAA
 a[1] => z.DATAA
 a[2] => z.DATAA
@@ -2962,7 +2946,7 @@ z[20] <= z.DB_MAX_OUTPUT_PORT_TYPE
 z[21] <= z.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|processor_memories|data_path:CPU|extend:ext|mux_4_x_1:mux0|mux_2_x_1:mux2
+|top|data_path:CPU|extend:ext|mux_4_x_1:mux0|mux_2_x_1:mux2
 a[0] => z.DATAA
 a[1] => z.DATAA
 a[2] => z.DATAA
@@ -3053,7 +3037,7 @@ z[20] <= z.DB_MAX_OUTPUT_PORT_TYPE
 z[21] <= z.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|processor_memories|data_path:CPU|mux_2_x_1:mux2
+|top|data_path:CPU|mux_2_x_1:mux2
 a[0] => z.DATAA
 a[1] => z.DATAA
 a[2] => z.DATAA
@@ -3144,7 +3128,7 @@ z[20] <= z.DB_MAX_OUTPUT_PORT_TYPE
 z[21] <= z.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|processor_memories|data_path:CPU|mux_2_x_1:mux3
+|top|data_path:CPU|mux_2_x_1:mux3
 a[0] => z.DATAA
 a[1] => z.DATAA
 a[2] => z.DATAA
@@ -3235,7 +3219,7 @@ z[20] <= z.DB_MAX_OUTPUT_PORT_TYPE
 z[21] <= z.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|processor_memories|data_path:CPU|ALU:alu
+|top|data_path:CPU|ALU:alu
 a[0] => a[0].IN1
 a[1] => a[1].IN1
 a[2] => a[2].IN1
@@ -3310,7 +3294,7 @@ flags[2] <= flag_module:flag_mod.port6
 flags[3] <= flag_module:flag_mod.port6
 
 
-|processor_memories|data_path:CPU|ALU:alu|arithmetic_module:arithmetic
+|top|data_path:CPU|ALU:alu|arithmetic_module:arithmetic
 a[0] => a[0].IN2
 a[1] => a[1].IN2
 a[2] => a[2].IN2
@@ -3448,7 +3432,7 @@ carry_out <= carry_out.DB_MAX_OUTPUT_PORT_TYPE
 msb_result <= add_sub_module:adder.port3
 
 
-|processor_memories|data_path:CPU|ALU:alu|arithmetic_module:arithmetic|add_sub_module:adder
+|top|data_path:CPU|ALU:alu|arithmetic_module:arithmetic|add_sub_module:adder
 a[0] => a[0].IN1
 a[1] => a[1].IN1
 a[2] => a[2].IN1
@@ -3519,7 +3503,7 @@ z[21] <= adder:fa.port3
 carry_out <= adder:fa.port4
 
 
-|processor_memories|data_path:CPU|ALU:alu|arithmetic_module:arithmetic|add_sub_module:adder|mux_2_x_1:mux0
+|top|data_path:CPU|ALU:alu|arithmetic_module:arithmetic|add_sub_module:adder|mux_2_x_1:mux0
 a[0] => z.DATAA
 a[1] => z.DATAA
 a[2] => z.DATAA
@@ -3610,7 +3594,7 @@ z[20] <= z.DB_MAX_OUTPUT_PORT_TYPE
 z[21] <= z.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|processor_memories|data_path:CPU|ALU:alu|arithmetic_module:arithmetic|add_sub_module:adder|adder:fa
+|top|data_path:CPU|ALU:alu|arithmetic_module:arithmetic|add_sub_module:adder|adder:fa
 a[0] => a[0].IN1
 a[1] => a[1].IN1
 a[2] => a[2].IN1
@@ -3681,7 +3665,7 @@ s[21] <= full_adder:generate_N_bit_Adder[21].f.port3
 carry_out <= full_adder:generate_N_bit_Adder[21].f.port4
 
 
-|processor_memories|data_path:CPU|ALU:alu|arithmetic_module:arithmetic|add_sub_module:adder|adder:fa|full_adder:generate_N_bit_Adder[0].f
+|top|data_path:CPU|ALU:alu|arithmetic_module:arithmetic|add_sub_module:adder|adder:fa|full_adder:generate_N_bit_Adder[0].f
 x => s.IN0
 x => c_out.IN0
 x => c_out.IN0
@@ -3695,7 +3679,7 @@ s <= s.DB_MAX_OUTPUT_PORT_TYPE
 c_out <= c_out.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|processor_memories|data_path:CPU|ALU:alu|arithmetic_module:arithmetic|add_sub_module:adder|adder:fa|full_adder:generate_N_bit_Adder[1].f
+|top|data_path:CPU|ALU:alu|arithmetic_module:arithmetic|add_sub_module:adder|adder:fa|full_adder:generate_N_bit_Adder[1].f
 x => s.IN0
 x => c_out.IN0
 x => c_out.IN0
@@ -3709,7 +3693,7 @@ s <= s.DB_MAX_OUTPUT_PORT_TYPE
 c_out <= c_out.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|processor_memories|data_path:CPU|ALU:alu|arithmetic_module:arithmetic|add_sub_module:adder|adder:fa|full_adder:generate_N_bit_Adder[2].f
+|top|data_path:CPU|ALU:alu|arithmetic_module:arithmetic|add_sub_module:adder|adder:fa|full_adder:generate_N_bit_Adder[2].f
 x => s.IN0
 x => c_out.IN0
 x => c_out.IN0
@@ -3723,7 +3707,7 @@ s <= s.DB_MAX_OUTPUT_PORT_TYPE
 c_out <= c_out.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|processor_memories|data_path:CPU|ALU:alu|arithmetic_module:arithmetic|add_sub_module:adder|adder:fa|full_adder:generate_N_bit_Adder[3].f
+|top|data_path:CPU|ALU:alu|arithmetic_module:arithmetic|add_sub_module:adder|adder:fa|full_adder:generate_N_bit_Adder[3].f
 x => s.IN0
 x => c_out.IN0
 x => c_out.IN0
@@ -3737,7 +3721,7 @@ s <= s.DB_MAX_OUTPUT_PORT_TYPE
 c_out <= c_out.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|processor_memories|data_path:CPU|ALU:alu|arithmetic_module:arithmetic|add_sub_module:adder|adder:fa|full_adder:generate_N_bit_Adder[4].f
+|top|data_path:CPU|ALU:alu|arithmetic_module:arithmetic|add_sub_module:adder|adder:fa|full_adder:generate_N_bit_Adder[4].f
 x => s.IN0
 x => c_out.IN0
 x => c_out.IN0
@@ -3751,7 +3735,7 @@ s <= s.DB_MAX_OUTPUT_PORT_TYPE
 c_out <= c_out.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|processor_memories|data_path:CPU|ALU:alu|arithmetic_module:arithmetic|add_sub_module:adder|adder:fa|full_adder:generate_N_bit_Adder[5].f
+|top|data_path:CPU|ALU:alu|arithmetic_module:arithmetic|add_sub_module:adder|adder:fa|full_adder:generate_N_bit_Adder[5].f
 x => s.IN0
 x => c_out.IN0
 x => c_out.IN0
@@ -3765,7 +3749,7 @@ s <= s.DB_MAX_OUTPUT_PORT_TYPE
 c_out <= c_out.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|processor_memories|data_path:CPU|ALU:alu|arithmetic_module:arithmetic|add_sub_module:adder|adder:fa|full_adder:generate_N_bit_Adder[6].f
+|top|data_path:CPU|ALU:alu|arithmetic_module:arithmetic|add_sub_module:adder|adder:fa|full_adder:generate_N_bit_Adder[6].f
 x => s.IN0
 x => c_out.IN0
 x => c_out.IN0
@@ -3779,7 +3763,7 @@ s <= s.DB_MAX_OUTPUT_PORT_TYPE
 c_out <= c_out.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|processor_memories|data_path:CPU|ALU:alu|arithmetic_module:arithmetic|add_sub_module:adder|adder:fa|full_adder:generate_N_bit_Adder[7].f
+|top|data_path:CPU|ALU:alu|arithmetic_module:arithmetic|add_sub_module:adder|adder:fa|full_adder:generate_N_bit_Adder[7].f
 x => s.IN0
 x => c_out.IN0
 x => c_out.IN0
@@ -3793,7 +3777,7 @@ s <= s.DB_MAX_OUTPUT_PORT_TYPE
 c_out <= c_out.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|processor_memories|data_path:CPU|ALU:alu|arithmetic_module:arithmetic|add_sub_module:adder|adder:fa|full_adder:generate_N_bit_Adder[8].f
+|top|data_path:CPU|ALU:alu|arithmetic_module:arithmetic|add_sub_module:adder|adder:fa|full_adder:generate_N_bit_Adder[8].f
 x => s.IN0
 x => c_out.IN0
 x => c_out.IN0
@@ -3807,7 +3791,7 @@ s <= s.DB_MAX_OUTPUT_PORT_TYPE
 c_out <= c_out.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|processor_memories|data_path:CPU|ALU:alu|arithmetic_module:arithmetic|add_sub_module:adder|adder:fa|full_adder:generate_N_bit_Adder[9].f
+|top|data_path:CPU|ALU:alu|arithmetic_module:arithmetic|add_sub_module:adder|adder:fa|full_adder:generate_N_bit_Adder[9].f
 x => s.IN0
 x => c_out.IN0
 x => c_out.IN0
@@ -3821,7 +3805,7 @@ s <= s.DB_MAX_OUTPUT_PORT_TYPE
 c_out <= c_out.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|processor_memories|data_path:CPU|ALU:alu|arithmetic_module:arithmetic|add_sub_module:adder|adder:fa|full_adder:generate_N_bit_Adder[10].f
+|top|data_path:CPU|ALU:alu|arithmetic_module:arithmetic|add_sub_module:adder|adder:fa|full_adder:generate_N_bit_Adder[10].f
 x => s.IN0
 x => c_out.IN0
 x => c_out.IN0
@@ -3835,7 +3819,7 @@ s <= s.DB_MAX_OUTPUT_PORT_TYPE
 c_out <= c_out.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|processor_memories|data_path:CPU|ALU:alu|arithmetic_module:arithmetic|add_sub_module:adder|adder:fa|full_adder:generate_N_bit_Adder[11].f
+|top|data_path:CPU|ALU:alu|arithmetic_module:arithmetic|add_sub_module:adder|adder:fa|full_adder:generate_N_bit_Adder[11].f
 x => s.IN0
 x => c_out.IN0
 x => c_out.IN0
@@ -3849,7 +3833,7 @@ s <= s.DB_MAX_OUTPUT_PORT_TYPE
 c_out <= c_out.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|processor_memories|data_path:CPU|ALU:alu|arithmetic_module:arithmetic|add_sub_module:adder|adder:fa|full_adder:generate_N_bit_Adder[12].f
+|top|data_path:CPU|ALU:alu|arithmetic_module:arithmetic|add_sub_module:adder|adder:fa|full_adder:generate_N_bit_Adder[12].f
 x => s.IN0
 x => c_out.IN0
 x => c_out.IN0
@@ -3863,7 +3847,7 @@ s <= s.DB_MAX_OUTPUT_PORT_TYPE
 c_out <= c_out.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|processor_memories|data_path:CPU|ALU:alu|arithmetic_module:arithmetic|add_sub_module:adder|adder:fa|full_adder:generate_N_bit_Adder[13].f
+|top|data_path:CPU|ALU:alu|arithmetic_module:arithmetic|add_sub_module:adder|adder:fa|full_adder:generate_N_bit_Adder[13].f
 x => s.IN0
 x => c_out.IN0
 x => c_out.IN0
@@ -3877,7 +3861,7 @@ s <= s.DB_MAX_OUTPUT_PORT_TYPE
 c_out <= c_out.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|processor_memories|data_path:CPU|ALU:alu|arithmetic_module:arithmetic|add_sub_module:adder|adder:fa|full_adder:generate_N_bit_Adder[14].f
+|top|data_path:CPU|ALU:alu|arithmetic_module:arithmetic|add_sub_module:adder|adder:fa|full_adder:generate_N_bit_Adder[14].f
 x => s.IN0
 x => c_out.IN0
 x => c_out.IN0
@@ -3891,7 +3875,7 @@ s <= s.DB_MAX_OUTPUT_PORT_TYPE
 c_out <= c_out.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|processor_memories|data_path:CPU|ALU:alu|arithmetic_module:arithmetic|add_sub_module:adder|adder:fa|full_adder:generate_N_bit_Adder[15].f
+|top|data_path:CPU|ALU:alu|arithmetic_module:arithmetic|add_sub_module:adder|adder:fa|full_adder:generate_N_bit_Adder[15].f
 x => s.IN0
 x => c_out.IN0
 x => c_out.IN0
@@ -3905,7 +3889,7 @@ s <= s.DB_MAX_OUTPUT_PORT_TYPE
 c_out <= c_out.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|processor_memories|data_path:CPU|ALU:alu|arithmetic_module:arithmetic|add_sub_module:adder|adder:fa|full_adder:generate_N_bit_Adder[16].f
+|top|data_path:CPU|ALU:alu|arithmetic_module:arithmetic|add_sub_module:adder|adder:fa|full_adder:generate_N_bit_Adder[16].f
 x => s.IN0
 x => c_out.IN0
 x => c_out.IN0
@@ -3919,7 +3903,7 @@ s <= s.DB_MAX_OUTPUT_PORT_TYPE
 c_out <= c_out.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|processor_memories|data_path:CPU|ALU:alu|arithmetic_module:arithmetic|add_sub_module:adder|adder:fa|full_adder:generate_N_bit_Adder[17].f
+|top|data_path:CPU|ALU:alu|arithmetic_module:arithmetic|add_sub_module:adder|adder:fa|full_adder:generate_N_bit_Adder[17].f
 x => s.IN0
 x => c_out.IN0
 x => c_out.IN0
@@ -3933,7 +3917,7 @@ s <= s.DB_MAX_OUTPUT_PORT_TYPE
 c_out <= c_out.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|processor_memories|data_path:CPU|ALU:alu|arithmetic_module:arithmetic|add_sub_module:adder|adder:fa|full_adder:generate_N_bit_Adder[18].f
+|top|data_path:CPU|ALU:alu|arithmetic_module:arithmetic|add_sub_module:adder|adder:fa|full_adder:generate_N_bit_Adder[18].f
 x => s.IN0
 x => c_out.IN0
 x => c_out.IN0
@@ -3947,7 +3931,7 @@ s <= s.DB_MAX_OUTPUT_PORT_TYPE
 c_out <= c_out.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|processor_memories|data_path:CPU|ALU:alu|arithmetic_module:arithmetic|add_sub_module:adder|adder:fa|full_adder:generate_N_bit_Adder[19].f
+|top|data_path:CPU|ALU:alu|arithmetic_module:arithmetic|add_sub_module:adder|adder:fa|full_adder:generate_N_bit_Adder[19].f
 x => s.IN0
 x => c_out.IN0
 x => c_out.IN0
@@ -3961,7 +3945,7 @@ s <= s.DB_MAX_OUTPUT_PORT_TYPE
 c_out <= c_out.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|processor_memories|data_path:CPU|ALU:alu|arithmetic_module:arithmetic|add_sub_module:adder|adder:fa|full_adder:generate_N_bit_Adder[20].f
+|top|data_path:CPU|ALU:alu|arithmetic_module:arithmetic|add_sub_module:adder|adder:fa|full_adder:generate_N_bit_Adder[20].f
 x => s.IN0
 x => c_out.IN0
 x => c_out.IN0
@@ -3975,7 +3959,7 @@ s <= s.DB_MAX_OUTPUT_PORT_TYPE
 c_out <= c_out.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|processor_memories|data_path:CPU|ALU:alu|arithmetic_module:arithmetic|add_sub_module:adder|adder:fa|full_adder:generate_N_bit_Adder[21].f
+|top|data_path:CPU|ALU:alu|arithmetic_module:arithmetic|add_sub_module:adder|adder:fa|full_adder:generate_N_bit_Adder[21].f
 x => s.IN0
 x => c_out.IN0
 x => c_out.IN0
@@ -3989,7 +3973,7 @@ s <= s.DB_MAX_OUTPUT_PORT_TYPE
 c_out <= c_out.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|processor_memories|data_path:CPU|ALU:alu|arithmetic_module:arithmetic|multiplier:mul
+|top|data_path:CPU|ALU:alu|arithmetic_module:arithmetic|multiplier:mul
 a[0] => Mult0.IN21
 a[1] => Mult0.IN20
 a[2] => Mult0.IN19
@@ -4059,7 +4043,7 @@ s[21] <= Mult0.DB_MAX_OUTPUT_PORT_TYPE
 cout <= Mult0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|processor_memories|data_path:CPU|ALU:alu|mux_4_x_1:mux0
+|top|data_path:CPU|ALU:alu|mux_4_x_1:mux0
 a[0] => a[0].IN1
 a[1] => a[1].IN1
 a[2] => a[2].IN1
@@ -4174,7 +4158,7 @@ z[20] <= mux_2_x_1:mux2.port3
 z[21] <= mux_2_x_1:mux2.port3
 
 
-|processor_memories|data_path:CPU|ALU:alu|mux_4_x_1:mux0|mux_2_x_1:mux0
+|top|data_path:CPU|ALU:alu|mux_4_x_1:mux0|mux_2_x_1:mux0
 a[0] => z.DATAA
 a[1] => z.DATAA
 a[2] => z.DATAA
@@ -4265,7 +4249,7 @@ z[20] <= z.DB_MAX_OUTPUT_PORT_TYPE
 z[21] <= z.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|processor_memories|data_path:CPU|ALU:alu|mux_4_x_1:mux0|mux_2_x_1:mux1
+|top|data_path:CPU|ALU:alu|mux_4_x_1:mux0|mux_2_x_1:mux1
 a[0] => z.DATAA
 a[1] => z.DATAA
 a[2] => z.DATAA
@@ -4356,7 +4340,7 @@ z[20] <= z.DB_MAX_OUTPUT_PORT_TYPE
 z[21] <= z.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|processor_memories|data_path:CPU|ALU:alu|mux_4_x_1:mux0|mux_2_x_1:mux2
+|top|data_path:CPU|ALU:alu|mux_4_x_1:mux0|mux_2_x_1:mux2
 a[0] => z.DATAA
 a[1] => z.DATAA
 a[2] => z.DATAA
@@ -4447,7 +4431,7 @@ z[20] <= z.DB_MAX_OUTPUT_PORT_TYPE
 z[21] <= z.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|processor_memories|data_path:CPU|ALU:alu|flag_module:flag_mod
+|top|data_path:CPU|ALU:alu|flag_module:flag_mod
 a => z.IN0
 a => z.IN0
 b => z.IN1
@@ -4484,7 +4468,7 @@ z[2] <= WideAnd0.DB_MAX_OUTPUT_PORT_TYPE
 z[3] <= result[21].DB_MAX_OUTPUT_PORT_TYPE
 
 
-|processor_memories|data_path:CPU|decode_unit:decode
+|top|data_path:CPU|decode_unit:decode
 op[0] => mem_op.IN0
 op[0] => imm_src[0].DATAIN
 op[0] => dataprocess_op.IN0
@@ -4517,25 +4501,14 @@ imm_src[0] <= op[0].DB_MAX_OUTPUT_PORT_TYPE
 imm_src[1] <= op[1].DB_MAX_OUTPUT_PORT_TYPE
 
 
-|processor_memories|data_path:CPU|decode_unit:decode|mux_2_x_1:mux_flags
+|top|data_path:CPU|decode_unit:decode|mux_2_x_1:mux_flags
 a[0] => z.DATAA
 b[0] => z.DATAB
 s => z.OUTPUTSELECT
 z[0] <= z.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|processor_memories|data_path:CPU|decode_unit:decode|mux_2_x_1:mux0
-a[0] => z.DATAA
-a[1] => z.DATAA
-b[0] => z.DATAB
-b[1] => z.DATAB
-s => z.OUTPUTSELECT
-s => z.OUTPUTSELECT
-z[0] <= z.DB_MAX_OUTPUT_PORT_TYPE
-z[1] <= z.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|processor_memories|data_path:CPU|decode_unit:decode|mux_2_x_1:mux1
+|top|data_path:CPU|decode_unit:decode|mux_2_x_1:mux0
 a[0] => z.DATAA
 a[1] => z.DATAA
 b[0] => z.DATAB
@@ -4546,7 +4519,18 @@ z[0] <= z.DB_MAX_OUTPUT_PORT_TYPE
 z[1] <= z.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|processor_memories|data_path:CPU|cond_logic:cl
+|top|data_path:CPU|decode_unit:decode|mux_2_x_1:mux1
+a[0] => z.DATAA
+a[1] => z.DATAA
+b[0] => z.DATAB
+b[1] => z.DATAB
+s => z.OUTPUTSELECT
+s => z.OUTPUTSELECT
+z[0] <= z.DB_MAX_OUTPUT_PORT_TYPE
+z[1] <= z.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|top|data_path:CPU|cond_logic:cl
 clk => clk.IN1
 reset => reset.IN1
 pc_src => pc_src_p.IN1
@@ -4561,7 +4545,7 @@ reg_write_p <= reg_write_p.DB_MAX_OUTPUT_PORT_TYPE
 mem_write_p <= mem_write_p.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|processor_memories|data_path:CPU|cond_logic:cl|flip_flop_D_neg:ff0
+|top|data_path:CPU|cond_logic:cl|flip_flop_D_neg:ff0
 clk => q[0]~reg0.CLK
 reset => q.OUTPUTSELECT
 enb => q.OUTPUTSELECT
@@ -4569,13 +4553,13 @@ d[0] => q.DATAB
 q[0] <= q[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|processor_memories|data_path:CPU|cond_logic:cl|cond_check:cc
+|top|data_path:CPU|cond_logic:cl|cond_check:cc
 cond => Decoder0.IN0
 zero_flag => cond_ex.DATAA
 cond_ex <= cond_ex.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|processor_memories|instruction_memory:im
+|top|instruction_memory:im
 a[0] => ~NO_FANOUT~
 a[1] => ~NO_FANOUT~
 a[2] => Mux0.IN134
@@ -4769,7 +4753,7 @@ rd[20] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
 rd[21] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|processor_memories|data_memory:dm
+|top|data_memory:dm
 clk => RAM.we_a.CLK
 clk => RAM.waddr_a[6].CLK
 clk => RAM.waddr_a[5].CLK
@@ -4907,7 +4891,177 @@ rd[20] <= RAM.DATAOUT20
 rd[21] <= RAM.DATAOUT21
 
 
-|processor_memories|RAM:image
+|top|flip_flop_D:ff0
+clk => q[0]~reg0.CLK
+reset => q.OUTPUTSELECT
+enb => q.OUTPUTSELECT
+d[0] => q.DATAB
+q[0] <= q[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|top|flip_flop_D:ff1
+clk => q[0]~reg0.CLK
+reset => q.OUTPUTSELECT
+enb => q.OUTPUTSELECT
+d[0] => q.DATAB
+q[0] <= q[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|top|io_deco:deco
+direction[0] => LessThan0.IN44
+direction[0] => Equal0.IN31
+direction[1] => LessThan0.IN43
+direction[1] => Equal0.IN30
+direction[2] => LessThan0.IN42
+direction[2] => Equal0.IN3
+direction[3] => LessThan0.IN41
+direction[3] => Equal0.IN29
+direction[4] => LessThan0.IN40
+direction[4] => Equal0.IN2
+direction[5] => LessThan0.IN39
+direction[5] => Equal0.IN1
+direction[6] => LessThan0.IN38
+direction[6] => Equal0.IN0
+direction[7] => LessThan0.IN37
+direction[7] => Equal0.IN28
+direction[8] => LessThan0.IN36
+direction[8] => Equal0.IN27
+direction[9] => LessThan0.IN35
+direction[9] => Equal0.IN26
+direction[10] => LessThan0.IN34
+direction[10] => Equal0.IN25
+direction[11] => LessThan0.IN33
+direction[11] => Equal0.IN24
+direction[12] => LessThan0.IN32
+direction[12] => Equal0.IN23
+direction[13] => LessThan0.IN31
+direction[13] => Equal0.IN22
+direction[14] => LessThan0.IN30
+direction[14] => Equal0.IN21
+direction[15] => LessThan0.IN29
+direction[15] => Equal0.IN20
+direction[16] => LessThan0.IN28
+direction[16] => Equal0.IN19
+direction[17] => LessThan0.IN27
+direction[17] => Equal0.IN18
+direction[18] => LessThan0.IN26
+direction[18] => Equal0.IN17
+direction[19] => LessThan0.IN25
+direction[19] => Equal0.IN16
+direction[20] => LessThan0.IN24
+direction[20] => Equal0.IN15
+direction[21] => LessThan0.IN23
+direction[21] => Equal0.IN14
+mem_enb <= mux_2_x_1:mux0.port3
+show_enb <= mux_2_x_1:mux1.port3
+
+
+|top|io_deco:deco|mux_2_x_1:mux0
+a[0] => z.DATAA
+b[0] => z.DATAB
+s => z.OUTPUTSELECT
+z[0] <= z.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|top|io_deco:deco|mux_2_x_1:mux1
+a[0] => z.DATAA
+b[0] => z.DATAB
+s => z.OUTPUTSELECT
+z[0] <= z.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|top|mux_2_x_1:mux0
+a[0] => z.DATAA
+a[1] => z.DATAA
+a[2] => z.DATAA
+a[3] => z.DATAA
+a[4] => z.DATAA
+a[5] => z.DATAA
+a[6] => z.DATAA
+a[7] => z.DATAA
+a[8] => z.DATAA
+a[9] => z.DATAA
+a[10] => z.DATAA
+a[11] => z.DATAA
+a[12] => z.DATAA
+a[13] => z.DATAA
+a[14] => z.DATAA
+a[15] => z.DATAA
+a[16] => z.DATAA
+a[17] => z.DATAA
+a[18] => z.DATAA
+a[19] => z.DATAA
+a[20] => z.DATAA
+a[21] => z.DATAA
+b[0] => z.DATAB
+b[1] => z.DATAB
+b[2] => z.DATAB
+b[3] => z.DATAB
+b[4] => z.DATAB
+b[5] => z.DATAB
+b[6] => z.DATAB
+b[7] => z.DATAB
+b[8] => z.DATAB
+b[9] => z.DATAB
+b[10] => z.DATAB
+b[11] => z.DATAB
+b[12] => z.DATAB
+b[13] => z.DATAB
+b[14] => z.DATAB
+b[15] => z.DATAB
+b[16] => z.DATAB
+b[17] => z.DATAB
+b[18] => z.DATAB
+b[19] => z.DATAB
+b[20] => z.DATAB
+b[21] => z.DATAB
+s => z.OUTPUTSELECT
+s => z.OUTPUTSELECT
+s => z.OUTPUTSELECT
+s => z.OUTPUTSELECT
+s => z.OUTPUTSELECT
+s => z.OUTPUTSELECT
+s => z.OUTPUTSELECT
+s => z.OUTPUTSELECT
+s => z.OUTPUTSELECT
+s => z.OUTPUTSELECT
+s => z.OUTPUTSELECT
+s => z.OUTPUTSELECT
+s => z.OUTPUTSELECT
+s => z.OUTPUTSELECT
+s => z.OUTPUTSELECT
+s => z.OUTPUTSELECT
+s => z.OUTPUTSELECT
+s => z.OUTPUTSELECT
+s => z.OUTPUTSELECT
+s => z.OUTPUTSELECT
+s => z.OUTPUTSELECT
+s => z.OUTPUTSELECT
+z[0] <= z.DB_MAX_OUTPUT_PORT_TYPE
+z[1] <= z.DB_MAX_OUTPUT_PORT_TYPE
+z[2] <= z.DB_MAX_OUTPUT_PORT_TYPE
+z[3] <= z.DB_MAX_OUTPUT_PORT_TYPE
+z[4] <= z.DB_MAX_OUTPUT_PORT_TYPE
+z[5] <= z.DB_MAX_OUTPUT_PORT_TYPE
+z[6] <= z.DB_MAX_OUTPUT_PORT_TYPE
+z[7] <= z.DB_MAX_OUTPUT_PORT_TYPE
+z[8] <= z.DB_MAX_OUTPUT_PORT_TYPE
+z[9] <= z.DB_MAX_OUTPUT_PORT_TYPE
+z[10] <= z.DB_MAX_OUTPUT_PORT_TYPE
+z[11] <= z.DB_MAX_OUTPUT_PORT_TYPE
+z[12] <= z.DB_MAX_OUTPUT_PORT_TYPE
+z[13] <= z.DB_MAX_OUTPUT_PORT_TYPE
+z[14] <= z.DB_MAX_OUTPUT_PORT_TYPE
+z[15] <= z.DB_MAX_OUTPUT_PORT_TYPE
+z[16] <= z.DB_MAX_OUTPUT_PORT_TYPE
+z[17] <= z.DB_MAX_OUTPUT_PORT_TYPE
+z[18] <= z.DB_MAX_OUTPUT_PORT_TYPE
+z[19] <= z.DB_MAX_OUTPUT_PORT_TYPE
+z[20] <= z.DB_MAX_OUTPUT_PORT_TYPE
+z[21] <= z.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|top|RAM:ram
 address[0] => address[0].IN1
 address[1] => address[1].IN1
 address[2] => address[2].IN1
@@ -4948,7 +5102,7 @@ q[6] <= altsyncram:altsyncram_component.q_a
 q[7] <= altsyncram:altsyncram_component.q_a
 
 
-|processor_memories|RAM:image|altsyncram:altsyncram_component
+|top|RAM:ram|altsyncram:altsyncram_component
 wren_a => altsyncram_62v1:auto_generated.wren_a
 rden_a => altsyncram_62v1:auto_generated.rden_a
 wren_b => ~NO_FANOUT~
@@ -5008,7 +5162,7 @@ eccstatus[1] <= <GND>
 eccstatus[2] <= <GND>
 
 
-|processor_memories|RAM:image|altsyncram:altsyncram_component|altsyncram_62v1:auto_generated
+|top|RAM:ram|altsyncram:altsyncram_component|altsyncram_62v1:auto_generated
 address_a[0] => ram_block1a0.PORTAADDR
 address_a[0] => ram_block1a1.PORTAADDR
 address_a[0] => ram_block1a2.PORTAADDR
@@ -9914,7 +10068,7 @@ wren_a => decode_3na:decode3.enable
 wren_a => _.IN0
 
 
-|processor_memories|RAM:image|altsyncram:altsyncram_component|altsyncram_62v1:auto_generated|decode_3na:decode3
+|top|RAM:ram|altsyncram:altsyncram_component|altsyncram_62v1:auto_generated|decode_3na:decode3
 data[0] => w_anode6967w[1].IN0
 data[0] => w_anode6984w[1].IN1
 data[0] => w_anode6994w[1].IN0
@@ -10179,7 +10333,7 @@ eq[36] <= w_anode7387w[3].DB_MAX_OUTPUT_PORT_TYPE
 eq[37] <= w_anode7397w[3].DB_MAX_OUTPUT_PORT_TYPE
 
 
-|processor_memories|RAM:image|altsyncram:altsyncram_component|altsyncram_62v1:auto_generated|decode_3na:rden_decode
+|top|RAM:ram|altsyncram:altsyncram_component|altsyncram_62v1:auto_generated|decode_3na:rden_decode
 data[0] => w_anode6967w[1].IN0
 data[0] => w_anode6984w[1].IN1
 data[0] => w_anode6994w[1].IN0
@@ -10444,7 +10598,7 @@ eq[36] <= w_anode7387w[3].DB_MAX_OUTPUT_PORT_TYPE
 eq[37] <= w_anode7397w[3].DB_MAX_OUTPUT_PORT_TYPE
 
 
-|processor_memories|RAM:image|altsyncram:altsyncram_component|altsyncram_62v1:auto_generated|mux_jhb:mux2
+|top|RAM:ram|altsyncram:altsyncram_component|altsyncram_62v1:auto_generated|mux_jhb:mux2
 data[0] => l1_w0_n0_mux_dataout.IN1
 data[1] => l1_w1_n0_mux_dataout.IN1
 data[2] => l1_w2_n0_mux_dataout.IN1
@@ -11767,70 +11921,160 @@ sel[5] => l6_w7_n0_mux_dataout.IN0
 sel[5] => _.IN0
 
 
-|processor_memories|io_deco:deco
-direction[0] => LessThan0.IN44
-direction[0] => LessThan1.IN44
-direction[1] => LessThan0.IN43
-direction[1] => LessThan1.IN43
-direction[2] => LessThan0.IN42
-direction[2] => LessThan1.IN42
-direction[3] => LessThan0.IN41
-direction[3] => LessThan1.IN41
-direction[4] => LessThan0.IN40
-direction[4] => LessThan1.IN40
-direction[5] => LessThan0.IN39
-direction[5] => LessThan1.IN39
-direction[6] => LessThan0.IN38
-direction[6] => LessThan1.IN38
-direction[7] => LessThan0.IN37
-direction[7] => LessThan1.IN37
-direction[8] => LessThan0.IN36
-direction[8] => LessThan1.IN36
-direction[9] => LessThan0.IN35
-direction[9] => LessThan1.IN35
-direction[10] => LessThan0.IN34
-direction[10] => LessThan1.IN34
-direction[11] => LessThan0.IN33
-direction[11] => LessThan1.IN33
-direction[12] => LessThan0.IN32
-direction[12] => LessThan1.IN32
-direction[13] => LessThan0.IN31
-direction[13] => LessThan1.IN31
-direction[14] => LessThan0.IN30
-direction[14] => LessThan1.IN30
-direction[15] => LessThan0.IN29
-direction[15] => LessThan1.IN29
-direction[16] => LessThan0.IN28
-direction[16] => LessThan1.IN28
-direction[17] => LessThan0.IN27
-direction[17] => LessThan1.IN27
-direction[18] => LessThan0.IN26
-direction[18] => LessThan1.IN26
-direction[19] => LessThan0.IN25
-direction[19] => LessThan1.IN25
-direction[20] => LessThan0.IN24
-direction[20] => LessThan1.IN24
-direction[21] => LessThan0.IN23
-direction[21] => LessThan1.IN23
-mem_enb <= mux_2_x_1:mux0.port3
-img_enb <= mux_2_x_1:mux1.port3
+|top|VGA:vga
+clk => clk.IN1
+reset => d_reset.IN1
+vga_hs <= ControllerSync:VGASync.port2
+vga_vs <= ControllerSync:VGASync.port3
+vga_blank_n <= ControllerSync:VGASync.port6
+clockVGA <= clockVGA.DB_MAX_OUTPUT_PORT_TYPE
+out[0] <= vga_mem_map:map.port2
+out[1] <= vga_mem_map:map.port2
+out[2] <= vga_mem_map:map.port2
+out[3] <= vga_mem_map:map.port2
+out[4] <= vga_mem_map:map.port2
+out[5] <= vga_mem_map:map.port2
+out[6] <= vga_mem_map:map.port2
+out[7] <= vga_mem_map:map.port2
+out[8] <= vga_mem_map:map.port2
+out[9] <= vga_mem_map:map.port2
+out[10] <= vga_mem_map:map.port2
+out[11] <= vga_mem_map:map.port2
+out[12] <= vga_mem_map:map.port2
+out[13] <= vga_mem_map:map.port2
+out[14] <= vga_mem_map:map.port2
+out[15] <= vga_mem_map:map.port2
+out[16] <= vga_mem_map:map.port2
+out[17] <= vga_mem_map:map.port2
+out[18] <= vga_mem_map:map.port2
 
 
-|processor_memories|io_deco:deco|mux_2_x_1:mux0
-a[0] => z.DATAA
-b[0] => z.DATAB
-s => z.OUTPUTSELECT
-z[0] <= z.DB_MAX_OUTPUT_PORT_TYPE
+|top|VGA:vga|ClkDivisor:VGAClkDivisor
+clock => counter.CLK
+clock => clk25Mhz~reg0.CLK
+clk25Mhz <= clk25Mhz~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|processor_memories|io_deco:deco|mux_2_x_1:mux1
-a[0] => z.DATAA
-b[0] => z.DATAB
-s => z.OUTPUTSELECT
-z[0] <= z.DB_MAX_OUTPUT_PORT_TYPE
+|top|VGA:vga|ControllerSync:VGASync
+clock => vCounter[0]~reg0.CLK
+clock => vCounter[1]~reg0.CLK
+clock => vCounter[2]~reg0.CLK
+clock => vCounter[3]~reg0.CLK
+clock => vCounter[4]~reg0.CLK
+clock => vCounter[5]~reg0.CLK
+clock => vCounter[6]~reg0.CLK
+clock => vCounter[7]~reg0.CLK
+clock => vCounter[8]~reg0.CLK
+clock => vCounter[9]~reg0.CLK
+clock => hCounter[0]~reg0.CLK
+clock => hCounter[1]~reg0.CLK
+clock => hCounter[2]~reg0.CLK
+clock => hCounter[3]~reg0.CLK
+clock => hCounter[4]~reg0.CLK
+clock => hCounter[5]~reg0.CLK
+clock => hCounter[6]~reg0.CLK
+clock => hCounter[7]~reg0.CLK
+clock => hCounter[8]~reg0.CLK
+clock => hCounter[9]~reg0.CLK
+reset => vCounter[0]~reg0.ACLR
+reset => vCounter[1]~reg0.ACLR
+reset => vCounter[2]~reg0.ACLR
+reset => vCounter[3]~reg0.ACLR
+reset => vCounter[4]~reg0.ACLR
+reset => vCounter[5]~reg0.ACLR
+reset => vCounter[6]~reg0.ACLR
+reset => vCounter[7]~reg0.ACLR
+reset => vCounter[8]~reg0.ACLR
+reset => vCounter[9]~reg0.ACLR
+reset => hCounter[0]~reg0.ACLR
+reset => hCounter[1]~reg0.ACLR
+reset => hCounter[2]~reg0.ACLR
+reset => hCounter[3]~reg0.ACLR
+reset => hCounter[4]~reg0.ACLR
+reset => hCounter[5]~reg0.ACLR
+reset => hCounter[6]~reg0.ACLR
+reset => hCounter[7]~reg0.ACLR
+reset => hCounter[8]~reg0.ACLR
+reset => hCounter[9]~reg0.ACLR
+hSync <= hSync.DB_MAX_OUTPUT_PORT_TYPE
+vSync <= vSync.DB_MAX_OUTPUT_PORT_TYPE
+hCounter[0] <= hCounter[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+hCounter[1] <= hCounter[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+hCounter[2] <= hCounter[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+hCounter[3] <= hCounter[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+hCounter[4] <= hCounter[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+hCounter[5] <= hCounter[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+hCounter[6] <= hCounter[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+hCounter[7] <= hCounter[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+hCounter[8] <= hCounter[8]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+hCounter[9] <= hCounter[9]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+vCounter[0] <= vCounter[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+vCounter[1] <= vCounter[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+vCounter[2] <= vCounter[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+vCounter[3] <= vCounter[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+vCounter[4] <= vCounter[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+vCounter[5] <= vCounter[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+vCounter[6] <= vCounter[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+vCounter[7] <= vCounter[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+vCounter[8] <= vCounter[8]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+vCounter[9] <= vCounter[9]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+vidOn <= vidOn.DB_MAX_OUTPUT_PORT_TYPE
+refreshDraw <= refreshDraw.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|processor_memories|mux_2_x_1:mux0
+|top|VGA:vga|vga_mem_map:map
+hCounter[0] => Add2.IN38
+hCounter[1] => Add2.IN37
+hCounter[2] => Add2.IN36
+hCounter[3] => Add2.IN35
+hCounter[4] => Add2.IN34
+hCounter[5] => Add2.IN33
+hCounter[6] => Add2.IN32
+hCounter[7] => Add1.IN22
+hCounter[8] => Add1.IN21
+hCounter[9] => Add1.IN20
+vCounter[0] => Add0.IN20
+vCounter[0] => Add1.IN24
+vCounter[1] => Add0.IN19
+vCounter[1] => Add1.IN23
+vCounter[2] => Add0.IN17
+vCounter[2] => Add0.IN18
+vCounter[3] => Add0.IN15
+vCounter[3] => Add0.IN16
+vCounter[4] => Add0.IN13
+vCounter[4] => Add0.IN14
+vCounter[5] => Add0.IN11
+vCounter[5] => Add0.IN12
+vCounter[6] => Add0.IN9
+vCounter[6] => Add0.IN10
+vCounter[7] => Add0.IN7
+vCounter[7] => Add0.IN8
+vCounter[8] => Add0.IN5
+vCounter[8] => Add0.IN6
+vCounter[9] => Add0.IN3
+vCounter[9] => Add0.IN4
+out[0] <= Add2.DB_MAX_OUTPUT_PORT_TYPE
+out[1] <= Add2.DB_MAX_OUTPUT_PORT_TYPE
+out[2] <= Add2.DB_MAX_OUTPUT_PORT_TYPE
+out[3] <= Add2.DB_MAX_OUTPUT_PORT_TYPE
+out[4] <= Add2.DB_MAX_OUTPUT_PORT_TYPE
+out[5] <= Add2.DB_MAX_OUTPUT_PORT_TYPE
+out[6] <= Add2.DB_MAX_OUTPUT_PORT_TYPE
+out[7] <= Add2.DB_MAX_OUTPUT_PORT_TYPE
+out[8] <= Add2.DB_MAX_OUTPUT_PORT_TYPE
+out[9] <= Add2.DB_MAX_OUTPUT_PORT_TYPE
+out[10] <= Add2.DB_MAX_OUTPUT_PORT_TYPE
+out[11] <= Add2.DB_MAX_OUTPUT_PORT_TYPE
+out[12] <= Add2.DB_MAX_OUTPUT_PORT_TYPE
+out[13] <= Add2.DB_MAX_OUTPUT_PORT_TYPE
+out[14] <= Add2.DB_MAX_OUTPUT_PORT_TYPE
+out[15] <= Add2.DB_MAX_OUTPUT_PORT_TYPE
+out[16] <= Add2.DB_MAX_OUTPUT_PORT_TYPE
+out[17] <= Add2.DB_MAX_OUTPUT_PORT_TYPE
+out[18] <= Add2.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|top|mux_2_x_1:mux1
 a[0] => z.DATAA
 a[1] => z.DATAA
 a[2] => z.DATAA
@@ -11839,20 +12083,6 @@ a[4] => z.DATAA
 a[5] => z.DATAA
 a[6] => z.DATAA
 a[7] => z.DATAA
-a[8] => z.DATAA
-a[9] => z.DATAA
-a[10] => z.DATAA
-a[11] => z.DATAA
-a[12] => z.DATAA
-a[13] => z.DATAA
-a[14] => z.DATAA
-a[15] => z.DATAA
-a[16] => z.DATAA
-a[17] => z.DATAA
-a[18] => z.DATAA
-a[19] => z.DATAA
-a[20] => z.DATAA
-a[21] => z.DATAA
 b[0] => z.DATAB
 b[1] => z.DATAB
 b[2] => z.DATAB
@@ -11861,34 +12091,6 @@ b[4] => z.DATAB
 b[5] => z.DATAB
 b[6] => z.DATAB
 b[7] => z.DATAB
-b[8] => z.DATAB
-b[9] => z.DATAB
-b[10] => z.DATAB
-b[11] => z.DATAB
-b[12] => z.DATAB
-b[13] => z.DATAB
-b[14] => z.DATAB
-b[15] => z.DATAB
-b[16] => z.DATAB
-b[17] => z.DATAB
-b[18] => z.DATAB
-b[19] => z.DATAB
-b[20] => z.DATAB
-b[21] => z.DATAB
-s => z.OUTPUTSELECT
-s => z.OUTPUTSELECT
-s => z.OUTPUTSELECT
-s => z.OUTPUTSELECT
-s => z.OUTPUTSELECT
-s => z.OUTPUTSELECT
-s => z.OUTPUTSELECT
-s => z.OUTPUTSELECT
-s => z.OUTPUTSELECT
-s => z.OUTPUTSELECT
-s => z.OUTPUTSELECT
-s => z.OUTPUTSELECT
-s => z.OUTPUTSELECT
-s => z.OUTPUTSELECT
 s => z.OUTPUTSELECT
 s => z.OUTPUTSELECT
 s => z.OUTPUTSELECT
@@ -11905,19 +12107,5 @@ z[4] <= z.DB_MAX_OUTPUT_PORT_TYPE
 z[5] <= z.DB_MAX_OUTPUT_PORT_TYPE
 z[6] <= z.DB_MAX_OUTPUT_PORT_TYPE
 z[7] <= z.DB_MAX_OUTPUT_PORT_TYPE
-z[8] <= z.DB_MAX_OUTPUT_PORT_TYPE
-z[9] <= z.DB_MAX_OUTPUT_PORT_TYPE
-z[10] <= z.DB_MAX_OUTPUT_PORT_TYPE
-z[11] <= z.DB_MAX_OUTPUT_PORT_TYPE
-z[12] <= z.DB_MAX_OUTPUT_PORT_TYPE
-z[13] <= z.DB_MAX_OUTPUT_PORT_TYPE
-z[14] <= z.DB_MAX_OUTPUT_PORT_TYPE
-z[15] <= z.DB_MAX_OUTPUT_PORT_TYPE
-z[16] <= z.DB_MAX_OUTPUT_PORT_TYPE
-z[17] <= z.DB_MAX_OUTPUT_PORT_TYPE
-z[18] <= z.DB_MAX_OUTPUT_PORT_TYPE
-z[19] <= z.DB_MAX_OUTPUT_PORT_TYPE
-z[20] <= z.DB_MAX_OUTPUT_PORT_TYPE
-z[21] <= z.DB_MAX_OUTPUT_PORT_TYPE
 
 

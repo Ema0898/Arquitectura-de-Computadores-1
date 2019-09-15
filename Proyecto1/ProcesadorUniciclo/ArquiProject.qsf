@@ -38,7 +38,7 @@
 
 set_global_assignment -name FAMILY "Cyclone V"
 set_global_assignment -name DEVICE 5CSEMA5F31C6
-set_global_assignment -name TOP_LEVEL_ENTITY processor_memories
+set_global_assignment -name TOP_LEVEL_ENTITY top
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION 18.1.0
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "09:58:05  AUGUST 28, 2019"
 set_global_assignment -name LAST_QUARTUS_VERSION "18.1.0 Lite Edition"
@@ -54,6 +54,40 @@ set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_location_assignment PIN_AF14 -to clk
+set_location_assignment PIN_AA15 -to btn
+set_location_assignment PIN_A11 -to clockVGA
+set_location_assignment PIN_F10 -to vga_blank_n
+set_location_assignment PIN_B11 -to vga_hs
+set_location_assignment PIN_D11 -to vga_vs
+set_location_assignment PIN_AA14 -to reset
+set_location_assignment PIN_J14 -to blue[7]
+set_location_assignment PIN_G15 -to blue[6]
+set_location_assignment PIN_H14 -to blue[4]
+set_location_assignment PIN_F15 -to blue[5]
+set_location_assignment PIN_F14 -to blue[3]
+set_location_assignment PIN_H13 -to blue[2]
+set_location_assignment PIN_G13 -to blue[1]
+set_location_assignment PIN_B13 -to blue[0]
+set_location_assignment PIN_E11 -to green[7]
+set_location_assignment PIN_F11 -to green[6]
+set_location_assignment PIN_G12 -to green[5]
+set_location_assignment PIN_G11 -to green[4]
+set_location_assignment PIN_G10 -to green[3]
+set_location_assignment PIN_H12 -to green[2]
+set_location_assignment PIN_J10 -to green[1]
+set_location_assignment PIN_J9 -to green[0]
+set_location_assignment PIN_F13 -to red[7]
+set_location_assignment PIN_E12 -to red[6]
+set_location_assignment PIN_D12 -to red[5]
+set_location_assignment PIN_C12 -to red[4]
+set_location_assignment PIN_B12 -to red[3]
+set_location_assignment PIN_E13 -to red[2]
+set_location_assignment PIN_C13 -to red[1]
+set_location_assignment PIN_A13 -to red[0]
+set_global_assignment -name SYSTEMVERILOG_FILE src/VGA/VGA.sv
+set_global_assignment -name SYSTEMVERILOG_FILE src/VGA/FrequencyDividers/ClkDivisor.sv
+set_global_assignment -name SYSTEMVERILOG_FILE src/VGA/Controller/ControllerSync.sv
 set_global_assignment -name VERILOG_FILE src/Memories/RAM/RAM.v
 set_global_assignment -name SYSTEMVERILOG_FILE src/Processor/ExtendUnit/extend.sv
 set_global_assignment -name SYSTEMVERILOG_FILE src/Processor/RegisterFile/register_file.sv
@@ -83,4 +117,6 @@ set_global_assignment -name SYSTEMVERILOG_FILE src/test.sv
 set_global_assignment -name SYSTEMVERILOG_FILE src/Memories/image_memory.sv
 set_global_assignment -name SYSTEMVERILOG_FILE src/IO/io_deco.sv
 set_global_assignment -name SYSTEMVERILOG_FILE src/VGA/vga_mem_map.sv
+set_global_assignment -name SYSTEMVERILOG_FILE src/top.sv
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
+set_global_assignment -name SYSTEMVERILOG_FILE src/IO/deco_buttons.sv

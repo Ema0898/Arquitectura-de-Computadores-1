@@ -1,3 +1,4 @@
+`timescale 1 ps / 1 ps
 module processor_test();
 
   logic clk, reset, mem_write;
@@ -6,7 +7,7 @@ module processor_test();
   processor_memories DUT(clk, reset, mem_write, write_data, data_adr);
   
   initial begin
-		reset <= 0; #5; reset <= 1; #5 reset <= 0;
+		reset <= 1; #5; reset <= 0; #5 reset <= 0;
 	end
 	
 	// generate clock to sequence tests
