@@ -71,6 +71,7 @@ llenarPixelFinal:
   STORE r5, [r4]
   SUM r4, r4, 1
   SUM r7, r7, 1
+  SUM r3, r3, 2
   MOVER r6, 0
 
 llenarPixelInicial:
@@ -133,6 +134,7 @@ convolucion:
   MUL r10, r0, r9
   SUM r1, r1, r10
   STORE r10, [r4]
+  SUM r3, r3, 1
   SUM r4, r4, 1
   SUM r6, r6, 1
   SALTO procesarImagenIni
