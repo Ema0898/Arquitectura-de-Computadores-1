@@ -1,5 +1,5 @@
 module fetch(input logic pc_src_w, branch_taken_e, stallF,
-				 input logic clk, rst,
+				 input logic clk, reset,
 				 input logic [21:0] result_fetch_in,
 				 input logic [21:0] alu_result_fetch_in,
 				 output logic [21:0] instruction_fetch_out, pc_plus_8_out);
@@ -12,7 +12,7 @@ module fetch(input logic pc_src_w, branch_taken_e, stallF,
 	mux_2_x_1 #(22) mux0(pc_plus_4_fetch, result_fetch_in, pc_src_w, pc_mux);
 	mux_2_x_1 #(22) mux1(pc_mux, alu_result_fetch_in, branch_taken_e, pc_mux2);
 	
-	flip_flop_D #(22) ff(clk, rst, ~stallF, pc_mux2, pc); 	
+	flip_flop_D #(22) ff(clk, reset, ~stallF, pc_mux2, pc); 	
 	
 	instruction_memory im(pc, instruction_fetch_out);
 	

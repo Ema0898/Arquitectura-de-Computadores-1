@@ -3,10 +3,14 @@ module data_memory(input logic clk, we,
 						 output logic [21:0] rd);
 						 
   logic [21:0] RAM [127:0];
-  assign rd = RAM[a[21:2]]; // word aligned
+  //assign rd = RAM[a]; // word aligned
     
-  always_ff @(negedge clk)
-    if (we) RAM[a[21:2]] <= wd;
+  always_ff @(posedge clk)
+    if (we) RAM[a] <= wd;
+	 
+  always_ff @(posedge clk)
+    if (!we) rd <= RAM[a]; 
+
 		
 	
 endmodule 

@@ -1,16 +1,6 @@
-module vga_mem_map(input logic clk, rst, 
-						  input logic [9:0] hCounter, vCounter, 
-						  output logic [18:0] out);
-						  
-	logic v_enb, h_enb;
-	logic [9:0] ff_v_out, ff_h_out;
+module vga_mem_map( input logic [9:0] hCounter, vCounter, 
+						  output logic [17:0] out);						  
 	
-	assign v_enb = (vCounter < 479);
-	assign h_enb = (hCounter < 639);
-	
-	flip_flop_D #(10) ff_h(clk, rst, h_enb, hCounter, ff_h_out);
-	flip_flop_D #(10) ff_v(clk, rst, v_enb, vCounter, ff_v_out);
-	
-	assign out = ff_h_out + (10'b1010000000 * ff_v_out) + 1'b1; // hCounter + (640 * vCounter) + 1
+	assign out = hCounter[8:0] + (9'b110010000 * vCounter[8:0]) + 1'b1; // hCounter + (400 * vCounter) + 1
 
 endmodule 

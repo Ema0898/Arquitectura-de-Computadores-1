@@ -6,7 +6,7 @@ module execute(input logic clk, rst,
 					input logic [21:0] rd1_execute_in, rd2_execute_in, extened_execute_in,
 					input logic [21:0] result_write_back, alu_result_memory,
 					input logic [1:0] forwardAE, forwardBE,
-					output logic [21:0] alu_result_execute_out, 
+					output logic [21:0] alu_result_execute_out, write_data,
 					output logic pc_src_m, reg_write_m, mem_write_m,
 					output logic flag_zero_p, branch_taken_e);
 
@@ -26,6 +26,7 @@ module execute(input logic clk, rst,
 				     branch_e, pc_src_m, reg_write_m, mem_write_m, branch_taken_e);	
 	
 	assign flag_zero_p = alu_flags[2];
+	assign write_data = mux1_out;
 
 	//assign write_data_execute_out = rd3_execute_in;
 	//assign write_register_execute_out = write_register_execute_in;

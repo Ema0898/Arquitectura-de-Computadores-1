@@ -15,7 +15,7 @@
 
 FUNCTION RAM 
 (
-	address[18..0],
+	address[17..0],
 	clock,
 	data[7..0],
 	rden,

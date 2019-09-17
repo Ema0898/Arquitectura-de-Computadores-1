@@ -35,17 +35,50 @@ module instruction_memory(input logic [21:0] a,
   assign memory[5] = 22'b1011101001100010000000; // STORE R1, [R3]
   assign memory[6] = 22'b1011101010000100000000; // STORE R2, [R4]
   assign memory[7] = 22'b1011111001101010000000; // LOAD R5, [R3]
-  assign memory[8] = 22'b1011111010001100000000; // LOAD R6, [R4]
-  
+ // assign memory[8] = 22'b1011111010001100000000; // LOAD R6, [R4]
+ 
   
   /*assign memory[0] = 22'b1001101000000110000000; // MOVER R3, #0 : Init
-  assign memory[1] = 22'b1001101000000010000000; // MOVER R1, #0
+  assign memory[1] = 22'b1001101000000010000001; // MOVER R1, #0
   assign memory[2] = 22'b1001101000000100000001; // MOVER R2, #1
   assign memory[3] = 22'b1000110000100000010000; // COMP R1, R2
   assign memory[4] = 22'b0101111111111111101000; // SALTOIG Init
   assign memory[5] = 22'b1000001000100010000100; // SUM R1, R1, #4
   assign memory[6] = 22'b1000001001000100000101; // SUM R2, R2, #5 : Hola
   assign memory[7] = 22'b1000001000100010000111; // SUM R1, R1, #7 : Adios*/
+  
+  /*assign memory[0] = 22'b1001101000000000000000;
+  assign memory[1] = 22'b1001101000000000000000;
+  assign memory[2] = 22'b1001101000000011110100;
+  assign memory[3] = 22'b1011101000100000000000;
+  assign memory[4] = 22'b1001101000000001101110;
+  assign memory[5] = 22'b1011111000000010000000;
+  assign memory[6] = 22'b1000111000100000000001;
+  assign memory[7] = 22'b0100000000000000000000;
+  assign memory[8] = 22'b1101111111111111101000;
+  assign memory[9] = 22'b1001101000000000000001;
+  assign memory[10] = 22'b1001101000000011110100;
+  assign memory[11] = 22'b1011101000100000000000;
+  assign memory[12] = 22'b1101111111111111011000;*/
+  
+  // test bench
+  /*assign memory[0] = 22'b1001101000000000000000;
+  assign memory[1] = 22'b1001101000000000000000;
+  assign memory[2] = 22'b1001101000000011110100;
+  assign memory[3] = 22'b1011101000100000000000;
+  assign memory[4] = 22'b1001101000000100000001;
+  assign memory[5] = 22'b1001101000000011101110;
+  assign memory[6] = 22'b1011101000100100000000;
+  assign memory[7] = 22'b1001101000000001101110;
+  assign memory[8] = 22'b1011111000000100000000;
+  assign memory[9] = 22'b1000111001000000000001;
+  assign memory[10] = 22'b0100000000000000000000;
+  assign memory[11] = 22'b1101111111111111101000;
+  assign memory[12] = 22'b1001101000000000000001;
+  assign memory[13] = 22'b1001101000000011110100;
+  assign memory[14] = 22'b1011101000100000000000;
+  assign memory[15] = 22'b1101111111111111011000;*/
+  
 	 
   assign rd = memory[a[21:2]]; // word aligned
 			  

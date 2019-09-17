@@ -12,6 +12,7 @@ module data_path(input clk, rst,
 	logic mem_reg, alu_src, reg_src, mov_src, no_write, flag_write;
 	logic [1:0] imm_src, alu_control;
 	logic [3:0] alu_flags;
+	logic branch_taken, branch_e, branch_taken2;
 					  
 	generic_adder #(22) adder1(pc, 22'b0000000000000000000100, 1'b0, pc_plus_4, carry_out);
    generic_adder #(22) adder2(pc_plus_4, 22'b0000000000000000000100, 1'b0, pc_plus_8, carry_out1);
@@ -36,12 +37,12 @@ module data_path(input clk, rst,
 	
 	// Unidad de decodificacion de instruccion
 	decode_unit decode(instruction[20:19], instruction[18:15], instruction[10:7], pc_src_previous, reg_write_previous, 
-							 mem_write_previous, mem_reg, alu_src, no_write, mov_src, reg_src, flag_write,
+							 mem_write_previous, mem_reg, alu_src, no_write, mov_src, reg_src, flag_write, branch_taken,
 							 alu_control, imm_src);
 							 
 	// Unidad de ejecucion condicional de instruccion
 	cond_logic cl(clk, rst, pc_src_previous, reg_write_previous, mem_write_previous, no_write, instruction[21], flag_write,
-					  alu_flags[2], pc_src, reg_write, mem_write);
+					  alu_flags[2], branch_e, pc_src, reg_write, mem_write, branch_taken2);
 							
 	assign write_data = rd3;
 	
