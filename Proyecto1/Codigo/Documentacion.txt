@@ -1,0 +1,10 @@
+r0 - contador | pieza kernel
+r1 - 400 | stackConvolution
+r2 - kernel
+r3 - imagen sin procesar
+r4 - imagen procesada
+r5 - 0 | offset
+r6 - Movimiento horizontal
+r7 - Movimiento vertical
+r9 - pixelActual
+r10 - convolution
