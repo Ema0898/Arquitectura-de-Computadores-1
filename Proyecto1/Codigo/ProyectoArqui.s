@@ -93,7 +93,7 @@ convolucion:
   MUL r10, r0, r9
   SUM r1, r1, r10
   SUM r5, r5, 1
-  LOAD r0, [r2, 1]
+  LOAD r0, [r2, 2]
   LOAD r9, [r3, r5]
   MUL r10, r0, r9
   SUM r1, r1, r10
@@ -101,36 +101,36 @@ convolucion:
   SUM r5, r5, 100
   SUM r5, r5, 100
   SUM r5, r5, 98
-  LOAD r0, [r2]
-  LOAD r9, [r3]
+  LOAD r0, [r2, 3]
+  LOAD r9, [r3, r5]
   MUL r10, r0, r9
   SUM r1, r1, r10
   SUM r5, r5, 1
-  LOAD r0, [r2]
-  LOAD r9, [r3]
+  LOAD r0, [r2, 4]
+  LOAD r9, [r3, r5]
   MUL r10, r0, r9
   SUM r1, r1, r10
   SUM r5, r5, 1
-  LOAD r0, [r2]
-  LOAD r9, [r3]
+  LOAD r0, [r2, 5]
+  LOAD r9, [r3, r5]
   MUL r10, r0, r9
   SUM r1, r1, r10
   SUM r5, r5, 100
   SUM r5, r5, 100
   SUM r5, r5, 100
   SUM r5, r5, 98
-  LOAD r0, [r2]
-  LOAD r9, [r3]
+  LOAD r0, [r2, 6]
+  LOAD r9, [r3, r5]
   MUL r10, r0, r9
   SUM r1, r1, r10
   SUM r5, r5, 1
-  LOAD r0, [r2]
-  LOAD r9, [r3]
+  LOAD r0, [r2, 7]
+  LOAD r9, [r3, r5]
   MUL r10, r0, r9
   SUM r1, r1, r10
   SUM r5, r5, 1
-  LOAD r0, [r2]
-  LOAD r9, [r3]
+  LOAD r0, [r2, 8]
+  LOAD r9, [r3, r5]
   MUL r10, r0, r9
   SUM r1, r1, r10
   STORE r10, [r4]
