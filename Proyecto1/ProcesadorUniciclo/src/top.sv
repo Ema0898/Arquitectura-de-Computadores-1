@@ -3,7 +3,7 @@ module top(input logic clk, reset, original,
 			  output logic vga_hs, vga_vs, vga_blank_n, clockVGA,
 			  output logic [7:0] red, green, blue);
 			  
-  logic [21:0] pc, instr, read_data, data_mem_out, data_adr, write_data;  
+  logic [23:0] pc, instr, read_data, data_mem_out, data_adr, write_data;  
   logic [7:0] original_image_mem_out, proccess_image_mem_out, RGB_out1, RGB_out2, image_mem_out, RGB_out3;
   logic [17:0] original_image_mem_address, proccess_image_mem_address_previous, proccess_image_mem_address;
   logic [17:0] out, original_image_mem_address_previous;
@@ -11,7 +11,7 @@ module top(input logic clk, reset, original,
   logic btn_read, counter_out;
   logic [2:0] btn_in;
   logic [1:0] btn_selecc;
-  logic [21:0] mux1_out, mux2_out;
+  logic [23:0] mux1_out, mux2_out;
   logic clk25MHz;
   
   ClkDivisor divisor(clk, clk25MHz);
@@ -37,8 +37,8 @@ module top(input logic clk, reset, original,
   flip_flop_D #(1) ff2(clk, ~reset, mem_read, ~btn[2], btn_in[2]); 
  
   mux_4_x_1 #(1) mux0(btn_in[0], btn_in[1], btn_in[2], 1'b0, btn_selecc, btn_read);   
-  mux_2_x_1 #(22) mux1({ 21'b0, btn_read }, data_mem_out, mem_enb & mem_read, mux1_out);
-  mux_2_x_1 #(22) mux2(mux1_out, { 14'b0, original_image_mem_out }, mem_read & original_enb, read_data);
+  mux_2_x_1 #(24) mux1({ 23'b0, btn_read }, data_mem_out, mem_enb & mem_read, mux1_out);
+  mux_2_x_1 #(24) mux2(mux1_out, { 16'b0, original_image_mem_out }, mem_read & original_enb, read_data);
   //mux_2_x_1 #(22) mux2(mux1_out, { 14'b0, image_mem_out }, mem_read & original_enb, mux2_out);
   //mux_2_x_1 #(22) mux3(mux2_out, { 14'b0, proccess_image_mem_out }, mem_read & process_enb, read_data); 
 

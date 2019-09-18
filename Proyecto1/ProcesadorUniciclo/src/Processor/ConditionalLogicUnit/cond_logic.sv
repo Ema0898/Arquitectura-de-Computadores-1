@@ -1,16 +1,17 @@
 module cond_logic(input logic clk, reset,
-							input logic pc_src, reg_write, mem_write, no_write, cond,
+							input logic pc_src, reg_write, mem_write, no_write, 
+							input logic [2:0] cond,
 							input logic flag_write,
-							input logic alu_flag_zero,
+							input logic [3:0] alu_flags,
 							output logic pc_src_p, reg_write_p, mem_write_p);
 							
   logic flag_write_p;
-  logic flag_zero;
+  logic [3:0] flags;
   logic cond_ex;
   
-  flip_flop_D_neg #(1) ff0(clk, reset, flag_write_p, alu_flag_zero, flag_zero);
+  flip_flop_D_neg #(4) ff0(clk, reset, flag_write_p, alu_flags, flags);
   
-  cond_check cc(cond, flag_zero, cond_ex);
+  cond_check cc(cond, flags, cond_ex);
   
   assign flag_write_p = flag_write & cond_ex;
   assign reg_write_p = reg_write & cond_ex & ~no_write;

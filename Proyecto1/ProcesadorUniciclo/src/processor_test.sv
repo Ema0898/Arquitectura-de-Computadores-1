@@ -2,7 +2,7 @@
 module processor_test();
 
   logic clk, reset, mem_write, vga;
-  logic [21:0] write_data, data_adr;
+  logic [23:0] write_data, data_adr;
   
   processor_memories DUT(clk, reset, mem_write, vga, write_data, data_adr);
   

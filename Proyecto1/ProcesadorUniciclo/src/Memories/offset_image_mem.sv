@@ -1,8 +1,8 @@
-module offset_image_mem(input logic [21:0] address, 
+module offset_image_mem(input logic [23:0] address, 
 								output logic [17:0] original_image_adress, process_image_address);
 								
 								
-	logic [21:0] sub1, sub2;
+	logic [23:0] sub1, sub2;
 	
 	assign sub1 = address - 7'd120;
 	assign sub2 = address - 18'd160120;

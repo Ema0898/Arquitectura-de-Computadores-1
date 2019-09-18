@@ -6,7 +6,7 @@ JedecChain;
 	P ActionCode(Ign)
 		Device PartName(SOCVHPS) MfrSpec(OpMask(0));
 	P ActionCode(Cfg)
-		Device PartName(5CSEMA5F31) Path("D:/uGit/Arquitectura-de-Computadores-1/Proyecto1/ProcesadorUniciclo/output_files/") File("ArquiProject.sof") MfrSpec(OpMask(1));
+		Device PartName(5CSEMA5F31) Path("/home/ema0898/Programas/Quartus/ArquiProjectRespaldo/output_files/") File("ArquiProject.sof") MfrSpec(OpMask(1));
 
 ChainEnd;
 
