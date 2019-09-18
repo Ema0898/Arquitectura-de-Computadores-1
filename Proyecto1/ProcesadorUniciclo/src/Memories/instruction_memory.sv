@@ -1,16 +1,19 @@
-module instruction_memory(input logic [21:0] a,
-								  output logic [21:0] rd);								  
+module instruction_memory(input logic [23:0] a,
+								  output logic [23:0] rd);								  
 								  
-  logic [21:0] memory [129];
+  logic [23:0] memory [140];
 	initial
 		$readmemb("instructions.dat", memory);  
   
-  /*assign memory[0] = 22'b1001101000000010001000; // MOVER R1, #8
-  assign memory[1] = 22'b1001101000000010001000; // MOVER R1, #8
-  assign memory[2] = 22'b1001101000000100001001; // MOVER R2, #9
-  assign memory[3] = 22'b1000000000100000010000; // SUM R0, R1, R2
-  assign memory[4] = 22'b1000110000100000010000; // COMP R1, R2
-  assign memory[5] = 22'b1000000000000000010000; // SUM R0, R0, R2*/
+  /*assign memory[0] = 24'b111001101000000010001000; // MOVER R1, #8
+  assign memory[1] = 24'b111001101000000010001000; // MOVER R1, #9
+  assign memory[2] = 24'b111001101000000100001000; // MOVER R2, #8
+  assign memory[3] = 24'b111001101000001000000010; // MOVER R4, #1
+  assign memory[4] = 24'b111011111010001010000000; // LOAD R5, [R4]
+  assign memory[5] = 24'b111001001010101010000001; // MUL R5, R5, 1
+  assign memory[6] = 24'b111000111010100000000000; // COMP R1, 0
+  assign memory[7] = 24'b001001101000000010001010; // MOVNEG R1, #10  
+  assign memory[8] = 24'b111000000000100000010000; // SUM R0, R1, R2*/
   
   /*assign memory[0] = 22'b1001101000000010001000; // MOVER R1, #8
   assign memory[1] = 22'b1001101000000010001000; // MOVER R1, #8
@@ -29,25 +32,23 @@ module instruction_memory(input logic [21:0] a,
   assign memory[14] = 22'b0000001011110000000010; // SUMIG R8, R7, #2 // Si se ejecuta
   assign memory[15] = 22'b1000001100010000000001; // SUM R8, R8, #1*/
   
-  /*assign memory[0] = 22'b1001101000000010001000; // MOVER R1, #8
-  assign memory[1] = 22'b1001101000000010001000; // MOVER R1, #8
-  assign memory[2] = 22'b1001101000000100001001; // MOVER R2, #9
-  assign memory[3] = 22'b1001101000000110110010; // MOVER R3, #50
-  assign memory[4] = 22'b1001101000001000111100; // MOVER R4, #60
-  assign memory[5] = 22'b1011101001100010000000; // STORE R1, [R3]
-  assign memory[6] = 22'b1011101010000100000000; // STORE R2, [R4]
-  assign memory[7] = 22'b1011111001101010000000; // LOAD R5, [R3]
-  assign memory[8] = 22'b1011111010001100000000; // LOAD R6, [R4]*/
+  /*assign memory[0] = 24'b111001101000000010001000; // MOVER R1, #8
+  assign memory[1] = 24'b111001101000000010001000; // MOVER R1, #8
+  assign memory[2] = 24'b111001101000000100001001; // MOVER R2, #9
+  assign memory[3] = 24'b111001101000000110000001; // MOVER R3, #50
+  assign memory[4] = 24'b111001101000001000000010; // MOVER R4, #60
+  assign memory[5] = 24'b111011111001101010000000; // LOAD R5, [R3]
+  assign memory[6] = 24'b111011111010001100000000; // LOAD R6, [R4]*/
   
   
-  /*assign memory[0] = 22'b1001101000000110000000; // MOVER R3, #0 : Init
-  assign memory[1] = 22'b1001101000000010000000; // MOVER R1, #0
-  assign memory[2] = 22'b1001101000000100000001; // MOVER R2, #1
-  assign memory[3] = 22'b1000110000100000010000; // COMP R1, R2
-  assign memory[4] = 22'b0101111111111111101000; // SALTOIG Init
-  assign memory[5] = 22'b1000001000100010000100; // SUM R1, R1, #4
-  assign memory[6] = 22'b1000001001000100000101; // SUM R2, R2, #5 : Hola
-  assign memory[7] = 22'b1000001000100010000111; // SUM R1, R1, #7 : Adios*/  
+  /*assign memory[0] = 24'b111001101000000110000000; // MOVER R3, #0 : Init
+  assign memory[1] = 24'b111001101000000010000001; // MOVER R1, #0
+  assign memory[2] = 24'b111001101000000100000001; // MOVER R2, #1
+  assign memory[3] = 24'b111000110000100000010000; // COMP R1, R2
+  assign memory[4] = 24'b000101111111111111101000; // SALTOIG Init
+  assign memory[5] = 24'b111000001000100010000100; // SUM R1, R1, #4
+  assign memory[6] = 24'b111000001001000100000101; // SUM R2, R2, #5 : Hola
+  assign memory[7] = 24'b111000001000100010000111; // SUM R1, R1, #7 : Adios*/
   
   // VGA primera prueba  
   /*assign memory[0] = 22'b1001101000000000000000;
@@ -144,6 +145,7 @@ module instruction_memory(input logic [21:0] a,
   assign memory[18] = 22'b1001101000000101110100;
   assign memory[19] = 22'b1011101001000000000000;
   assign memory[20] = 22'b1101111111111111010100;*/
+  
 	
   assign rd = memory[a[21:2]]; // word aligned
 			  

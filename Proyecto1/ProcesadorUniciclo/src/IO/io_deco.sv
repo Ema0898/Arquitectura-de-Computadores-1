@@ -1,4 +1,4 @@
-module io_deco(input logic [21:0] direction, 
+module io_deco(input logic [23:0] direction, 
 					output logic mem_enb, show_enb, show_original_enb, original_enb, process_enb,
 					output logic [1:0] btn_selecc);
 

@@ -1,5 +1,5 @@
 Analysis & Synthesis report for ArquiProject
-Wed Sep 18 14:12:38 2019
+Wed Sep 18 16:54:21 2019
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -113,17 +113,16 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 105. Port Connectivity Checks: "data_path:CPU|decode_unit:decode|mux_2_x_1:mux1"
 106. Port Connectivity Checks: "data_path:CPU|decode_unit:decode|mux_2_x_1:mux0"
 107. Port Connectivity Checks: "data_path:CPU|decode_unit:decode|mux_2_x_1:mux_flags"
-108. Port Connectivity Checks: "data_path:CPU|ALU:alu"
-109. Port Connectivity Checks: "data_path:CPU|mux_2_x_1:mux3"
-110. Port Connectivity Checks: "data_path:CPU|extend:ext|mux_4_x_1:mux0"
-111. Port Connectivity Checks: "data_path:CPU|mux_2_x_1:mux_reg1"
-112. Port Connectivity Checks: "data_path:CPU|flip_flop_D:ff"
-113. Port Connectivity Checks: "data_path:CPU|generic_adder:adder2"
-114. Port Connectivity Checks: "data_path:CPU|generic_adder:adder1"
-115. Post-Synthesis Netlist Statistics for Top Partition
-116. Elapsed Time Per Partition
-117. Analysis & Synthesis Messages
-118. Analysis & Synthesis Suppressed Messages
+108. Port Connectivity Checks: "data_path:CPU|mux_2_x_1:mux3"
+109. Port Connectivity Checks: "data_path:CPU|extend:ext|mux_4_x_1:mux0"
+110. Port Connectivity Checks: "data_path:CPU|mux_2_x_1:mux_reg1"
+111. Port Connectivity Checks: "data_path:CPU|flip_flop_D:ff"
+112. Port Connectivity Checks: "data_path:CPU|generic_adder:adder2"
+113. Port Connectivity Checks: "data_path:CPU|generic_adder:adder1"
+114. Post-Synthesis Netlist Statistics for Top Partition
+115. Elapsed Time Per Partition
+116. Analysis & Synthesis Messages
+117. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -149,13 +148,13 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Wed Sep 18 14:12:38 2019       ;
+; Analysis & Synthesis Status     ; Successful - Wed Sep 18 16:54:21 2019       ;
 ; Quartus Prime Version           ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                   ; ArquiProject                                ;
 ; Top-level Entity Name           ; top                                         ;
 ; Family                          ; Cyclone V                                   ;
 ; Logic utilization (in ALMs)     ; N/A                                         ;
-; Total registers                 ; 910                                         ;
+; Total registers                 ; 342                                         ;
 ; Total pins                      ; 34                                          ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 2,560,000                                   ;
@@ -313,7 +312,6 @@ refer to the applicable agreement for further details.
 ; src/Memories/image_memory_controller.sv             ; yes             ; User SystemVerilog HDL File                           ; D:/uGit/BranchOldV/Arquitectura-de-Computadores-1/Proyecto1/ProcesadorUniciclo/src/Memories/image_memory_controller.sv             ;         ;
 ; src/Memories/image_memory_controller_process.sv     ; yes             ; User SystemVerilog HDL File                           ; D:/uGit/BranchOldV/Arquitectura-de-Computadores-1/Proyecto1/ProcesadorUniciclo/src/Memories/image_memory_controller_process.sv     ;         ;
 ; src/Memories/image_memory3.sv                       ; yes             ; User SystemVerilog HDL File                           ; D:/uGit/BranchOldV/Arquitectura-de-Computadores-1/Proyecto1/ProcesadorUniciclo/src/Memories/image_memory3.sv                       ;         ;
-; src/memories/kernels.dat                            ; yes             ; Auto-Found Unspecified File                           ; D:/uGit/BranchOldV/Arquitectura-de-Computadores-1/Proyecto1/ProcesadorUniciclo/src/memories/kernels.dat                            ;         ;
 ; src/memories/instructions.dat                       ; yes             ; Auto-Found Unspecified File                           ; D:/uGit/BranchOldV/Arquitectura-de-Computadores-1/Proyecto1/ProcesadorUniciclo/src/memories/instructions.dat                       ;         ;
 ; altsyncram.tdf                                      ; yes             ; Megafunction                                          ; d:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altsyncram.tdf                                                              ;         ;
 ; stratix_ram_block.inc                               ; yes             ; Megafunction                                          ; d:/intelfpga_lite/18.1/quartus/libraries/megafunctions/stratix_ram_block.inc                                                       ;         ;
@@ -344,16 +342,16 @@ refer to the applicable agreement for further details.
 +---------------------------------------------+-----------+
 ; Resource                                    ; Usage     ;
 +---------------------------------------------+-----------+
-; Estimate of Logic utilization (ALMs needed) ; 1218      ;
+; Estimate of Logic utilization (ALMs needed) ; 945       ;
 ;                                             ;           ;
-; Combinational ALUT usage for logic          ; 1665      ;
-;     -- 7 input functions                    ; 136       ;
-;     -- 6 input functions                    ; 576       ;
-;     -- 5 input functions                    ; 250       ;
-;     -- 4 input functions                    ; 165       ;
-;     -- <=3 input functions                  ; 538       ;
+; Combinational ALUT usage for logic          ; 1270      ;
+;     -- 7 input functions                    ; 11        ;
+;     -- 6 input functions                    ; 582       ;
+;     -- 5 input functions                    ; 220       ;
+;     -- 4 input functions                    ; 199       ;
+;     -- <=3 input functions                  ; 258       ;
 ;                                             ;           ;
-; Dedicated logic registers                   ; 910       ;
+; Dedicated logic registers                   ; 342       ;
 ;                                             ;           ;
 ; I/O pins                                    ; 34        ;
 ; Total MLAB memory bits                      ; 0         ;
@@ -362,9 +360,9 @@ refer to the applicable agreement for further details.
 ; Total DSP Blocks                            ; 2         ;
 ;                                             ;           ;
 ; Maximum fan-out node                        ; clk~input ;
-; Maximum fan-out                             ; 945       ;
-; Total fan-out                               ; 15358     ;
-; Average fan-out                             ; 5.18      ;
+; Maximum fan-out                             ; 351       ;
+; Total fan-out                               ; 12478     ;
+; Average fan-out                             ; 6.23      ;
 +---------------------------------------------+-----------+
 
 
@@ -373,98 +371,102 @@ refer to the applicable agreement for further details.
 +-----------------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+------------------------------------------------------------------------------------------------------------------------------------------------+---------------------------------+--------------+
 ; Compilation Hierarchy Node                                ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                            ; Entity Name                     ; Library Name ;
 +-----------------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+------------------------------------------------------------------------------------------------------------------------------------------------+---------------------------------+--------------+
-; |top                                                      ; 1665 (21)           ; 910 (0)                   ; 2560000           ; 2          ; 34   ; 0            ; |top                                                                                                                                           ; top                             ; work         ;
+; |top                                                      ; 1270 (12)           ; 342 (0)                   ; 2560000           ; 2          ; 34   ; 0            ; |top                                                                                                                                           ; top                             ; work         ;
 ;    |ClkDivisor:divisor|                                   ; 1 (1)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |top|ClkDivisor:divisor                                                                                                                        ; ClkDivisor                      ; work         ;
 ;    |VGA:vga|                                              ; 38 (2)              ; 22 (0)                    ; 0                 ; 1          ; 0    ; 0            ; |top|VGA:vga                                                                                                                                   ; VGA                             ; work         ;
 ;       |ClkDivisor:VGAClkDivisor|                          ; 2 (2)               ; 2 (2)                     ; 0                 ; 0          ; 0    ; 0            ; |top|VGA:vga|ClkDivisor:VGAClkDivisor                                                                                                          ; ClkDivisor                      ; work         ;
 ;       |ControllerSync:VGASync|                            ; 34 (34)             ; 20 (20)                   ; 0                 ; 0          ; 0    ; 0            ; |top|VGA:vga|ControllerSync:VGASync                                                                                                            ; ControllerSync                  ; work         ;
 ;       |vga_mem_map:map|                                   ; 0 (0)               ; 0 (0)                     ; 0                 ; 1          ; 0    ; 0            ; |top|VGA:vga|vga_mem_map:map                                                                                                                   ; vga_mem_map                     ; work         ;
-;    |data_memory:dm|                                       ; 479 (479)           ; 594 (594)                 ; 0                 ; 0          ; 0    ; 0            ; |top|data_memory:dm                                                                                                                            ; data_memory                     ; work         ;
-;    |data_path:CPU|                                        ; 618 (0)             ; 265 (0)                   ; 0                 ; 1          ; 0    ; 0            ; |top|data_path:CPU                                                                                                                             ; data_path                       ; work         ;
-;       |ALU:alu|                                           ; 134 (0)             ; 0 (0)                     ; 0                 ; 1          ; 0    ; 0            ; |top|data_path:CPU|ALU:alu                                                                                                                     ; ALU                             ; work         ;
-;          |arithmetic_module:arithmetic|                   ; 83 (0)              ; 0 (0)                     ; 0                 ; 1          ; 0    ; 0            ; |top|data_path:CPU|ALU:alu|arithmetic_module:arithmetic                                                                                        ; arithmetic_module               ; work         ;
-;             |add_sub_module:adder|                        ; 83 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|data_path:CPU|ALU:alu|arithmetic_module:arithmetic|add_sub_module:adder                                                                   ; add_sub_module                  ; work         ;
-;                |adder:fa|                                 ; 65 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|data_path:CPU|ALU:alu|arithmetic_module:arithmetic|add_sub_module:adder|adder:fa                                                          ; adder                           ; work         ;
+;    |data_memory:dm|                                       ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|data_memory:dm                                                                                                                            ; data_memory                     ; work         ;
+;    |data_path:CPU|                                        ; 628 (0)             ; 291 (0)                   ; 0                 ; 1          ; 0    ; 0            ; |top|data_path:CPU                                                                                                                             ; data_path                       ; work         ;
+;       |ALU:alu|                                           ; 142 (0)             ; 0 (0)                     ; 0                 ; 1          ; 0    ; 0            ; |top|data_path:CPU|ALU:alu                                                                                                                     ; ALU                             ; work         ;
+;          |arithmetic_module:arithmetic|                   ; 86 (0)              ; 0 (0)                     ; 0                 ; 1          ; 0    ; 0            ; |top|data_path:CPU|ALU:alu|arithmetic_module:arithmetic                                                                                        ; arithmetic_module               ; work         ;
+;             |add_sub_module:adder|                        ; 86 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|data_path:CPU|ALU:alu|arithmetic_module:arithmetic|add_sub_module:adder                                                                   ; add_sub_module                  ; work         ;
+;                |adder:fa|                                 ; 66 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|data_path:CPU|ALU:alu|arithmetic_module:arithmetic|add_sub_module:adder|adder:fa                                                          ; adder                           ; work         ;
 ;                   |full_adder:generate_N_bit_Adder[0].f|  ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|data_path:CPU|ALU:alu|arithmetic_module:arithmetic|add_sub_module:adder|adder:fa|full_adder:generate_N_bit_Adder[0].f                     ; full_adder                      ; work         ;
 ;                   |full_adder:generate_N_bit_Adder[10].f| ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|data_path:CPU|ALU:alu|arithmetic_module:arithmetic|add_sub_module:adder|adder:fa|full_adder:generate_N_bit_Adder[10].f                    ; full_adder                      ; work         ;
 ;                   |full_adder:generate_N_bit_Adder[11].f| ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|data_path:CPU|ALU:alu|arithmetic_module:arithmetic|add_sub_module:adder|adder:fa|full_adder:generate_N_bit_Adder[11].f                    ; full_adder                      ; work         ;
-;                   |full_adder:generate_N_bit_Adder[12].f| ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|data_path:CPU|ALU:alu|arithmetic_module:arithmetic|add_sub_module:adder|adder:fa|full_adder:generate_N_bit_Adder[12].f                    ; full_adder                      ; work         ;
-;                   |full_adder:generate_N_bit_Adder[13].f| ; 4 (4)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|data_path:CPU|ALU:alu|arithmetic_module:arithmetic|add_sub_module:adder|adder:fa|full_adder:generate_N_bit_Adder[13].f                    ; full_adder                      ; work         ;
-;                   |full_adder:generate_N_bit_Adder[14].f| ; 5 (5)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|data_path:CPU|ALU:alu|arithmetic_module:arithmetic|add_sub_module:adder|adder:fa|full_adder:generate_N_bit_Adder[14].f                    ; full_adder                      ; work         ;
+;                   |full_adder:generate_N_bit_Adder[12].f| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|data_path:CPU|ALU:alu|arithmetic_module:arithmetic|add_sub_module:adder|adder:fa|full_adder:generate_N_bit_Adder[12].f                    ; full_adder                      ; work         ;
+;                   |full_adder:generate_N_bit_Adder[13].f| ; 5 (5)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|data_path:CPU|ALU:alu|arithmetic_module:arithmetic|add_sub_module:adder|adder:fa|full_adder:generate_N_bit_Adder[13].f                    ; full_adder                      ; work         ;
+;                   |full_adder:generate_N_bit_Adder[14].f| ; 4 (4)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|data_path:CPU|ALU:alu|arithmetic_module:arithmetic|add_sub_module:adder|adder:fa|full_adder:generate_N_bit_Adder[14].f                    ; full_adder                      ; work         ;
 ;                   |full_adder:generate_N_bit_Adder[15].f| ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|data_path:CPU|ALU:alu|arithmetic_module:arithmetic|add_sub_module:adder|adder:fa|full_adder:generate_N_bit_Adder[15].f                    ; full_adder                      ; work         ;
 ;                   |full_adder:generate_N_bit_Adder[16].f| ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|data_path:CPU|ALU:alu|arithmetic_module:arithmetic|add_sub_module:adder|adder:fa|full_adder:generate_N_bit_Adder[16].f                    ; full_adder                      ; work         ;
-;                   |full_adder:generate_N_bit_Adder[17].f| ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|data_path:CPU|ALU:alu|arithmetic_module:arithmetic|add_sub_module:adder|adder:fa|full_adder:generate_N_bit_Adder[17].f                    ; full_adder                      ; work         ;
-;                   |full_adder:generate_N_bit_Adder[18].f| ; 4 (4)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|data_path:CPU|ALU:alu|arithmetic_module:arithmetic|add_sub_module:adder|adder:fa|full_adder:generate_N_bit_Adder[18].f                    ; full_adder                      ; work         ;
-;                   |full_adder:generate_N_bit_Adder[19].f| ; 5 (5)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|data_path:CPU|ALU:alu|arithmetic_module:arithmetic|add_sub_module:adder|adder:fa|full_adder:generate_N_bit_Adder[19].f                    ; full_adder                      ; work         ;
-;                   |full_adder:generate_N_bit_Adder[1].f|  ; 4 (4)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|data_path:CPU|ALU:alu|arithmetic_module:arithmetic|add_sub_module:adder|adder:fa|full_adder:generate_N_bit_Adder[1].f                     ; full_adder                      ; work         ;
+;                   |full_adder:generate_N_bit_Adder[17].f| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|data_path:CPU|ALU:alu|arithmetic_module:arithmetic|add_sub_module:adder|adder:fa|full_adder:generate_N_bit_Adder[17].f                    ; full_adder                      ; work         ;
+;                   |full_adder:generate_N_bit_Adder[18].f| ; 6 (6)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|data_path:CPU|ALU:alu|arithmetic_module:arithmetic|add_sub_module:adder|adder:fa|full_adder:generate_N_bit_Adder[18].f                    ; full_adder                      ; work         ;
+;                   |full_adder:generate_N_bit_Adder[19].f| ; 4 (4)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|data_path:CPU|ALU:alu|arithmetic_module:arithmetic|add_sub_module:adder|adder:fa|full_adder:generate_N_bit_Adder[19].f                    ; full_adder                      ; work         ;
+;                   |full_adder:generate_N_bit_Adder[1].f|  ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|data_path:CPU|ALU:alu|arithmetic_module:arithmetic|add_sub_module:adder|adder:fa|full_adder:generate_N_bit_Adder[1].f                     ; full_adder                      ; work         ;
 ;                   |full_adder:generate_N_bit_Adder[20].f| ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|data_path:CPU|ALU:alu|arithmetic_module:arithmetic|add_sub_module:adder|adder:fa|full_adder:generate_N_bit_Adder[20].f                    ; full_adder                      ; work         ;
-;                   |full_adder:generate_N_bit_Adder[21].f| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|data_path:CPU|ALU:alu|arithmetic_module:arithmetic|add_sub_module:adder|adder:fa|full_adder:generate_N_bit_Adder[21].f                    ; full_adder                      ; work         ;
-;                   |full_adder:generate_N_bit_Adder[2].f|  ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|data_path:CPU|ALU:alu|arithmetic_module:arithmetic|add_sub_module:adder|adder:fa|full_adder:generate_N_bit_Adder[2].f                     ; full_adder                      ; work         ;
-;                   |full_adder:generate_N_bit_Adder[3].f|  ; 4 (4)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|data_path:CPU|ALU:alu|arithmetic_module:arithmetic|add_sub_module:adder|adder:fa|full_adder:generate_N_bit_Adder[3].f                     ; full_adder                      ; work         ;
-;                   |full_adder:generate_N_bit_Adder[4].f|  ; 4 (4)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|data_path:CPU|ALU:alu|arithmetic_module:arithmetic|add_sub_module:adder|adder:fa|full_adder:generate_N_bit_Adder[4].f                     ; full_adder                      ; work         ;
+;                   |full_adder:generate_N_bit_Adder[21].f| ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|data_path:CPU|ALU:alu|arithmetic_module:arithmetic|add_sub_module:adder|adder:fa|full_adder:generate_N_bit_Adder[21].f                    ; full_adder                      ; work         ;
+;                   |full_adder:generate_N_bit_Adder[22].f| ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|data_path:CPU|ALU:alu|arithmetic_module:arithmetic|add_sub_module:adder|adder:fa|full_adder:generate_N_bit_Adder[22].f                    ; full_adder                      ; work         ;
+;                   |full_adder:generate_N_bit_Adder[23].f| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|data_path:CPU|ALU:alu|arithmetic_module:arithmetic|add_sub_module:adder|adder:fa|full_adder:generate_N_bit_Adder[23].f                    ; full_adder                      ; work         ;
+;                   |full_adder:generate_N_bit_Adder[2].f|  ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|data_path:CPU|ALU:alu|arithmetic_module:arithmetic|add_sub_module:adder|adder:fa|full_adder:generate_N_bit_Adder[2].f                     ; full_adder                      ; work         ;
+;                   |full_adder:generate_N_bit_Adder[3].f|  ; 5 (5)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|data_path:CPU|ALU:alu|arithmetic_module:arithmetic|add_sub_module:adder|adder:fa|full_adder:generate_N_bit_Adder[3].f                     ; full_adder                      ; work         ;
+;                   |full_adder:generate_N_bit_Adder[4].f|  ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|data_path:CPU|ALU:alu|arithmetic_module:arithmetic|add_sub_module:adder|adder:fa|full_adder:generate_N_bit_Adder[4].f                     ; full_adder                      ; work         ;
 ;                   |full_adder:generate_N_bit_Adder[5].f|  ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|data_path:CPU|ALU:alu|arithmetic_module:arithmetic|add_sub_module:adder|adder:fa|full_adder:generate_N_bit_Adder[5].f                     ; full_adder                      ; work         ;
 ;                   |full_adder:generate_N_bit_Adder[6].f|  ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|data_path:CPU|ALU:alu|arithmetic_module:arithmetic|add_sub_module:adder|adder:fa|full_adder:generate_N_bit_Adder[6].f                     ; full_adder                      ; work         ;
 ;                   |full_adder:generate_N_bit_Adder[7].f|  ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|data_path:CPU|ALU:alu|arithmetic_module:arithmetic|add_sub_module:adder|adder:fa|full_adder:generate_N_bit_Adder[7].f                     ; full_adder                      ; work         ;
 ;                   |full_adder:generate_N_bit_Adder[8].f|  ; 5 (5)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|data_path:CPU|ALU:alu|arithmetic_module:arithmetic|add_sub_module:adder|adder:fa|full_adder:generate_N_bit_Adder[8].f                     ; full_adder                      ; work         ;
 ;                   |full_adder:generate_N_bit_Adder[9].f|  ; 4 (4)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|data_path:CPU|ALU:alu|arithmetic_module:arithmetic|add_sub_module:adder|adder:fa|full_adder:generate_N_bit_Adder[9].f                     ; full_adder                      ; work         ;
-;                |mux_2_x_1:mux0|                           ; 18 (18)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|data_path:CPU|ALU:alu|arithmetic_module:arithmetic|add_sub_module:adder|mux_2_x_1:mux0                                                    ; mux_2_x_1                       ; work         ;
+;                |mux_2_x_1:mux0|                           ; 20 (20)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|data_path:CPU|ALU:alu|arithmetic_module:arithmetic|add_sub_module:adder|mux_2_x_1:mux0                                                    ; mux_2_x_1                       ; work         ;
 ;             |multiplier:mul|                              ; 0 (0)               ; 0 (0)                     ; 0                 ; 1          ; 0    ; 0            ; |top|data_path:CPU|ALU:alu|arithmetic_module:arithmetic|multiplier:mul                                                                         ; multiplier                      ; work         ;
-;          |mux_4_x_1:mux0|                                 ; 51 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|data_path:CPU|ALU:alu|mux_4_x_1:mux0                                                                                                      ; mux_4_x_1                       ; work         ;
-;             |mux_2_x_1:mux2|                              ; 51 (51)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|data_path:CPU|ALU:alu|mux_4_x_1:mux0|mux_2_x_1:mux2                                                                                       ; mux_2_x_1                       ; work         ;
-;       |cond_logic:cl|                                     ; 9 (3)               ; 1 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|data_path:CPU|cond_logic:cl                                                                                                               ; cond_logic                      ; work         ;
-;          |cond_check:cc|                                  ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|data_path:CPU|cond_logic:cl|cond_check:cc                                                                                                 ; cond_check                      ; work         ;
-;          |flip_flop_D_neg:ff0|                            ; 3 (3)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |top|data_path:CPU|cond_logic:cl|flip_flop_D_neg:ff0                                                                                           ; flip_flop_D_neg                 ; work         ;
+;          |flag_module:flag_mod|                           ; 10 (10)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|data_path:CPU|ALU:alu|flag_module:flag_mod                                                                                                ; flag_module                     ; work         ;
+;          |mux_4_x_1:mux0|                                 ; 46 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|data_path:CPU|ALU:alu|mux_4_x_1:mux0                                                                                                      ; mux_4_x_1                       ; work         ;
+;             |mux_2_x_1:mux2|                              ; 46 (46)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|data_path:CPU|ALU:alu|mux_4_x_1:mux0|mux_2_x_1:mux2                                                                                       ; mux_2_x_1                       ; work         ;
+;       |cond_logic:cl|                                     ; 10 (3)              ; 3 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|data_path:CPU|cond_logic:cl                                                                                                               ; cond_logic                      ; work         ;
+;          |cond_check:cc|                                  ; 4 (4)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|data_path:CPU|cond_logic:cl|cond_check:cc                                                                                                 ; cond_check                      ; work         ;
+;          |flip_flop_D_neg:ff0|                            ; 3 (3)               ; 3 (3)                     ; 0                 ; 0          ; 0    ; 0            ; |top|data_path:CPU|cond_logic:cl|flip_flop_D_neg:ff0                                                                                           ; flip_flop_D_neg                 ; work         ;
 ;       |decode_unit:decode|                                ; 8 (5)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|data_path:CPU|decode_unit:decode                                                                                                          ; decode_unit                     ; work         ;
 ;          |mux_2_x_1:mux1|                                 ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|data_path:CPU|decode_unit:decode|mux_2_x_1:mux1                                                                                           ; mux_2_x_1                       ; work         ;
-;       |flip_flop_D:ff|                                    ; 2 (2)               ; 22 (22)                   ; 0                 ; 0          ; 0    ; 0            ; |top|data_path:CPU|flip_flop_D:ff                                                                                                              ; flip_flop_D                     ; work         ;
-;       |generic_adder:adder1|                              ; 22 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|data_path:CPU|generic_adder:adder1                                                                                                        ; generic_adder                   ; work         ;
+;       |flip_flop_D:ff|                                    ; 2 (2)               ; 24 (24)                   ; 0                 ; 0          ; 0    ; 0            ; |top|data_path:CPU|flip_flop_D:ff                                                                                                              ; flip_flop_D                     ; work         ;
+;       |generic_adder:adder1|                              ; 30 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|data_path:CPU|generic_adder:adder1                                                                                                        ; generic_adder                   ; work         ;
 ;          |generic_full_adder:generate_N_bit_Adder[10].f|  ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|data_path:CPU|generic_adder:adder1|generic_full_adder:generate_N_bit_Adder[10].f                                                          ; generic_full_adder              ; work         ;
 ;          |generic_full_adder:generate_N_bit_Adder[11].f|  ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|data_path:CPU|generic_adder:adder1|generic_full_adder:generate_N_bit_Adder[11].f                                                          ; generic_full_adder              ; work         ;
-;          |generic_full_adder:generate_N_bit_Adder[12].f|  ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|data_path:CPU|generic_adder:adder1|generic_full_adder:generate_N_bit_Adder[12].f                                                          ; generic_full_adder              ; work         ;
-;          |generic_full_adder:generate_N_bit_Adder[13].f|  ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|data_path:CPU|generic_adder:adder1|generic_full_adder:generate_N_bit_Adder[13].f                                                          ; generic_full_adder              ; work         ;
+;          |generic_full_adder:generate_N_bit_Adder[12].f|  ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|data_path:CPU|generic_adder:adder1|generic_full_adder:generate_N_bit_Adder[12].f                                                          ; generic_full_adder              ; work         ;
+;          |generic_full_adder:generate_N_bit_Adder[13].f|  ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|data_path:CPU|generic_adder:adder1|generic_full_adder:generate_N_bit_Adder[13].f                                                          ; generic_full_adder              ; work         ;
 ;          |generic_full_adder:generate_N_bit_Adder[14].f|  ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|data_path:CPU|generic_adder:adder1|generic_full_adder:generate_N_bit_Adder[14].f                                                          ; generic_full_adder              ; work         ;
-;          |generic_full_adder:generate_N_bit_Adder[15].f|  ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|data_path:CPU|generic_adder:adder1|generic_full_adder:generate_N_bit_Adder[15].f                                                          ; generic_full_adder              ; work         ;
-;          |generic_full_adder:generate_N_bit_Adder[16].f|  ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|data_path:CPU|generic_adder:adder1|generic_full_adder:generate_N_bit_Adder[16].f                                                          ; generic_full_adder              ; work         ;
+;          |generic_full_adder:generate_N_bit_Adder[15].f|  ; 4 (4)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|data_path:CPU|generic_adder:adder1|generic_full_adder:generate_N_bit_Adder[15].f                                                          ; generic_full_adder              ; work         ;
+;          |generic_full_adder:generate_N_bit_Adder[16].f|  ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|data_path:CPU|generic_adder:adder1|generic_full_adder:generate_N_bit_Adder[16].f                                                          ; generic_full_adder              ; work         ;
 ;          |generic_full_adder:generate_N_bit_Adder[17].f|  ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|data_path:CPU|generic_adder:adder1|generic_full_adder:generate_N_bit_Adder[17].f                                                          ; generic_full_adder              ; work         ;
 ;          |generic_full_adder:generate_N_bit_Adder[18].f|  ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|data_path:CPU|generic_adder:adder1|generic_full_adder:generate_N_bit_Adder[18].f                                                          ; generic_full_adder              ; work         ;
-;          |generic_full_adder:generate_N_bit_Adder[19].f|  ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|data_path:CPU|generic_adder:adder1|generic_full_adder:generate_N_bit_Adder[19].f                                                          ; generic_full_adder              ; work         ;
+;          |generic_full_adder:generate_N_bit_Adder[19].f|  ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|data_path:CPU|generic_adder:adder1|generic_full_adder:generate_N_bit_Adder[19].f                                                          ; generic_full_adder              ; work         ;
 ;          |generic_full_adder:generate_N_bit_Adder[20].f|  ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|data_path:CPU|generic_adder:adder1|generic_full_adder:generate_N_bit_Adder[20].f                                                          ; generic_full_adder              ; work         ;
 ;          |generic_full_adder:generate_N_bit_Adder[21].f|  ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|data_path:CPU|generic_adder:adder1|generic_full_adder:generate_N_bit_Adder[21].f                                                          ; generic_full_adder              ; work         ;
+;          |generic_full_adder:generate_N_bit_Adder[22].f|  ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|data_path:CPU|generic_adder:adder1|generic_full_adder:generate_N_bit_Adder[22].f                                                          ; generic_full_adder              ; work         ;
+;          |generic_full_adder:generate_N_bit_Adder[23].f|  ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|data_path:CPU|generic_adder:adder1|generic_full_adder:generate_N_bit_Adder[23].f                                                          ; generic_full_adder              ; work         ;
+;          |generic_full_adder:generate_N_bit_Adder[3].f|   ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|data_path:CPU|generic_adder:adder1|generic_full_adder:generate_N_bit_Adder[3].f                                                           ; generic_full_adder              ; work         ;
 ;          |generic_full_adder:generate_N_bit_Adder[4].f|   ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|data_path:CPU|generic_adder:adder1|generic_full_adder:generate_N_bit_Adder[4].f                                                           ; generic_full_adder              ; work         ;
 ;          |generic_full_adder:generate_N_bit_Adder[5].f|   ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|data_path:CPU|generic_adder:adder1|generic_full_adder:generate_N_bit_Adder[5].f                                                           ; generic_full_adder              ; work         ;
-;          |generic_full_adder:generate_N_bit_Adder[6].f|   ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|data_path:CPU|generic_adder:adder1|generic_full_adder:generate_N_bit_Adder[6].f                                                           ; generic_full_adder              ; work         ;
+;          |generic_full_adder:generate_N_bit_Adder[6].f|   ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|data_path:CPU|generic_adder:adder1|generic_full_adder:generate_N_bit_Adder[6].f                                                           ; generic_full_adder              ; work         ;
 ;          |generic_full_adder:generate_N_bit_Adder[7].f|   ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|data_path:CPU|generic_adder:adder1|generic_full_adder:generate_N_bit_Adder[7].f                                                           ; generic_full_adder              ; work         ;
 ;          |generic_full_adder:generate_N_bit_Adder[8].f|   ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|data_path:CPU|generic_adder:adder1|generic_full_adder:generate_N_bit_Adder[8].f                                                           ; generic_full_adder              ; work         ;
 ;          |generic_full_adder:generate_N_bit_Adder[9].f|   ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|data_path:CPU|generic_adder:adder1|generic_full_adder:generate_N_bit_Adder[9].f                                                           ; generic_full_adder              ; work         ;
-;       |generic_adder:adder2|                              ; 23 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|data_path:CPU|generic_adder:adder2                                                                                                        ; generic_adder                   ; work         ;
-;          |generic_full_adder:generate_N_bit_Adder[10].f|  ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|data_path:CPU|generic_adder:adder2|generic_full_adder:generate_N_bit_Adder[10].f                                                          ; generic_full_adder              ; work         ;
-;          |generic_full_adder:generate_N_bit_Adder[11].f|  ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|data_path:CPU|generic_adder:adder2|generic_full_adder:generate_N_bit_Adder[11].f                                                          ; generic_full_adder              ; work         ;
+;       |generic_adder:adder2|                              ; 22 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|data_path:CPU|generic_adder:adder2                                                                                                        ; generic_adder                   ; work         ;
+;          |generic_full_adder:generate_N_bit_Adder[10].f|  ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|data_path:CPU|generic_adder:adder2|generic_full_adder:generate_N_bit_Adder[10].f                                                          ; generic_full_adder              ; work         ;
+;          |generic_full_adder:generate_N_bit_Adder[11].f|  ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|data_path:CPU|generic_adder:adder2|generic_full_adder:generate_N_bit_Adder[11].f                                                          ; generic_full_adder              ; work         ;
 ;          |generic_full_adder:generate_N_bit_Adder[12].f|  ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|data_path:CPU|generic_adder:adder2|generic_full_adder:generate_N_bit_Adder[12].f                                                          ; generic_full_adder              ; work         ;
 ;          |generic_full_adder:generate_N_bit_Adder[13].f|  ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|data_path:CPU|generic_adder:adder2|generic_full_adder:generate_N_bit_Adder[13].f                                                          ; generic_full_adder              ; work         ;
-;          |generic_full_adder:generate_N_bit_Adder[14].f|  ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|data_path:CPU|generic_adder:adder2|generic_full_adder:generate_N_bit_Adder[14].f                                                          ; generic_full_adder              ; work         ;
-;          |generic_full_adder:generate_N_bit_Adder[15].f|  ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|data_path:CPU|generic_adder:adder2|generic_full_adder:generate_N_bit_Adder[15].f                                                          ; generic_full_adder              ; work         ;
-;          |generic_full_adder:generate_N_bit_Adder[16].f|  ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|data_path:CPU|generic_adder:adder2|generic_full_adder:generate_N_bit_Adder[16].f                                                          ; generic_full_adder              ; work         ;
-;          |generic_full_adder:generate_N_bit_Adder[17].f|  ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|data_path:CPU|generic_adder:adder2|generic_full_adder:generate_N_bit_Adder[17].f                                                          ; generic_full_adder              ; work         ;
+;          |generic_full_adder:generate_N_bit_Adder[14].f|  ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|data_path:CPU|generic_adder:adder2|generic_full_adder:generate_N_bit_Adder[14].f                                                          ; generic_full_adder              ; work         ;
+;          |generic_full_adder:generate_N_bit_Adder[15].f|  ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|data_path:CPU|generic_adder:adder2|generic_full_adder:generate_N_bit_Adder[15].f                                                          ; generic_full_adder              ; work         ;
 ;          |generic_full_adder:generate_N_bit_Adder[18].f|  ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|data_path:CPU|generic_adder:adder2|generic_full_adder:generate_N_bit_Adder[18].f                                                          ; generic_full_adder              ; work         ;
-;          |generic_full_adder:generate_N_bit_Adder[19].f|  ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|data_path:CPU|generic_adder:adder2|generic_full_adder:generate_N_bit_Adder[19].f                                                          ; generic_full_adder              ; work         ;
-;          |generic_full_adder:generate_N_bit_Adder[20].f|  ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|data_path:CPU|generic_adder:adder2|generic_full_adder:generate_N_bit_Adder[20].f                                                          ; generic_full_adder              ; work         ;
 ;          |generic_full_adder:generate_N_bit_Adder[21].f|  ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|data_path:CPU|generic_adder:adder2|generic_full_adder:generate_N_bit_Adder[21].f                                                          ; generic_full_adder              ; work         ;
+;          |generic_full_adder:generate_N_bit_Adder[22].f|  ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|data_path:CPU|generic_adder:adder2|generic_full_adder:generate_N_bit_Adder[22].f                                                          ; generic_full_adder              ; work         ;
+;          |generic_full_adder:generate_N_bit_Adder[23].f|  ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|data_path:CPU|generic_adder:adder2|generic_full_adder:generate_N_bit_Adder[23].f                                                          ; generic_full_adder              ; work         ;
 ;          |generic_full_adder:generate_N_bit_Adder[4].f|   ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|data_path:CPU|generic_adder:adder2|generic_full_adder:generate_N_bit_Adder[4].f                                                           ; generic_full_adder              ; work         ;
 ;          |generic_full_adder:generate_N_bit_Adder[5].f|   ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|data_path:CPU|generic_adder:adder2|generic_full_adder:generate_N_bit_Adder[5].f                                                           ; generic_full_adder              ; work         ;
 ;          |generic_full_adder:generate_N_bit_Adder[6].f|   ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|data_path:CPU|generic_adder:adder2|generic_full_adder:generate_N_bit_Adder[6].f                                                           ; generic_full_adder              ; work         ;
 ;          |generic_full_adder:generate_N_bit_Adder[7].f|   ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|data_path:CPU|generic_adder:adder2|generic_full_adder:generate_N_bit_Adder[7].f                                                           ; generic_full_adder              ; work         ;
 ;          |generic_full_adder:generate_N_bit_Adder[8].f|   ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|data_path:CPU|generic_adder:adder2|generic_full_adder:generate_N_bit_Adder[8].f                                                           ; generic_full_adder              ; work         ;
-;          |generic_full_adder:generate_N_bit_Adder[9].f|   ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|data_path:CPU|generic_adder:adder2|generic_full_adder:generate_N_bit_Adder[9].f                                                           ; generic_full_adder              ; work         ;
-;       |mux_2_x_1:mux1|                                    ; 34 (34)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|data_path:CPU|mux_2_x_1:mux1                                                                                                              ; mux_2_x_1                       ; work         ;
-;       |mux_2_x_1:mux2|                                    ; 136 (136)           ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|data_path:CPU|mux_2_x_1:mux2                                                                                                              ; mux_2_x_1                       ; work         ;
-;       |mux_2_x_1:mux3|                                    ; 114 (114)           ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|data_path:CPU|mux_2_x_1:mux3                                                                                                              ; mux_2_x_1                       ; work         ;
+;          |generic_full_adder:generate_N_bit_Adder[9].f|   ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|data_path:CPU|generic_adder:adder2|generic_full_adder:generate_N_bit_Adder[9].f                                                           ; generic_full_adder              ; work         ;
+;       |mux_2_x_1:mux1|                                    ; 45 (45)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|data_path:CPU|mux_2_x_1:mux1                                                                                                              ; mux_2_x_1                       ; work         ;
+;       |mux_2_x_1:mux2|                                    ; 150 (150)           ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|data_path:CPU|mux_2_x_1:mux2                                                                                                              ; mux_2_x_1                       ; work         ;
+;       |mux_2_x_1:mux3|                                    ; 142 (142)           ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|data_path:CPU|mux_2_x_1:mux3                                                                                                              ; mux_2_x_1                       ; work         ;
 ;       |mux_2_x_1:mux_reg1|                                ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|data_path:CPU|mux_2_x_1:mux_reg1                                                                                                          ; mux_2_x_1                       ; work         ;
-;       |register_file:rf|                                  ; 134 (134)           ; 242 (242)                 ; 0                 ; 0          ; 0    ; 0            ; |top|data_path:CPU|register_file:rf                                                                                                            ; register_file                   ; work         ;
+;       |register_file:rf|                                  ; 75 (75)             ; 264 (264)                 ; 0                 ; 0          ; 0    ; 0            ; |top|data_path:CPU|register_file:rf                                                                                                            ; register_file                   ; work         ;
 ;    |flip_flop_D:ff0|                                      ; 2 (2)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |top|flip_flop_D:ff0                                                                                                                           ; flip_flop_D                     ; work         ;
 ;    |flip_flop_D:ff1|                                      ; 1 (1)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |top|flip_flop_D:ff1                                                                                                                           ; flip_flop_D                     ; work         ;
 ;    |flip_flop_D:ff2|                                      ; 1 (1)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |top|flip_flop_D:ff2                                                                                                                           ; flip_flop_D                     ; work         ;
 ;    |flip_flop_D:ff3|                                      ; 1 (1)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |top|flip_flop_D:ff3                                                                                                                           ; flip_flop_D                     ; work         ;
-;    |image_memory_controller:image_controller|             ; 159 (31)            ; 12 (0)                    ; 1280000           ; 0          ; 0    ; 0            ; |top|image_memory_controller:image_controller                                                                                                  ; image_memory_controller         ; work         ;
+;    |image_memory_controller:image_controller|             ; 186 (32)            ; 12 (0)                    ; 1280000           ; 0          ; 0    ; 0            ; |top|image_memory_controller:image_controller                                                                                                  ; image_memory_controller         ; work         ;
 ;       |image_memory2:image1|                              ; 14 (0)              ; 3 (0)                     ; 320000            ; 0          ; 0    ; 0            ; |top|image_memory_controller:image_controller|image_memory2:image1                                                                             ; image_memory2                   ; work         ;
 ;          |altsyncram:RAM_rtl_0|                           ; 14 (0)              ; 3 (0)                     ; 320000            ; 0          ; 0    ; 0            ; |top|image_memory_controller:image_controller|image_memory2:image1|altsyncram:RAM_rtl_0                                                        ; altsyncram                      ; work         ;
 ;             |altsyncram_5he1:auto_generated|              ; 14 (0)              ; 3 (3)                     ; 320000            ; 0          ; 0    ; 0            ; |top|image_memory_controller:image_controller|image_memory2:image1|altsyncram:RAM_rtl_0|altsyncram_5he1:auto_generated                         ; altsyncram_5he1                 ; work         ;
@@ -485,31 +487,32 @@ refer to the applicable agreement for further details.
 ;             |altsyncram_ode1:auto_generated|              ; 13 (0)              ; 3 (3)                     ; 320000            ; 0          ; 0    ; 0            ; |top|image_memory_controller:image_controller|image_memory2:image4|altsyncram:RAM_rtl_0|altsyncram_ode1:auto_generated                         ; altsyncram_ode1                 ; work         ;
 ;                |decode_31a:rden_decode|                   ; 5 (5)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|image_memory_controller:image_controller|image_memory2:image4|altsyncram:RAM_rtl_0|altsyncram_ode1:auto_generated|decode_31a:rden_decode  ; decode_31a                      ; work         ;
 ;                |mux_qfb:mux2|                             ; 8 (8)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|image_memory_controller:image_controller|image_memory2:image4|altsyncram:RAM_rtl_0|altsyncram_ode1:auto_generated|mux_qfb:mux2            ; mux_qfb                         ; work         ;
-;       |mux_2_x_1:mux3|                                    ; 75 (75)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|image_memory_controller:image_controller|mux_2_x_1:mux3                                                                                   ; mux_2_x_1                       ; work         ;
-;    |image_memory_controller_process:image_process|        ; 119 (61)            ; 12 (0)                    ; 1280000           ; 0          ; 0    ; 0            ; |top|image_memory_controller_process:image_process                                                                                             ; image_memory_controller_process ; work         ;
-;       |image_memory3:image1|                              ; 16 (0)              ; 3 (0)                     ; 320000            ; 0          ; 0    ; 0            ; |top|image_memory_controller_process:image_process|image_memory3:image1                                                                        ; image_memory3                   ; work         ;
-;          |altsyncram:RAM_rtl_0|                           ; 16 (0)              ; 3 (0)                     ; 320000            ; 0          ; 0    ; 0            ; |top|image_memory_controller_process:image_process|image_memory3:image1|altsyncram:RAM_rtl_0                                                   ; altsyncram                      ; work         ;
-;             |altsyncram_29q1:auto_generated|              ; 16 (0)              ; 3 (3)                     ; 320000            ; 0          ; 0    ; 0            ; |top|image_memory_controller_process:image_process|image_memory3:image1|altsyncram:RAM_rtl_0|altsyncram_29q1:auto_generated                    ; altsyncram_29q1                 ; work         ;
-;                |decode_ala:decode2|                       ; 8 (8)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|image_memory_controller_process:image_process|image_memory3:image1|altsyncram:RAM_rtl_0|altsyncram_29q1:auto_generated|decode_ala:decode2 ; decode_ala                      ; work         ;
+;       |mux_2_x_1:mux3|                                    ; 101 (101)           ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|image_memory_controller:image_controller|mux_2_x_1:mux3                                                                                   ; mux_2_x_1                       ; work         ;
+;    |image_memory_controller_process:image_process|        ; 136 (73)            ; 12 (0)                    ; 1280000           ; 0          ; 0    ; 0            ; |top|image_memory_controller_process:image_process                                                                                             ; image_memory_controller_process ; work         ;
+;       |image_memory3:image1|                              ; 20 (0)              ; 3 (0)                     ; 320000            ; 0          ; 0    ; 0            ; |top|image_memory_controller_process:image_process|image_memory3:image1                                                                        ; image_memory3                   ; work         ;
+;          |altsyncram:RAM_rtl_0|                           ; 20 (0)              ; 3 (0)                     ; 320000            ; 0          ; 0    ; 0            ; |top|image_memory_controller_process:image_process|image_memory3:image1|altsyncram:RAM_rtl_0                                                   ; altsyncram                      ; work         ;
+;             |altsyncram_29q1:auto_generated|              ; 20 (0)              ; 3 (3)                     ; 320000            ; 0          ; 0    ; 0            ; |top|image_memory_controller_process:image_process|image_memory3:image1|altsyncram:RAM_rtl_0|altsyncram_29q1:auto_generated                    ; altsyncram_29q1                 ; work         ;
+;                |decode_ala:decode2|                       ; 12 (12)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|image_memory_controller_process:image_process|image_memory3:image1|altsyncram:RAM_rtl_0|altsyncram_29q1:auto_generated|decode_ala:decode2 ; decode_ala                      ; work         ;
 ;                |mux_qfb:mux3|                             ; 8 (8)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|image_memory_controller_process:image_process|image_memory3:image1|altsyncram:RAM_rtl_0|altsyncram_29q1:auto_generated|mux_qfb:mux3       ; mux_qfb                         ; work         ;
 ;       |image_memory3:image2|                              ; 14 (0)              ; 3 (0)                     ; 320000            ; 0          ; 0    ; 0            ; |top|image_memory_controller_process:image_process|image_memory3:image2                                                                        ; image_memory3                   ; work         ;
 ;          |altsyncram:RAM_rtl_0|                           ; 14 (0)              ; 3 (0)                     ; 320000            ; 0          ; 0    ; 0            ; |top|image_memory_controller_process:image_process|image_memory3:image2|altsyncram:RAM_rtl_0                                                   ; altsyncram                      ; work         ;
 ;             |altsyncram_29q1:auto_generated|              ; 14 (0)              ; 3 (3)                     ; 320000            ; 0          ; 0    ; 0            ; |top|image_memory_controller_process:image_process|image_memory3:image2|altsyncram:RAM_rtl_0|altsyncram_29q1:auto_generated                    ; altsyncram_29q1                 ; work         ;
 ;                |decode_ala:decode2|                       ; 6 (6)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|image_memory_controller_process:image_process|image_memory3:image2|altsyncram:RAM_rtl_0|altsyncram_29q1:auto_generated|decode_ala:decode2 ; decode_ala                      ; work         ;
 ;                |mux_qfb:mux3|                             ; 8 (8)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|image_memory_controller_process:image_process|image_memory3:image2|altsyncram:RAM_rtl_0|altsyncram_29q1:auto_generated|mux_qfb:mux3       ; mux_qfb                         ; work         ;
-;       |image_memory3:image3|                              ; 14 (0)              ; 3 (0)                     ; 320000            ; 0          ; 0    ; 0            ; |top|image_memory_controller_process:image_process|image_memory3:image3                                                                        ; image_memory3                   ; work         ;
-;          |altsyncram:RAM_rtl_0|                           ; 14 (0)              ; 3 (0)                     ; 320000            ; 0          ; 0    ; 0            ; |top|image_memory_controller_process:image_process|image_memory3:image3|altsyncram:RAM_rtl_0                                                   ; altsyncram                      ; work         ;
-;             |altsyncram_29q1:auto_generated|              ; 14 (0)              ; 3 (3)                     ; 320000            ; 0          ; 0    ; 0            ; |top|image_memory_controller_process:image_process|image_memory3:image3|altsyncram:RAM_rtl_0|altsyncram_29q1:auto_generated                    ; altsyncram_29q1                 ; work         ;
-;                |decode_ala:decode2|                       ; 6 (6)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|image_memory_controller_process:image_process|image_memory3:image3|altsyncram:RAM_rtl_0|altsyncram_29q1:auto_generated|decode_ala:decode2 ; decode_ala                      ; work         ;
+;       |image_memory3:image3|                              ; 15 (0)              ; 3 (0)                     ; 320000            ; 0          ; 0    ; 0            ; |top|image_memory_controller_process:image_process|image_memory3:image3                                                                        ; image_memory3                   ; work         ;
+;          |altsyncram:RAM_rtl_0|                           ; 15 (0)              ; 3 (0)                     ; 320000            ; 0          ; 0    ; 0            ; |top|image_memory_controller_process:image_process|image_memory3:image3|altsyncram:RAM_rtl_0                                                   ; altsyncram                      ; work         ;
+;             |altsyncram_29q1:auto_generated|              ; 15 (0)              ; 3 (3)                     ; 320000            ; 0          ; 0    ; 0            ; |top|image_memory_controller_process:image_process|image_memory3:image3|altsyncram:RAM_rtl_0|altsyncram_29q1:auto_generated                    ; altsyncram_29q1                 ; work         ;
+;                |decode_ala:decode2|                       ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|image_memory_controller_process:image_process|image_memory3:image3|altsyncram:RAM_rtl_0|altsyncram_29q1:auto_generated|decode_ala:decode2 ; decode_ala                      ; work         ;
 ;                |mux_qfb:mux3|                             ; 8 (8)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|image_memory_controller_process:image_process|image_memory3:image3|altsyncram:RAM_rtl_0|altsyncram_29q1:auto_generated|mux_qfb:mux3       ; mux_qfb                         ; work         ;
 ;       |image_memory3:image4|                              ; 14 (0)              ; 3 (0)                     ; 320000            ; 0          ; 0    ; 0            ; |top|image_memory_controller_process:image_process|image_memory3:image4                                                                        ; image_memory3                   ; work         ;
 ;          |altsyncram:RAM_rtl_0|                           ; 14 (0)              ; 3 (0)                     ; 320000            ; 0          ; 0    ; 0            ; |top|image_memory_controller_process:image_process|image_memory3:image4|altsyncram:RAM_rtl_0                                                   ; altsyncram                      ; work         ;
 ;             |altsyncram_29q1:auto_generated|              ; 14 (0)              ; 3 (3)                     ; 320000            ; 0          ; 0    ; 0            ; |top|image_memory_controller_process:image_process|image_memory3:image4|altsyncram:RAM_rtl_0|altsyncram_29q1:auto_generated                    ; altsyncram_29q1                 ; work         ;
 ;                |decode_ala:decode2|                       ; 6 (6)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|image_memory_controller_process:image_process|image_memory3:image4|altsyncram:RAM_rtl_0|altsyncram_29q1:auto_generated|decode_ala:decode2 ; decode_ala                      ; work         ;
 ;                |mux_qfb:mux3|                             ; 8 (8)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|image_memory_controller_process:image_process|image_memory3:image4|altsyncram:RAM_rtl_0|altsyncram_29q1:auto_generated|mux_qfb:mux3       ; mux_qfb                         ; work         ;
-;    |instruction_memory:im|                                ; 74 (74)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|instruction_memory:im                                                                                                                     ; instruction_memory              ; work         ;
-;    |io_deco:deco|                                         ; 25 (20)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|io_deco:deco                                                                                                                              ; io_deco                         ; work         ;
-;       |deco_buttons:deco_btn|                             ; 5 (5)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|io_deco:deco|deco_buttons:deco_btn                                                                                                        ; deco_buttons                    ; work         ;
+;    |instruction_memory:im|                                ; 108 (108)           ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|instruction_memory:im                                                                                                                     ; instruction_memory              ; work         ;
+;    |io_deco:deco|                                         ; 24 (20)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|io_deco:deco                                                                                                                              ; io_deco                         ; work         ;
+;       |deco_buttons:deco_btn|                             ; 4 (4)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|io_deco:deco|deco_buttons:deco_btn                                                                                                        ; deco_buttons                    ; work         ;
+;    |mux_2_x_1:mux1|                                       ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|mux_2_x_1:mux1                                                                                                                            ; mux_2_x_1                       ; work         ;
 ;    |mux_2_x_1:mux4|                                       ; 20 (20)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|mux_2_x_1:mux4                                                                                                                            ; mux_2_x_1                       ; work         ;
 ;    |mux_2_x_1:mux6|                                       ; 58 (58)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|mux_2_x_1:mux6                                                                                                                            ; mux_2_x_1                       ; work         ;
 ;    |mux_2_x_1:mux7|                                       ; 18 (18)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|mux_2_x_1:mux7                                                                                                                            ; mux_2_x_1                       ; work         ;
@@ -562,12 +565,12 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 910   ;
-; Number of registers using Synchronous Clear  ; 42    ;
-; Number of registers using Synchronous Load   ; 20    ;
+; Total registers                              ; 342   ;
+; Number of registers using Synchronous Clear  ; 45    ;
+; Number of registers using Synchronous Load   ; 22    ;
 ; Number of registers using Asynchronous Clear ; 20    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 863   ;
+; Number of registers using Clock Enable       ; 293   ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -596,18 +599,19 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; 3:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |top|VGA:vga|ControllerSync:VGASync|vCounter[0]                   ;
 ; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top|flip_flop_D:ff0|q[0]                                         ;
 ; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |top|data_path:CPU|flip_flop_D:ff|q[0]                            ;
-; 3:1                ; 20 bits   ; 40 LEs        ; 0 LEs                ; 40 LEs                 ; Yes        ; |top|data_path:CPU|flip_flop_D:ff|q[20]                           ;
-; 3:1                ; 22 bits   ; 44 LEs        ; 44 LEs               ; 0 LEs                  ; No         ; |top|data_path:CPU|ALU:alu|mux_4_x_1:mux0|mux_2_x_1:mux2|z[3]     ;
+; 3:1                ; 22 bits   ; 44 LEs        ; 0 LEs                ; 44 LEs                 ; Yes        ; |top|data_path:CPU|flip_flop_D:ff|q[6]                            ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top|data_path:CPU|cond_logic:cl|flip_flop_D_neg:ff0|q[2]         ;
+; 3:1                ; 24 bits   ; 48 LEs        ; 48 LEs               ; 0 LEs                  ; No         ; |top|data_path:CPU|ALU:alu|mux_4_x_1:mux0|mux_2_x_1:mux2|z[13]    ;
+; 3:1                ; 5 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; No         ; |top|data_path:CPU|mux_2_x_1:mux1|z[4]                            ;
 ; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |top|data_path:CPU|decode_unit:decode|mux_2_x_1:mux1|z[1]         ;
-; 4:1                ; 14 bits   ; 28 LEs        ; 28 LEs               ; 0 LEs                  ; No         ; |top|data_path:CPU|mux_2_x_1:mux1|z[18]                           ;
-; 4:1                ; 7 bits    ; 14 LEs        ; 14 LEs               ; 0 LEs                  ; No         ; |top|data_path:CPU|mux_2_x_1:mux1|z[1]                            ;
-; 5:1                ; 8 bits    ; 24 LEs        ; 24 LEs               ; 0 LEs                  ; No         ; |top|image_memory_controller:image_controller|mux_2_x_1:mux3|z[2] ;
-; 17:1               ; 22 bits   ; 242 LEs       ; 198 LEs              ; 44 LEs                 ; No         ; |top|data_path:CPU|register_file:rf|rd3[11]                       ;
-; 18:1               ; 22 bits   ; 264 LEs       ; 220 LEs              ; 44 LEs                 ; No         ; |top|data_path:CPU|mux_2_x_1:mux3|z[6]                            ;
-; 18:1               ; 4 bits    ; 48 LEs        ; 40 LEs               ; 8 LEs                  ; No         ; |top|data_path:CPU|mux_2_x_1:mux2|z[18]                           ;
-; 19:1               ; 7 bits    ; 84 LEs        ; 70 LEs               ; 14 LEs                 ; No         ; |top|data_path:CPU|mux_2_x_1:mux2|z[1]                            ;
-; 8:1                ; 8 bits    ; 40 LEs        ; 40 LEs               ; 0 LEs                  ; No         ; |top|mux_2_x_1:mux6|z[4]                                          ;
-; 20:1               ; 11 bits   ; 143 LEs       ; 121 LEs              ; 22 LEs                 ; No         ; |top|data_path:CPU|mux_2_x_1:mux2|z[17]                           ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |top|data_path:CPU|mux_2_x_1:mux1|z[2]                            ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 24 LEs               ; 0 LEs                  ; No         ; |top|image_memory_controller:image_controller|mux_2_x_1:mux3|z[5] ;
+; 17:1               ; 8 bits    ; 88 LEs        ; 72 LEs               ; 16 LEs                 ; No         ; |top|data_path:CPU|register_file:rf|rd3[7]                        ;
+; 18:1               ; 24 bits   ; 288 LEs       ; 240 LEs              ; 48 LEs                 ; No         ; |top|data_path:CPU|mux_2_x_1:mux3|z[7]                            ;
+; 18:1               ; 6 bits    ; 72 LEs        ; 60 LEs               ; 12 LEs                 ; No         ; |top|data_path:CPU|mux_2_x_1:mux2|z[23]                           ;
+; 19:1               ; 7 bits    ; 84 LEs        ; 70 LEs               ; 14 LEs                 ; No         ; |top|data_path:CPU|mux_2_x_1:mux2|z[5]                            ;
+; 8:1                ; 8 bits    ; 40 LEs        ; 40 LEs               ; 0 LEs                  ; No         ; |top|mux_2_x_1:mux6|z[0]                                          ;
+; 20:1               ; 11 bits   ; 143 LEs       ; 121 LEs              ; 22 LEs                 ; No         ; |top|data_path:CPU|mux_2_x_1:mux2|z[12]                           ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------------+
 
 
@@ -688,7 +692,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------+-------+--------------------------------------------------------+
 ; Parameter Name ; Value ; Type                                                   ;
 +----------------+-------+--------------------------------------------------------+
-; N              ; 22    ; Signed Integer                                         ;
+; N              ; 24    ; Signed Integer                                         ;
 +----------------+-------+--------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
@@ -698,7 +702,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+-------+--------------------------------------------------------+
 ; Parameter Name ; Value ; Type                                                   ;
 +----------------+-------+--------------------------------------------------------+
-; N              ; 22    ; Signed Integer                                         ;
+; N              ; 24    ; Signed Integer                                         ;
 +----------------+-------+--------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
@@ -708,7 +712,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+-------+--------------------------------------------------+
 ; Parameter Name ; Value ; Type                                             ;
 +----------------+-------+--------------------------------------------------+
-; N              ; 22    ; Signed Integer                                   ;
+; N              ; 24    ; Signed Integer                                   ;
 +----------------+-------+--------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
@@ -718,7 +722,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+-------+--------------------------------------------------+
 ; Parameter Name ; Value ; Type                                             ;
 +----------------+-------+--------------------------------------------------+
-; N              ; 22    ; Signed Integer                                   ;
+; N              ; 24    ; Signed Integer                                   ;
 +----------------+-------+--------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
@@ -728,7 +732,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+-------+--------------------------------------------------+
 ; Parameter Name ; Value ; Type                                             ;
 +----------------+-------+--------------------------------------------------+
-; N              ; 22    ; Signed Integer                                   ;
+; N              ; 24    ; Signed Integer                                   ;
 +----------------+-------+--------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
@@ -748,7 +752,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+-------+-------------------------------------------------------------+
 ; Parameter Name ; Value ; Type                                                        ;
 +----------------+-------+-------------------------------------------------------------+
-; N              ; 22    ; Signed Integer                                              ;
+; N              ; 24    ; Signed Integer                                              ;
 +----------------+-------+-------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
@@ -758,7 +762,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+-------+----------------------------------------------------------------------------+
 ; Parameter Name ; Value ; Type                                                                       ;
 +----------------+-------+----------------------------------------------------------------------------+
-; N              ; 22    ; Signed Integer                                                             ;
+; N              ; 24    ; Signed Integer                                                             ;
 +----------------+-------+----------------------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
@@ -768,7 +772,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+-------+----------------------------------------------------------------------------+
 ; Parameter Name ; Value ; Type                                                                       ;
 +----------------+-------+----------------------------------------------------------------------------+
-; N              ; 22    ; Signed Integer                                                             ;
+; N              ; 24    ; Signed Integer                                                             ;
 +----------------+-------+----------------------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
@@ -778,7 +782,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+-------+----------------------------------------------------------------------------+
 ; Parameter Name ; Value ; Type                                                                       ;
 +----------------+-------+----------------------------------------------------------------------------+
-; N              ; 22    ; Signed Integer                                                             ;
+; N              ; 24    ; Signed Integer                                                             ;
 +----------------+-------+----------------------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
@@ -788,7 +792,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+-------+--------------------------------------------------+
 ; Parameter Name ; Value ; Type                                             ;
 +----------------+-------+--------------------------------------------------+
-; N              ; 22    ; Signed Integer                                   ;
+; N              ; 24    ; Signed Integer                                   ;
 +----------------+-------+--------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
@@ -798,7 +802,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+-------+--------------------------------------------------+
 ; Parameter Name ; Value ; Type                                             ;
 +----------------+-------+--------------------------------------------------+
-; N              ; 22    ; Signed Integer                                   ;
+; N              ; 24    ; Signed Integer                                   ;
 +----------------+-------+--------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
@@ -808,7 +812,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+-------+-------------------------------------------+
 ; Parameter Name ; Value ; Type                                      ;
 +----------------+-------+-------------------------------------------+
-; N              ; 22    ; Signed Integer                            ;
+; N              ; 24    ; Signed Integer                            ;
 +----------------+-------+-------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
@@ -818,7 +822,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+-------+------------------------------------------------------------------------+
 ; Parameter Name ; Value ; Type                                                                   ;
 +----------------+-------+------------------------------------------------------------------------+
-; N              ; 22    ; Signed Integer                                                         ;
+; N              ; 24    ; Signed Integer                                                         ;
 +----------------+-------+------------------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
@@ -828,7 +832,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+-------+---------------------------------------------------------------------------------------------+
 ; Parameter Name ; Value ; Type                                                                                        ;
 +----------------+-------+---------------------------------------------------------------------------------------------+
-; N              ; 22    ; Signed Integer                                                                              ;
+; N              ; 24    ; Signed Integer                                                                              ;
 +----------------+-------+---------------------------------------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
@@ -838,7 +842,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+-------+------------------------------------------------------------------------------------------------------------+
 ; Parameter Name ; Value ; Type                                                                                                       ;
 +----------------+-------+------------------------------------------------------------------------------------------------------------+
-; N              ; 22    ; Signed Integer                                                                                             ;
+; N              ; 24    ; Signed Integer                                                                                             ;
 +----------------+-------+------------------------------------------------------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
@@ -848,7 +852,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+-------+------------------------------------------------------------------------------------------------------+
 ; Parameter Name ; Value ; Type                                                                                                 ;
 +----------------+-------+------------------------------------------------------------------------------------------------------+
-; N              ; 22    ; Signed Integer                                                                                       ;
+; N              ; 24    ; Signed Integer                                                                                       ;
 +----------------+-------+------------------------------------------------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
@@ -858,7 +862,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+-------+---------------------------------------------------------------------------------------+
 ; Parameter Name ; Value ; Type                                                                                  ;
 +----------------+-------+---------------------------------------------------------------------------------------+
-; N              ; 22    ; Signed Integer                                                                        ;
+; N              ; 24    ; Signed Integer                                                                        ;
 +----------------+-------+---------------------------------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
@@ -868,7 +872,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+-------+----------------------------------------------------------+
 ; Parameter Name ; Value ; Type                                                     ;
 +----------------+-------+----------------------------------------------------------+
-; N              ; 22    ; Signed Integer                                           ;
+; N              ; 24    ; Signed Integer                                           ;
 +----------------+-------+----------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
@@ -878,7 +882,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+-------+-------------------------------------------------------------------------+
 ; Parameter Name ; Value ; Type                                                                    ;
 +----------------+-------+-------------------------------------------------------------------------+
-; N              ; 22    ; Signed Integer                                                          ;
+; N              ; 24    ; Signed Integer                                                          ;
 +----------------+-------+-------------------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
@@ -888,7 +892,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+-------+-------------------------------------------------------------------------+
 ; Parameter Name ; Value ; Type                                                                    ;
 +----------------+-------+-------------------------------------------------------------------------+
-; N              ; 22    ; Signed Integer                                                          ;
+; N              ; 24    ; Signed Integer                                                          ;
 +----------------+-------+-------------------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
@@ -898,7 +902,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+-------+-------------------------------------------------------------------------+
 ; Parameter Name ; Value ; Type                                                                    ;
 +----------------+-------+-------------------------------------------------------------------------+
-; N              ; 22    ; Signed Integer                                                          ;
+; N              ; 24    ; Signed Integer                                                          ;
 +----------------+-------+-------------------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
@@ -908,7 +912,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+-------+----------------------------------------------------------------+
 ; Parameter Name ; Value ; Type                                                           ;
 +----------------+-------+----------------------------------------------------------------+
-; N              ; 22    ; Signed Integer                                                 ;
+; N              ; 24    ; Signed Integer                                                 ;
 +----------------+-------+----------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
@@ -948,7 +952,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+-------+---------------------------------------------------------------------+
 ; Parameter Name ; Value ; Type                                                                ;
 +----------------+-------+---------------------------------------------------------------------+
-; N              ; 1     ; Signed Integer                                                      ;
+; N              ; 4     ; Signed Integer                                                      ;
 +----------------+-------+---------------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
@@ -1198,7 +1202,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+-------+------------------------------------+
 ; Parameter Name ; Value ; Type                               ;
 +----------------+-------+------------------------------------+
-; N              ; 22    ; Signed Integer                     ;
+; N              ; 24    ; Signed Integer                     ;
 +----------------+-------+------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
@@ -1208,7 +1212,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+-------+------------------------------------+
 ; Parameter Name ; Value ; Type                               ;
 +----------------+-------+------------------------------------+
-; N              ; 22    ; Signed Integer                     ;
+; N              ; 24    ; Signed Integer                     ;
 +----------------+-------+------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
@@ -1890,7 +1894,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------+-------+----------+--------------+
 ; Port     ; Type  ; Severity ; Details      ;
 +----------+-------+----------+--------------+
-; b[21..8] ; Input ; Info     ; Stuck at GND ;
+; b[23..8] ; Input ; Info     ; Stuck at GND ;
 +----------+-------+----------+--------------+
 
 
@@ -1899,7 +1903,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------+-------+----------+--------------+
 ; Port     ; Type  ; Severity ; Details      ;
 +----------+-------+----------+--------------+
-; a[21..1] ; Input ; Info     ; Stuck at GND ;
+; a[23..1] ; Input ; Info     ; Stuck at GND ;
 +----------+-------+----------+--------------+
 
 
@@ -2026,16 +2030,6 @@ Note: In order to hide this table in the UI and the text report file, please set
 +------+-------+----------+--------------------------------------------------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "data_path:CPU|ALU:alu"                                                                     ;
-+-------------+--------+----------+-------------------------------------------------------------------------------------+
-; Port        ; Type   ; Severity ; Details                                                                             ;
-+-------------+--------+----------+-------------------------------------------------------------------------------------+
-; flags[1..0] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; flags[3]    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+-------------+--------+----------+-------------------------------------------------------------------------------------+
-
-
 +----------------------------------------------------------+
 ; Port Connectivity Checks: "data_path:CPU|mux_2_x_1:mux3" ;
 +------+-------+----------+--------------------------------+
@@ -2050,8 +2044,8 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------+-------+----------+---------------------------------------+
 ; Port     ; Type  ; Severity ; Details                               ;
 +----------+-------+----------+---------------------------------------+
-; a[21..7] ; Input ; Info     ; Stuck at GND                          ;
-; b[21..7] ; Input ; Info     ; Stuck at GND                          ;
+; a[23..7] ; Input ; Info     ; Stuck at GND                          ;
+; b[23..7] ; Input ; Info     ; Stuck at GND                          ;
 ; d        ; Input ; Info     ; Stuck at GND                          ;
 +----------+-------+----------+---------------------------------------+
 
@@ -2081,7 +2075,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------+--------+----------+-------------------------------------------------------------------------------------+
 ; Port      ; Type   ; Severity ; Details                                                                             ;
 +-----------+--------+----------+-------------------------------------------------------------------------------------+
-; b[21..3]  ; Input  ; Info     ; Stuck at GND                                                                        ;
+; b[23..3]  ; Input  ; Info     ; Stuck at GND                                                                        ;
 ; b[1..0]   ; Input  ; Info     ; Stuck at GND                                                                        ;
 ; b[2]      ; Input  ; Info     ; Stuck at VCC                                                                        ;
 ; carry_in  ; Input  ; Info     ; Stuck at GND                                                                        ;
@@ -2094,7 +2088,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------+--------+----------+-------------------------------------------------------------------------------------+
 ; Port      ; Type   ; Severity ; Details                                                                             ;
 +-----------+--------+----------+-------------------------------------------------------------------------------------+
-; b[21..3]  ; Input  ; Info     ; Stuck at GND                                                                        ;
+; b[23..3]  ; Input  ; Info     ; Stuck at GND                                                                        ;
 ; b[1..0]   ; Input  ; Info     ; Stuck at GND                                                                        ;
 ; b[2]      ; Input  ; Info     ; Stuck at VCC                                                                        ;
 ; carry_in  ; Input  ; Info     ; Stuck at GND                                                                        ;
@@ -2107,34 +2101,35 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_ff             ; 910                         ;
+; arriav_ff             ; 342                         ;
 ;     CLR SCLR          ; 10                          ;
-;     ENA               ; 853                         ;
+;     ENA               ; 281                         ;
 ;     ENA CLR SCLR      ; 10                          ;
-;     SCLR              ; 2                           ;
-;     SCLR SLD          ; 20                          ;
-;     plain             ; 15                          ;
-; arriav_lcell_comb     ; 1665                        ;
+;     ENA SCLR          ; 2                           ;
+;     SCLR              ; 1                           ;
+;     SCLR SLD          ; 22                          ;
+;     plain             ; 16                          ;
+; arriav_lcell_comb     ; 1270                        ;
 ;     arith             ; 107                         ;
 ;         1 data inputs ; 20                          ;
 ;         3 data inputs ; 56                          ;
 ;         4 data inputs ; 30                          ;
 ;         5 data inputs ; 1                           ;
-;     extend            ; 136                         ;
-;         7 data inputs ; 136                         ;
-;     normal            ; 1422                        ;
-;         1 data inputs ; 274                         ;
-;         2 data inputs ; 76                          ;
-;         3 data inputs ; 112                         ;
-;         4 data inputs ; 135                         ;
-;         5 data inputs ; 249                         ;
-;         6 data inputs ; 576                         ;
+;     extend            ; 11                          ;
+;         7 data inputs ; 11                          ;
+;     normal            ; 1152                        ;
+;         1 data inputs ; 6                           ;
+;         2 data inputs ; 62                          ;
+;         3 data inputs ; 114                         ;
+;         4 data inputs ; 169                         ;
+;         5 data inputs ; 219                         ;
+;         6 data inputs ; 582                         ;
 ; arriav_mac            ; 2                           ;
 ; boundary_port         ; 34                          ;
 ; stratixv_ram_block    ; 320                         ;
 ;                       ;                             ;
-; Max LUT depth         ; 18.20                       ;
-; Average LUT depth     ; 9.24                        ;
+; Max LUT depth         ; 19.20                       ;
+; Average LUT depth     ; 11.34                       ;
 +-----------------------+-----------------------------+
 
 
@@ -2143,7 +2138,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:08     ;
+; Top            ; 00:00:09     ;
 +----------------+--------------+
 
 
@@ -2153,7 +2148,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Wed Sep 18 14:11:34 2019
+    Info: Processing started: Wed Sep 18 16:53:17 2019
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off ArquiProject -c ArquiProject
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
@@ -2265,8 +2260,9 @@ Info (12128): Elaborating entity "decode_unit" for hierarchy "data_path:CPU|deco
 Info (12128): Elaborating entity "mux_2_x_1" for hierarchy "data_path:CPU|decode_unit:decode|mux_2_x_1:mux_flags" File: D:/uGit/BranchOldV/Arquitectura-de-Computadores-1/Proyecto1/ProcesadorUniciclo/src/Processor/DecodeUnit/decode_unit.sv Line: 29
 Info (12128): Elaborating entity "mux_2_x_1" for hierarchy "data_path:CPU|decode_unit:decode|mux_2_x_1:mux0" File: D:/uGit/BranchOldV/Arquitectura-de-Computadores-1/Proyecto1/ProcesadorUniciclo/src/Processor/DecodeUnit/decode_unit.sv Line: 34
 Info (12128): Elaborating entity "cond_logic" for hierarchy "data_path:CPU|cond_logic:cl" File: D:/uGit/BranchOldV/Arquitectura-de-Computadores-1/Proyecto1/ProcesadorUniciclo/src/Processor/data_path.sv Line: 44
-Info (12128): Elaborating entity "flip_flop_D_neg" for hierarchy "data_path:CPU|cond_logic:cl|flip_flop_D_neg:ff0" File: D:/uGit/BranchOldV/Arquitectura-de-Computadores-1/Proyecto1/ProcesadorUniciclo/src/Processor/ConditionalLogicUnit/cond_logic.sv Line: 11
-Info (12128): Elaborating entity "cond_check" for hierarchy "data_path:CPU|cond_logic:cl|cond_check:cc" File: D:/uGit/BranchOldV/Arquitectura-de-Computadores-1/Proyecto1/ProcesadorUniciclo/src/Processor/ConditionalLogicUnit/cond_logic.sv Line: 13
+Info (12128): Elaborating entity "flip_flop_D_neg" for hierarchy "data_path:CPU|cond_logic:cl|flip_flop_D_neg:ff0" File: D:/uGit/BranchOldV/Arquitectura-de-Computadores-1/Proyecto1/ProcesadorUniciclo/src/Processor/ConditionalLogicUnit/cond_logic.sv Line: 12
+Info (12128): Elaborating entity "cond_check" for hierarchy "data_path:CPU|cond_logic:cl|cond_check:cc" File: D:/uGit/BranchOldV/Arquitectura-de-Computadores-1/Proyecto1/ProcesadorUniciclo/src/Processor/ConditionalLogicUnit/cond_logic.sv Line: 14
+Warning (10036): Verilog HDL or VHDL warning at cond_check.sv(3): object "_carry" assigned a value but never read File: D:/uGit/BranchOldV/Arquitectura-de-Computadores-1/Proyecto1/ProcesadorUniciclo/src/Processor/ConditionalLogicUnit/cond_check.sv Line: 3
 Info (12128): Elaborating entity "instruction_memory" for hierarchy "instruction_memory:im" File: D:/uGit/BranchOldV/Arquitectura-de-Computadores-1/Proyecto1/ProcesadorUniciclo/src/top.sv Line: 22
 Warning (10030): Net "memory.data_a" at instruction_memory.sv(4) has no driver or initial value, using a default initial value '0' File: D:/uGit/BranchOldV/Arquitectura-de-Computadores-1/Proyecto1/ProcesadorUniciclo/src/Memories/instruction_memory.sv Line: 4
 Warning (10030): Net "memory.waddr_a" at instruction_memory.sv(4) has no driver or initial value, using a default initial value '0' File: D:/uGit/BranchOldV/Arquitectura-de-Computadores-1/Proyecto1/ProcesadorUniciclo/src/Memories/instruction_memory.sv Line: 4
@@ -2289,10 +2285,7 @@ Info (12128): Elaborating entity "ControllerSync" for hierarchy "VGA:vga|Control
 Info (12128): Elaborating entity "vga_mem_map" for hierarchy "VGA:vga|vga_mem_map:map" File: D:/uGit/BranchOldV/Arquitectura-de-Computadores-1/Proyecto1/ProcesadorUniciclo/src/VGA/VGA.sv Line: 16
 Info (12128): Elaborating entity "offset_image_mem" for hierarchy "offset_image_mem:offset" File: D:/uGit/BranchOldV/Arquitectura-de-Computadores-1/Proyecto1/ProcesadorUniciclo/src/top.sv Line: 51
 Info (12128): Elaborating entity "mux_2_x_1" for hierarchy "mux_2_x_1:mux4" File: D:/uGit/BranchOldV/Arquitectura-de-Computadores-1/Proyecto1/ProcesadorUniciclo/src/top.sv Line: 52
-Info (276014): Found 1 instances of uninferred RAM logic
-    Info (276007): RAM logic "data_memory:dm|RAM" is uninferred due to asynchronous read logic File: D:/uGit/BranchOldV/Arquitectura-de-Computadores-1/Proyecto1/ProcesadorUniciclo/src/Memories/data_memory.sv Line: 5
-Critical Warning (127005): Memory depth (256) in the design file differs from memory depth (129) in the Memory Initialization File "D:/uGit/BranchOldV/Arquitectura-de-Computadores-1/Proyecto1/ProcesadorUniciclo/db/ArquiProject.ram0_instruction_memory_68fd8bb8.hdl.mif" -- setting initial value for remaining addresses to 0
-Critical Warning (127005): Memory depth (32) in the design file differs from memory depth (27) in the Memory Initialization File "D:/uGit/BranchOldV/Arquitectura-de-Computadores-1/Proyecto1/ProcesadorUniciclo/db/ArquiProject.ram0_data_memory_8ae84398.hdl.mif" -- setting initial value for remaining addresses to 0
+Critical Warning (127005): Memory depth (256) in the design file differs from memory depth (140) in the Memory Initialization File "D:/uGit/BranchOldV/Arquitectura-de-Computadores-1/Proyecto1/ProcesadorUniciclo/db/ArquiProject.ram0_instruction_memory_68fd8bb8.hdl.mif" -- setting initial value for remaining addresses to 0
 Info (19000): Inferred 8 megafunctions from design logic
     Info (276029): Inferred altsyncram megafunction from the following design logic: "image_memory_controller_process:image_process|image_memory3:image4|RAM_rtl_0" 
         Info (286033): Parameter OPERATION_MODE set to DUAL_PORT
@@ -2492,17 +2485,17 @@ Info (286030): Timing-Driven Synthesis is running
 Info (144001): Generated suppressed messages file D:/uGit/BranchOldV/Arquitectura-de-Computadores-1/Proyecto1/ProcesadorUniciclo/output_files/ArquiProject.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 2630 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 1930 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 6 input pins
     Info (21059): Implemented 28 output pins
-    Info (21061): Implemented 2274 logic cells
+    Info (21061): Implemented 1574 logic cells
     Info (21064): Implemented 320 RAM segments
     Info (21062): Implemented 2 DSP elements
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 6 warnings
-    Info: Peak virtual memory: 4901 megabytes
-    Info: Processing ended: Wed Sep 18 14:12:38 2019
+    Info: Peak virtual memory: 4899 megabytes
+    Info: Processing ended: Wed Sep 18 16:54:21 2019
     Info: Elapsed time: 00:01:04
-    Info: Total CPU time (on all processors): 00:01:13
+    Info: Total CPU time (on all processors): 00:01:14
 
 
 +------------------------------------------+

@@ -10,35 +10,289 @@
 # Copying D:/intelFPGA_lite/18.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
 # Modifying modelsim.ini
 # 
-# vlog -sv -work work +incdir+D:/uGit/Arquitectura-de-Computadores-1/Proyecto1/ProcesadorUniciclo/src/Processor/ALU {D:/uGit/Arquitectura-de-Computadores-1/Proyecto1/ProcesadorUniciclo/src/Processor/ALU/multiplier.sv}
+# vlog -sv -work work +incdir+D:/uGit/BranchOldV/Arquitectura-de-Computadores-1/Proyecto1/ProcesadorUniciclo/src/Processor/ExtendUnit {D:/uGit/BranchOldV/Arquitectura-de-Computadores-1/Proyecto1/ProcesadorUniciclo/src/Processor/ExtendUnit/extend.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 01:03:14 on Sep 18,2019
-# vlog -reportprogress 300 -sv -work work "+incdir+D:/uGit/Arquitectura-de-Computadores-1/Proyecto1/ProcesadorUniciclo/src/Processor/ALU" D:/uGit/Arquitectura-de-Computadores-1/Proyecto1/ProcesadorUniciclo/src/Processor/ALU/multiplier.sv 
+# Start time: 16:27:32 on Sep 18,2019
+# vlog -reportprogress 300 -sv -work work "+incdir+D:/uGit/BranchOldV/Arquitectura-de-Computadores-1/Proyecto1/ProcesadorUniciclo/src/Processor/ExtendUnit" D:/uGit/BranchOldV/Arquitectura-de-Computadores-1/Proyecto1/ProcesadorUniciclo/src/Processor/ExtendUnit/extend.sv 
+# -- Compiling module extend
+# 
+# Top level modules:
+# 	extend
+# End time: 16:27:32 on Sep 18,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+D:/uGit/BranchOldV/Arquitectura-de-Computadores-1/Proyecto1/ProcesadorUniciclo/src/Processor/RegisterFile {D:/uGit/BranchOldV/Arquitectura-de-Computadores-1/Proyecto1/ProcesadorUniciclo/src/Processor/RegisterFile/register_file.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:27:32 on Sep 18,2019
+# vlog -reportprogress 300 -sv -work work "+incdir+D:/uGit/BranchOldV/Arquitectura-de-Computadores-1/Proyecto1/ProcesadorUniciclo/src/Processor/RegisterFile" D:/uGit/BranchOldV/Arquitectura-de-Computadores-1/Proyecto1/ProcesadorUniciclo/src/Processor/RegisterFile/register_file.sv 
+# -- Compiling module register_file
+# 
+# Top level modules:
+# 	register_file
+# End time: 16:27:32 on Sep 18,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+D:/uGit/BranchOldV/Arquitectura-de-Computadores-1/Proyecto1/ProcesadorUniciclo/src/Processor/ALU {D:/uGit/BranchOldV/Arquitectura-de-Computadores-1/Proyecto1/ProcesadorUniciclo/src/Processor/ALU/multiplier.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:27:32 on Sep 18,2019
+# vlog -reportprogress 300 -sv -work work "+incdir+D:/uGit/BranchOldV/Arquitectura-de-Computadores-1/Proyecto1/ProcesadorUniciclo/src/Processor/ALU" D:/uGit/BranchOldV/Arquitectura-de-Computadores-1/Proyecto1/ProcesadorUniciclo/src/Processor/ALU/multiplier.sv 
 # -- Compiling module multiplier
 # 
 # Top level modules:
 # 	multiplier
-# End time: 01:03:14 on Sep 18,2019, Elapsed time: 0:00:00
+# End time: 16:27:32 on Sep 18,2019, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+D:/uGit/Arquitectura-de-Computadores-1/Proyecto1/ProcesadorUniciclo/src {D:/uGit/Arquitectura-de-Computadores-1/Proyecto1/ProcesadorUniciclo/src/test.sv}
+# vlog -sv -work work +incdir+D:/uGit/BranchOldV/Arquitectura-de-Computadores-1/Proyecto1/ProcesadorUniciclo/src/Processor/ALU {D:/uGit/BranchOldV/Arquitectura-de-Computadores-1/Proyecto1/ProcesadorUniciclo/src/Processor/ALU/full_adder.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 01:03:14 on Sep 18,2019
-# vlog -reportprogress 300 -sv -work work "+incdir+D:/uGit/Arquitectura-de-Computadores-1/Proyecto1/ProcesadorUniciclo/src" D:/uGit/Arquitectura-de-Computadores-1/Proyecto1/ProcesadorUniciclo/src/test.sv 
-# -- Compiling module test
+# Start time: 16:27:32 on Sep 18,2019
+# vlog -reportprogress 300 -sv -work work "+incdir+D:/uGit/BranchOldV/Arquitectura-de-Computadores-1/Proyecto1/ProcesadorUniciclo/src/Processor/ALU" D:/uGit/BranchOldV/Arquitectura-de-Computadores-1/Proyecto1/ProcesadorUniciclo/src/Processor/ALU/full_adder.sv 
+# -- Compiling module full_adder
 # 
 # Top level modules:
-# 	test
-# End time: 01:03:14 on Sep 18,2019, Elapsed time: 0:00:00
+# 	full_adder
+# End time: 16:27:32 on Sep 18,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+D:/uGit/BranchOldV/Arquitectura-de-Computadores-1/Proyecto1/ProcesadorUniciclo/src/Processor/ALU {D:/uGit/BranchOldV/Arquitectura-de-Computadores-1/Proyecto1/ProcesadorUniciclo/src/Processor/ALU/flag_module.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:27:32 on Sep 18,2019
+# vlog -reportprogress 300 -sv -work work "+incdir+D:/uGit/BranchOldV/Arquitectura-de-Computadores-1/Proyecto1/ProcesadorUniciclo/src/Processor/ALU" D:/uGit/BranchOldV/Arquitectura-de-Computadores-1/Proyecto1/ProcesadorUniciclo/src/Processor/ALU/flag_module.sv 
+# -- Compiling module flag_module
+# 
+# Top level modules:
+# 	flag_module
+# End time: 16:27:33 on Sep 18,2019, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+D:/uGit/BranchOldV/Arquitectura-de-Computadores-1/Proyecto1/ProcesadorUniciclo/src/Processor/ALU {D:/uGit/BranchOldV/Arquitectura-de-Computadores-1/Proyecto1/ProcesadorUniciclo/src/Processor/ALU/arithmetic_module.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:27:33 on Sep 18,2019
+# vlog -reportprogress 300 -sv -work work "+incdir+D:/uGit/BranchOldV/Arquitectura-de-Computadores-1/Proyecto1/ProcesadorUniciclo/src/Processor/ALU" D:/uGit/BranchOldV/Arquitectura-de-Computadores-1/Proyecto1/ProcesadorUniciclo/src/Processor/ALU/arithmetic_module.sv 
+# -- Compiling module arithmetic_module
+# 
+# Top level modules:
+# 	arithmetic_module
+# End time: 16:27:33 on Sep 18,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+D:/uGit/BranchOldV/Arquitectura-de-Computadores-1/Proyecto1/ProcesadorUniciclo/src/Processor/ALU {D:/uGit/BranchOldV/Arquitectura-de-Computadores-1/Proyecto1/ProcesadorUniciclo/src/Processor/ALU/ALU.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:27:33 on Sep 18,2019
+# vlog -reportprogress 300 -sv -work work "+incdir+D:/uGit/BranchOldV/Arquitectura-de-Computadores-1/Proyecto1/ProcesadorUniciclo/src/Processor/ALU" D:/uGit/BranchOldV/Arquitectura-de-Computadores-1/Proyecto1/ProcesadorUniciclo/src/Processor/ALU/ALU.sv 
+# -- Compiling module ALU
+# 
+# Top level modules:
+# 	ALU
+# End time: 16:27:33 on Sep 18,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+D:/uGit/BranchOldV/Arquitectura-de-Computadores-1/Proyecto1/ProcesadorUniciclo/src/Processor/ALU {D:/uGit/BranchOldV/Arquitectura-de-Computadores-1/Proyecto1/ProcesadorUniciclo/src/Processor/ALU/adder.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:27:33 on Sep 18,2019
+# vlog -reportprogress 300 -sv -work work "+incdir+D:/uGit/BranchOldV/Arquitectura-de-Computadores-1/Proyecto1/ProcesadorUniciclo/src/Processor/ALU" D:/uGit/BranchOldV/Arquitectura-de-Computadores-1/Proyecto1/ProcesadorUniciclo/src/Processor/ALU/adder.sv 
+# -- Compiling module adder
+# 
+# Top level modules:
+# 	adder
+# End time: 16:27:33 on Sep 18,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+D:/uGit/BranchOldV/Arquitectura-de-Computadores-1/Proyecto1/ProcesadorUniciclo/src/Processor/ALU {D:/uGit/BranchOldV/Arquitectura-de-Computadores-1/Proyecto1/ProcesadorUniciclo/src/Processor/ALU/add_sub_module.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:27:33 on Sep 18,2019
+# vlog -reportprogress 300 -sv -work work "+incdir+D:/uGit/BranchOldV/Arquitectura-de-Computadores-1/Proyecto1/ProcesadorUniciclo/src/Processor/ALU" D:/uGit/BranchOldV/Arquitectura-de-Computadores-1/Proyecto1/ProcesadorUniciclo/src/Processor/ALU/add_sub_module.sv 
+# -- Compiling module add_sub_module
+# 
+# Top level modules:
+# 	add_sub_module
+# End time: 16:27:33 on Sep 18,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+D:/uGit/BranchOldV/Arquitectura-de-Computadores-1/Proyecto1/ProcesadorUniciclo/src/Processor {D:/uGit/BranchOldV/Arquitectura-de-Computadores-1/Proyecto1/ProcesadorUniciclo/src/Processor/data_path.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:27:33 on Sep 18,2019
+# vlog -reportprogress 300 -sv -work work "+incdir+D:/uGit/BranchOldV/Arquitectura-de-Computadores-1/Proyecto1/ProcesadorUniciclo/src/Processor" D:/uGit/BranchOldV/Arquitectura-de-Computadores-1/Proyecto1/ProcesadorUniciclo/src/Processor/data_path.sv 
+# -- Compiling module data_path
+# 
+# Top level modules:
+# 	data_path
+# End time: 16:27:33 on Sep 18,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+D:/uGit/BranchOldV/Arquitectura-de-Computadores-1/Proyecto1/ProcesadorUniciclo/src/Memories {D:/uGit/BranchOldV/Arquitectura-de-Computadores-1/Proyecto1/ProcesadorUniciclo/src/Memories/instruction_memory.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:27:33 on Sep 18,2019
+# vlog -reportprogress 300 -sv -work work "+incdir+D:/uGit/BranchOldV/Arquitectura-de-Computadores-1/Proyecto1/ProcesadorUniciclo/src/Memories" D:/uGit/BranchOldV/Arquitectura-de-Computadores-1/Proyecto1/ProcesadorUniciclo/src/Memories/instruction_memory.sv 
+# -- Compiling module instruction_memory
+# 
+# Top level modules:
+# 	instruction_memory
+# End time: 16:27:33 on Sep 18,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+D:/uGit/BranchOldV/Arquitectura-de-Computadores-1/Proyecto1/ProcesadorUniciclo/src/Memories {D:/uGit/BranchOldV/Arquitectura-de-Computadores-1/Proyecto1/ProcesadorUniciclo/src/Memories/data_memory.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:27:33 on Sep 18,2019
+# vlog -reportprogress 300 -sv -work work "+incdir+D:/uGit/BranchOldV/Arquitectura-de-Computadores-1/Proyecto1/ProcesadorUniciclo/src/Memories" D:/uGit/BranchOldV/Arquitectura-de-Computadores-1/Proyecto1/ProcesadorUniciclo/src/Memories/data_memory.sv 
+# -- Compiling module data_memory
+# 
+# Top level modules:
+# 	data_memory
+# End time: 16:27:34 on Sep 18,2019, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+D:/uGit/BranchOldV/Arquitectura-de-Computadores-1/Proyecto1/ProcesadorUniciclo/src/Generic_Modules {D:/uGit/BranchOldV/Arquitectura-de-Computadores-1/Proyecto1/ProcesadorUniciclo/src/Generic_Modules/mux_4_x_1.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:27:34 on Sep 18,2019
+# vlog -reportprogress 300 -sv -work work "+incdir+D:/uGit/BranchOldV/Arquitectura-de-Computadores-1/Proyecto1/ProcesadorUniciclo/src/Generic_Modules" D:/uGit/BranchOldV/Arquitectura-de-Computadores-1/Proyecto1/ProcesadorUniciclo/src/Generic_Modules/mux_4_x_1.sv 
+# -- Compiling module mux_4_x_1
+# 
+# Top level modules:
+# 	mux_4_x_1
+# End time: 16:27:34 on Sep 18,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+D:/uGit/BranchOldV/Arquitectura-de-Computadores-1/Proyecto1/ProcesadorUniciclo/src/Generic_Modules {D:/uGit/BranchOldV/Arquitectura-de-Computadores-1/Proyecto1/ProcesadorUniciclo/src/Generic_Modules/mux_2_x_1.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:27:34 on Sep 18,2019
+# vlog -reportprogress 300 -sv -work work "+incdir+D:/uGit/BranchOldV/Arquitectura-de-Computadores-1/Proyecto1/ProcesadorUniciclo/src/Generic_Modules" D:/uGit/BranchOldV/Arquitectura-de-Computadores-1/Proyecto1/ProcesadorUniciclo/src/Generic_Modules/mux_2_x_1.sv 
+# -- Compiling module mux_2_x_1
+# 
+# Top level modules:
+# 	mux_2_x_1
+# End time: 16:27:34 on Sep 18,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+D:/uGit/BranchOldV/Arquitectura-de-Computadores-1/Proyecto1/ProcesadorUniciclo/src/Generic_Modules {D:/uGit/BranchOldV/Arquitectura-de-Computadores-1/Proyecto1/ProcesadorUniciclo/src/Generic_Modules/flip_flop_D.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:27:34 on Sep 18,2019
+# vlog -reportprogress 300 -sv -work work "+incdir+D:/uGit/BranchOldV/Arquitectura-de-Computadores-1/Proyecto1/ProcesadorUniciclo/src/Generic_Modules" D:/uGit/BranchOldV/Arquitectura-de-Computadores-1/Proyecto1/ProcesadorUniciclo/src/Generic_Modules/flip_flop_D.sv 
+# -- Compiling module flip_flop_D
+# 
+# Top level modules:
+# 	flip_flop_D
+# End time: 16:27:34 on Sep 18,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+D:/uGit/BranchOldV/Arquitectura-de-Computadores-1/Proyecto1/ProcesadorUniciclo/src/Generic_Modules {D:/uGit/BranchOldV/Arquitectura-de-Computadores-1/Proyecto1/ProcesadorUniciclo/src/Generic_Modules/generic_full_adder.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:27:34 on Sep 18,2019
+# vlog -reportprogress 300 -sv -work work "+incdir+D:/uGit/BranchOldV/Arquitectura-de-Computadores-1/Proyecto1/ProcesadorUniciclo/src/Generic_Modules" D:/uGit/BranchOldV/Arquitectura-de-Computadores-1/Proyecto1/ProcesadorUniciclo/src/Generic_Modules/generic_full_adder.sv 
+# -- Compiling module generic_full_adder
+# 
+# Top level modules:
+# 	generic_full_adder
+# End time: 16:27:34 on Sep 18,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+D:/uGit/BranchOldV/Arquitectura-de-Computadores-1/Proyecto1/ProcesadorUniciclo/src/Generic_Modules {D:/uGit/BranchOldV/Arquitectura-de-Computadores-1/Proyecto1/ProcesadorUniciclo/src/Generic_Modules/generic_adder.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:27:34 on Sep 18,2019
+# vlog -reportprogress 300 -sv -work work "+incdir+D:/uGit/BranchOldV/Arquitectura-de-Computadores-1/Proyecto1/ProcesadorUniciclo/src/Generic_Modules" D:/uGit/BranchOldV/Arquitectura-de-Computadores-1/Proyecto1/ProcesadorUniciclo/src/Generic_Modules/generic_adder.sv 
+# -- Compiling module generic_adder
+# 
+# Top level modules:
+# 	generic_adder
+# End time: 16:27:34 on Sep 18,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+D:/uGit/BranchOldV/Arquitectura-de-Computadores-1/Proyecto1/ProcesadorUniciclo/src/Processor/DecodeUnit {D:/uGit/BranchOldV/Arquitectura-de-Computadores-1/Proyecto1/ProcesadorUniciclo/src/Processor/DecodeUnit/decode_unit.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:27:34 on Sep 18,2019
+# vlog -reportprogress 300 -sv -work work "+incdir+D:/uGit/BranchOldV/Arquitectura-de-Computadores-1/Proyecto1/ProcesadorUniciclo/src/Processor/DecodeUnit" D:/uGit/BranchOldV/Arquitectura-de-Computadores-1/Proyecto1/ProcesadorUniciclo/src/Processor/DecodeUnit/decode_unit.sv 
+# -- Compiling module decode_unit
+# 
+# Top level modules:
+# 	decode_unit
+# End time: 16:27:34 on Sep 18,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+D:/uGit/BranchOldV/Arquitectura-de-Computadores-1/Proyecto1/ProcesadorUniciclo/src/Processor/ConditionalLogicUnit {D:/uGit/BranchOldV/Arquitectura-de-Computadores-1/Proyecto1/ProcesadorUniciclo/src/Processor/ConditionalLogicUnit/cond_check.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:27:34 on Sep 18,2019
+# vlog -reportprogress 300 -sv -work work "+incdir+D:/uGit/BranchOldV/Arquitectura-de-Computadores-1/Proyecto1/ProcesadorUniciclo/src/Processor/ConditionalLogicUnit" D:/uGit/BranchOldV/Arquitectura-de-Computadores-1/Proyecto1/ProcesadorUniciclo/src/Processor/ConditionalLogicUnit/cond_check.sv 
+# -- Compiling module cond_check
+# 
+# Top level modules:
+# 	cond_check
+# End time: 16:27:35 on Sep 18,2019, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+D:/uGit/BranchOldV/Arquitectura-de-Computadores-1/Proyecto1/ProcesadorUniciclo/src/Processor/ConditionalLogicUnit {D:/uGit/BranchOldV/Arquitectura-de-Computadores-1/Proyecto1/ProcesadorUniciclo/src/Processor/ConditionalLogicUnit/cond_logic.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:27:35 on Sep 18,2019
+# vlog -reportprogress 300 -sv -work work "+incdir+D:/uGit/BranchOldV/Arquitectura-de-Computadores-1/Proyecto1/ProcesadorUniciclo/src/Processor/ConditionalLogicUnit" D:/uGit/BranchOldV/Arquitectura-de-Computadores-1/Proyecto1/ProcesadorUniciclo/src/Processor/ConditionalLogicUnit/cond_logic.sv 
+# -- Compiling module cond_logic
+# 
+# Top level modules:
+# 	cond_logic
+# End time: 16:27:35 on Sep 18,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+D:/uGit/BranchOldV/Arquitectura-de-Computadores-1/Proyecto1/ProcesadorUniciclo/src/Generic_Modules {D:/uGit/BranchOldV/Arquitectura-de-Computadores-1/Proyecto1/ProcesadorUniciclo/src/Generic_Modules/flip_flop_D_neg.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:27:35 on Sep 18,2019
+# vlog -reportprogress 300 -sv -work work "+incdir+D:/uGit/BranchOldV/Arquitectura-de-Computadores-1/Proyecto1/ProcesadorUniciclo/src/Generic_Modules" D:/uGit/BranchOldV/Arquitectura-de-Computadores-1/Proyecto1/ProcesadorUniciclo/src/Generic_Modules/flip_flop_D_neg.sv 
+# -- Compiling module flip_flop_D_neg
+# 
+# Top level modules:
+# 	flip_flop_D_neg
+# End time: 16:27:35 on Sep 18,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+D:/uGit/BranchOldV/Arquitectura-de-Computadores-1/Proyecto1/ProcesadorUniciclo/src {D:/uGit/BranchOldV/Arquitectura-de-Computadores-1/Proyecto1/ProcesadorUniciclo/src/processor_memories.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:27:35 on Sep 18,2019
+# vlog -reportprogress 300 -sv -work work "+incdir+D:/uGit/BranchOldV/Arquitectura-de-Computadores-1/Proyecto1/ProcesadorUniciclo/src" D:/uGit/BranchOldV/Arquitectura-de-Computadores-1/Proyecto1/ProcesadorUniciclo/src/processor_memories.sv 
+# -- Compiling module processor_memories
+# 
+# Top level modules:
+# 	processor_memories
+# End time: 16:27:35 on Sep 18,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+D:/uGit/BranchOldV/Arquitectura-de-Computadores-1/Proyecto1/ProcesadorUniciclo/src {D:/uGit/BranchOldV/Arquitectura-de-Computadores-1/Proyecto1/ProcesadorUniciclo/src/processor_test.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:27:35 on Sep 18,2019
+# vlog -reportprogress 300 -sv -work work "+incdir+D:/uGit/BranchOldV/Arquitectura-de-Computadores-1/Proyecto1/ProcesadorUniciclo/src" D:/uGit/BranchOldV/Arquitectura-de-Computadores-1/Proyecto1/ProcesadorUniciclo/src/processor_test.sv 
+# -- Compiling module processor_test
+# 
+# Top level modules:
+# 	processor_test
+# End time: 16:27:35 on Sep 18,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+D:/uGit/BranchOldV/Arquitectura-de-Computadores-1/Proyecto1/ProcesadorUniciclo/src/Memories {D:/uGit/BranchOldV/Arquitectura-de-Computadores-1/Proyecto1/ProcesadorUniciclo/src/Memories/image_memory.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:27:35 on Sep 18,2019
+# vlog -reportprogress 300 -sv -work work "+incdir+D:/uGit/BranchOldV/Arquitectura-de-Computadores-1/Proyecto1/ProcesadorUniciclo/src/Memories" D:/uGit/BranchOldV/Arquitectura-de-Computadores-1/Proyecto1/ProcesadorUniciclo/src/Memories/image_memory.sv 
+# -- Compiling module image_memory
+# 
+# Top level modules:
+# 	image_memory
+# End time: 16:27:35 on Sep 18,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+D:/uGit/BranchOldV/Arquitectura-de-Computadores-1/Proyecto1/ProcesadorUniciclo/src/IO {D:/uGit/BranchOldV/Arquitectura-de-Computadores-1/Proyecto1/ProcesadorUniciclo/src/IO/io_deco2.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:27:35 on Sep 18,2019
+# vlog -reportprogress 300 -sv -work work "+incdir+D:/uGit/BranchOldV/Arquitectura-de-Computadores-1/Proyecto1/ProcesadorUniciclo/src/IO" D:/uGit/BranchOldV/Arquitectura-de-Computadores-1/Proyecto1/ProcesadorUniciclo/src/IO/io_deco2.sv 
+# -- Compiling module io_deco2
+# 
+# Top level modules:
+# 	io_deco2
+# End time: 16:27:35 on Sep 18,2019, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
-vsim work.test
-# vsim work.test 
-# Start time: 01:03:29 on Sep 18,2019
+vsim work.processor_test
+# vsim work.processor_test 
+# Start time: 16:27:40 on Sep 18,2019
 # Loading sv_std.std
-# Loading work.test
+# Loading work.processor_test
+# Loading work.processor_memories
+# Loading work.data_path
+# Loading work.generic_adder
+# Loading work.mux_2_x_1
+# Loading work.flip_flop_D
+# Loading work.register_file
+# Loading work.extend
+# Loading work.mux_4_x_1
+# Loading work.ALU
+# Loading work.arithmetic_module
+# Loading work.add_sub_module
+# Loading work.adder
 # Loading work.multiplier
-add wave -position end sim:/test/*
-run
-# a = 01100100, b = 11111111, s = 10011100, cout = 1
-# End time: 01:08:01 on Sep 18,2019, Elapsed time: 0:04:32
+# Loading work.flag_module
+# Loading work.decode_unit
+# Loading work.cond_logic
+# Loading work.flip_flop_D_neg
+# Loading work.cond_check
+# Loading work.instruction_memory
+# Loading work.data_memory
+# Loading work.image_memory
+# Loading work.io_deco2
+# Loading work.generic_full_adder
+# Loading work.full_adder
+add wave -position end  sim:/processor_test/DUT/pc
+add wave -position end  sim:/processor_test/DUT/instr
+add wave -position end  sim:/processor_test/DUT/data_adr
+run 200ps
+# End time: 16:28:15 on Sep 18,2019, Elapsed time: 0:00:35
 # Errors: 0, Warnings: 0

@@ -3,147 +3,147 @@ Timing Analyzer Summary
 ------------------------------------------------------------
 
 Type  : Slow 1100mV 85C Model Setup 'ClkDivisor:divisor|clk25Mhz'
-Slack : -19.501
-TNS   : -4614.589
+Slack : -20.058
+TNS   : -5193.018
 
 Type  : Slow 1100mV 85C Model Setup 'clk'
-Slack : -17.950
-TNS   : -133818.002
+Slack : -18.141
+TNS   : -126262.133
 
 Type  : Slow 1100mV 85C Model Setup 'VGA:vga|ClkDivisor:VGAClkDivisor|clk25Mhz'
-Slack : -3.360
-TNS   : -108.800
+Slack : -3.227
+TNS   : -108.037
 
 Type  : Slow 1100mV 85C Model Hold 'clk'
-Slack : 0.374
+Slack : 0.352
 TNS   : 0.000
 
 Type  : Slow 1100mV 85C Model Hold 'VGA:vga|ClkDivisor:VGAClkDivisor|clk25Mhz'
-Slack : 0.737
+Slack : 0.845
 TNS   : 0.000
 
 Type  : Slow 1100mV 85C Model Hold 'ClkDivisor:divisor|clk25Mhz'
-Slack : 0.931
+Slack : 0.953
 TNS   : 0.000
 
 Type  : Slow 1100mV 85C Model Minimum Pulse Width 'clk'
 Slack : -2.636
-TNS   : -33805.765
+TNS   : -33461.770
 
 Type  : Slow 1100mV 85C Model Minimum Pulse Width 'VGA:vga|ClkDivisor:VGAClkDivisor|clk25Mhz'
 Slack : -2.225
-TNS   : -54.014
+TNS   : -56.471
 
 Type  : Slow 1100mV 85C Model Minimum Pulse Width 'ClkDivisor:divisor|clk25Mhz'
-Slack : -0.468
-TNS   : -187.654
+Slack : -0.425
+TNS   : -203.410
 
 Type  : Slow 1100mV 0C Model Setup 'ClkDivisor:divisor|clk25Mhz'
-Slack : -19.312
-TNS   : -4544.517
+Slack : -19.774
+TNS   : -5107.034
 
 Type  : Slow 1100mV 0C Model Setup 'clk'
-Slack : -17.485
-TNS   : -129593.504
+Slack : -17.644
+TNS   : -121727.881
 
 Type  : Slow 1100mV 0C Model Setup 'VGA:vga|ClkDivisor:VGAClkDivisor|clk25Mhz'
-Slack : -3.408
-TNS   : -106.635
+Slack : -3.147
+TNS   : -105.313
 
 Type  : Slow 1100mV 0C Model Hold 'clk'
 Slack : 0.392
 TNS   : 0.000
 
 Type  : Slow 1100mV 0C Model Hold 'VGA:vga|ClkDivisor:VGAClkDivisor|clk25Mhz'
-Slack : 0.642
+Slack : 0.845
 TNS   : 0.000
 
 Type  : Slow 1100mV 0C Model Hold 'ClkDivisor:divisor|clk25Mhz'
-Slack : 0.919
+Slack : 0.893
 TNS   : 0.000
 
 Type  : Slow 1100mV 0C Model Minimum Pulse Width 'clk'
 Slack : -2.636
-TNS   : -33793.367
+TNS   : -33411.630
 
 Type  : Slow 1100mV 0C Model Minimum Pulse Width 'VGA:vga|ClkDivisor:VGAClkDivisor|clk25Mhz'
 Slack : -2.225
-TNS   : -54.029
+TNS   : -55.850
 
 Type  : Slow 1100mV 0C Model Minimum Pulse Width 'ClkDivisor:divisor|clk25Mhz'
-Slack : -0.434
-TNS   : -173.130
+Slack : -0.398
+TNS   : -183.905
 
 Type  : Fast 1100mV 85C Model Setup 'ClkDivisor:divisor|clk25Mhz'
-Slack : -11.420
-TNS   : -2680.269
+Slack : -11.838
+TNS   : -3048.799
 
 Type  : Fast 1100mV 85C Model Setup 'clk'
-Slack : -10.433
-TNS   : -78552.329
+Slack : -10.548
+TNS   : -74497.584
 
 Type  : Fast 1100mV 85C Model Setup 'VGA:vga|ClkDivisor:VGAClkDivisor|clk25Mhz'
-Slack : -1.743
-TNS   : -53.864
+Slack : -1.574
+TNS   : -50.160
 
 Type  : Fast 1100mV 85C Model Hold 'clk'
-Slack : 0.182
+Slack : 0.001
 TNS   : 0.000
 
 Type  : Fast 1100mV 85C Model Hold 'VGA:vga|ClkDivisor:VGAClkDivisor|clk25Mhz'
-Slack : 0.353
+Slack : 0.398
 TNS   : 0.000
 
 Type  : Fast 1100mV 85C Model Hold 'ClkDivisor:divisor|clk25Mhz'
-Slack : 0.440
+Slack : 0.441
 TNS   : 0.000
 
 Type  : Fast 1100mV 85C Model Minimum Pulse Width 'clk'
 Slack : -2.636
-TNS   : -33426.854
+TNS   : -33392.332
 
 Type  : Fast 1100mV 85C Model Minimum Pulse Width 'VGA:vga|ClkDivisor:VGAClkDivisor|clk25Mhz'
 Slack : -1.702
-TNS   : -32.338
+TNS   : -33.298
 
 Type  : Fast 1100mV 85C Model Minimum Pulse Width 'ClkDivisor:divisor|clk25Mhz'
-Slack : -0.193
-TNS   : -20.545
+Slack : -0.159
+TNS   : -17.472
 
 Type  : Fast 1100mV 0C Model Setup 'ClkDivisor:divisor|clk25Mhz'
-Slack : -10.362
-TNS   : -2427.881
+Slack : -10.713
+TNS   : -2744.990
 
 Type  : Fast 1100mV 0C Model Setup 'clk'
-Slack : -9.210
-TNS   : -68536.118
+Slack : -9.298
+TNS   : -64837.132
 
 Type  : Fast 1100mV 0C Model Setup 'VGA:vga|ClkDivisor:VGAClkDivisor|clk25Mhz'
-Slack : -1.555
-TNS   : -46.296
+Slack : -1.341
+TNS   : -43.365
 
 Type  : Fast 1100mV 0C Model Hold 'clk'
-Slack : -0.028
-TNS   : -0.104
+Slack : -0.086
+TNS   : -0.435
 
 Type  : Fast 1100mV 0C Model Hold 'VGA:vga|ClkDivisor:VGAClkDivisor|clk25Mhz'
-Slack : 0.270
+Slack : 0.369
 TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Hold 'ClkDivisor:divisor|clk25Mhz'
-Slack : 0.399
+Slack : 0.420
 TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Minimum Pulse Width 'clk'
 Slack : -2.636
-TNS   : -33462.672
+TNS   : -33414.628
 
 Type  : Fast 1100mV 0C Model Minimum Pulse Width 'VGA:vga|ClkDivisor:VGAClkDivisor|clk25Mhz'
 Slack : -1.702
 TNS   : -32.338
 
 Type  : Fast 1100mV 0C Model Minimum Pulse Width 'ClkDivisor:divisor|clk25Mhz'
-Slack : -0.141
-TNS   : -12.869
+Slack : -0.098
+TNS   : -8.777
 
 ------------------------------------------------------------

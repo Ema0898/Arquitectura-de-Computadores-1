@@ -7,54 +7,632 @@ z2
 !i10e 25
 !i10f 100
 cModel Technology
-Z0 dD:/uGit/Arquitectura-de-Computadores-1/Proyecto1/ProcesadorUniciclo/simulation/modelsim
-vmultiplier
+Z0 dD:/uGit/BranchOldV/Arquitectura-de-Computadores-1/Proyecto1/ProcesadorUniciclo/simulation/modelsim
+vadd_sub_module
 Z1 DXx6 sv_std 3 std 0 22 AD7iAPLo6nTIKk<N0eo=D3
-Z2 !s110 1568790194
+Z2 !s110 1568845653
 !i10b 1
-!s100 kEdThd9g@Kd=ZMc4KoT023
-I7EUgZDdd<0g<XSmzF<4SM2
+!s100 153@klffEGC2H5D5Z4JmP1
+I]ceWLF6@giE[:zeDo7dEa2
 Z3 VDg1SIo80bB@j0V0VzS_@n1
-!s105 multiplier_sv_unit
+!s105 add_sub_module_sv_unit
 S1
 R0
-w1568773898
-8D:/uGit/Arquitectura-de-Computadores-1/Proyecto1/ProcesadorUniciclo/src/Processor/ALU/multiplier.sv
-FD:/uGit/Arquitectura-de-Computadores-1/Proyecto1/ProcesadorUniciclo/src/Processor/ALU/multiplier.sv
+Z4 w1568836531
+8D:/uGit/BranchOldV/Arquitectura-de-Computadores-1/Proyecto1/ProcesadorUniciclo/src/Processor/ALU/add_sub_module.sv
+FD:/uGit/BranchOldV/Arquitectura-de-Computadores-1/Proyecto1/ProcesadorUniciclo/src/Processor/ALU/add_sub_module.sv
 L0 1
-Z4 OV;L;10.5b;63
+Z5 OV;L;10.5b;63
 r1
 !s85 0
 31
-Z5 !s108 1568790194.000000
-!s107 D:/uGit/Arquitectura-de-Computadores-1/Proyecto1/ProcesadorUniciclo/src/Processor/ALU/multiplier.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+D:/uGit/Arquitectura-de-Computadores-1/Proyecto1/ProcesadorUniciclo/src/Processor/ALU|D:/uGit/Arquitectura-de-Computadores-1/Proyecto1/ProcesadorUniciclo/src/Processor/ALU/multiplier.sv|
+Z6 !s108 1568845653.000000
+!s107 D:/uGit/BranchOldV/Arquitectura-de-Computadores-1/Proyecto1/ProcesadorUniciclo/src/Processor/ALU/add_sub_module.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+D:/uGit/BranchOldV/Arquitectura-de-Computadores-1/Proyecto1/ProcesadorUniciclo/src/Processor/ALU|D:/uGit/BranchOldV/Arquitectura-de-Computadores-1/Proyecto1/ProcesadorUniciclo/src/Processor/ALU/add_sub_module.sv|
 !i113 1
-Z6 o-sv -work work
-!s92 -sv -work work +incdir+D:/uGit/Arquitectura-de-Computadores-1/Proyecto1/ProcesadorUniciclo/src/Processor/ALU
-Z7 tCvgOpt 0
-vtest
+Z7 o-sv -work work
+Z8 !s92 -sv -work work +incdir+D:/uGit/BranchOldV/Arquitectura-de-Computadores-1/Proyecto1/ProcesadorUniciclo/src/Processor/ALU
+Z9 tCvgOpt 0
+vadder
 R1
 R2
 !i10b 1
-!s100 SEm:a=ogXP[4M6dMh0i0A2
-InN:=96djQIK>H0L2f3VE^0
+!s100 _?B`DVCDGd:@HEaJ99[Z30
+I^ATShA:YL3MblePAT7JHN0
 R3
-!s105 test_sv_unit
+!s105 adder_sv_unit
 S1
 R0
-w1568790159
-8D:/uGit/Arquitectura-de-Computadores-1/Proyecto1/ProcesadorUniciclo/src/test.sv
-FD:/uGit/Arquitectura-de-Computadores-1/Proyecto1/ProcesadorUniciclo/src/test.sv
-L0 1
 R4
+8D:/uGit/BranchOldV/Arquitectura-de-Computadores-1/Proyecto1/ProcesadorUniciclo/src/Processor/ALU/adder.sv
+FD:/uGit/BranchOldV/Arquitectura-de-Computadores-1/Proyecto1/ProcesadorUniciclo/src/Processor/ALU/adder.sv
+L0 1
+R5
 r1
 !s85 0
 31
-R5
-!s107 D:/uGit/Arquitectura-de-Computadores-1/Proyecto1/ProcesadorUniciclo/src/test.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+D:/uGit/Arquitectura-de-Computadores-1/Proyecto1/ProcesadorUniciclo/src|D:/uGit/Arquitectura-de-Computadores-1/Proyecto1/ProcesadorUniciclo/src/test.sv|
-!i113 1
 R6
-!s92 -sv -work work +incdir+D:/uGit/Arquitectura-de-Computadores-1/Proyecto1/ProcesadorUniciclo/src
+!s107 D:/uGit/BranchOldV/Arquitectura-de-Computadores-1/Proyecto1/ProcesadorUniciclo/src/Processor/ALU/adder.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+D:/uGit/BranchOldV/Arquitectura-de-Computadores-1/Proyecto1/ProcesadorUniciclo/src/Processor/ALU|D:/uGit/BranchOldV/Arquitectura-de-Computadores-1/Proyecto1/ProcesadorUniciclo/src/Processor/ALU/adder.sv|
+!i113 1
 R7
+R8
+R9
+vALU
+R1
+R2
+!i10b 1
+!s100 S<0Y_HPoR4]2lUBFNB`N12
+IK=4GJ=9nPmLzAM]kT:>Nl0
+R3
+!s105 ALU_sv_unit
+S1
+R0
+R4
+8D:/uGit/BranchOldV/Arquitectura-de-Computadores-1/Proyecto1/ProcesadorUniciclo/src/Processor/ALU/ALU.sv
+FD:/uGit/BranchOldV/Arquitectura-de-Computadores-1/Proyecto1/ProcesadorUniciclo/src/Processor/ALU/ALU.sv
+L0 1
+R5
+r1
+!s85 0
+31
+R6
+!s107 D:/uGit/BranchOldV/Arquitectura-de-Computadores-1/Proyecto1/ProcesadorUniciclo/src/Processor/ALU/ALU.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+D:/uGit/BranchOldV/Arquitectura-de-Computadores-1/Proyecto1/ProcesadorUniciclo/src/Processor/ALU|D:/uGit/BranchOldV/Arquitectura-de-Computadores-1/Proyecto1/ProcesadorUniciclo/src/Processor/ALU/ALU.sv|
+!i113 1
+R7
+R8
+R9
+n@a@l@u
+varithmetic_module
+R1
+R2
+!i10b 1
+!s100 RSLRIRVJ[K1i8E6ACm]2X2
+IN:DllZ[WJ_DJ:=<jHG0GX3
+R3
+!s105 arithmetic_module_sv_unit
+S1
+R0
+R4
+8D:/uGit/BranchOldV/Arquitectura-de-Computadores-1/Proyecto1/ProcesadorUniciclo/src/Processor/ALU/arithmetic_module.sv
+FD:/uGit/BranchOldV/Arquitectura-de-Computadores-1/Proyecto1/ProcesadorUniciclo/src/Processor/ALU/arithmetic_module.sv
+L0 1
+R5
+r1
+!s85 0
+31
+R6
+!s107 D:/uGit/BranchOldV/Arquitectura-de-Computadores-1/Proyecto1/ProcesadorUniciclo/src/Processor/ALU/arithmetic_module.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+D:/uGit/BranchOldV/Arquitectura-de-Computadores-1/Proyecto1/ProcesadorUniciclo/src/Processor/ALU|D:/uGit/BranchOldV/Arquitectura-de-Computadores-1/Proyecto1/ProcesadorUniciclo/src/Processor/ALU/arithmetic_module.sv|
+!i113 1
+R7
+R8
+R9
+vcond_check
+R1
+Z10 !s110 1568845654
+!i10b 1
+!s100 I?NLm;TZiE]51Ha=olf7n2
+IZIT9Fb45@gLD[^DC6KSYe3
+R3
+!s105 cond_check_sv_unit
+S1
+R0
+w1568838632
+8D:/uGit/BranchOldV/Arquitectura-de-Computadores-1/Proyecto1/ProcesadorUniciclo/src/Processor/ConditionalLogicUnit/cond_check.sv
+FD:/uGit/BranchOldV/Arquitectura-de-Computadores-1/Proyecto1/ProcesadorUniciclo/src/Processor/ConditionalLogicUnit/cond_check.sv
+L0 1
+R5
+r1
+!s85 0
+31
+Z11 !s108 1568845654.000000
+!s107 D:/uGit/BranchOldV/Arquitectura-de-Computadores-1/Proyecto1/ProcesadorUniciclo/src/Processor/ConditionalLogicUnit/cond_check.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+D:/uGit/BranchOldV/Arquitectura-de-Computadores-1/Proyecto1/ProcesadorUniciclo/src/Processor/ConditionalLogicUnit|D:/uGit/BranchOldV/Arquitectura-de-Computadores-1/Proyecto1/ProcesadorUniciclo/src/Processor/ConditionalLogicUnit/cond_check.sv|
+!i113 1
+R7
+Z12 !s92 -sv -work work +incdir+D:/uGit/BranchOldV/Arquitectura-de-Computadores-1/Proyecto1/ProcesadorUniciclo/src/Processor/ConditionalLogicUnit
+R9
+vcond_logic
+R1
+Z13 !s110 1568845655
+!i10b 1
+!s100 gV7]<MzHWz:04PJ5zg54k3
+Ia8<n1lNTM6:1X^Go:JB_[1
+R3
+!s105 cond_logic_sv_unit
+S1
+R0
+w1568838938
+8D:/uGit/BranchOldV/Arquitectura-de-Computadores-1/Proyecto1/ProcesadorUniciclo/src/Processor/ConditionalLogicUnit/cond_logic.sv
+FD:/uGit/BranchOldV/Arquitectura-de-Computadores-1/Proyecto1/ProcesadorUniciclo/src/Processor/ConditionalLogicUnit/cond_logic.sv
+L0 1
+R5
+r1
+!s85 0
+31
+Z14 !s108 1568845655.000000
+!s107 D:/uGit/BranchOldV/Arquitectura-de-Computadores-1/Proyecto1/ProcesadorUniciclo/src/Processor/ConditionalLogicUnit/cond_logic.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+D:/uGit/BranchOldV/Arquitectura-de-Computadores-1/Proyecto1/ProcesadorUniciclo/src/Processor/ConditionalLogicUnit|D:/uGit/BranchOldV/Arquitectura-de-Computadores-1/Proyecto1/ProcesadorUniciclo/src/Processor/ConditionalLogicUnit/cond_logic.sv|
+!i113 1
+R7
+R12
+R9
+vdata_memory
+R1
+R2
+!i10b 1
+!s100 fhY^1]i46;:lCJhYYN]f@2
+IN3CTB^0Fj;fmAUVKB1=1=3
+R3
+!s105 data_memory_sv_unit
+S1
+R0
+w1568845151
+8D:/uGit/BranchOldV/Arquitectura-de-Computadores-1/Proyecto1/ProcesadorUniciclo/src/Memories/data_memory.sv
+FD:/uGit/BranchOldV/Arquitectura-de-Computadores-1/Proyecto1/ProcesadorUniciclo/src/Memories/data_memory.sv
+L0 1
+R5
+r1
+!s85 0
+31
+R6
+!s107 D:/uGit/BranchOldV/Arquitectura-de-Computadores-1/Proyecto1/ProcesadorUniciclo/src/Memories/data_memory.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+D:/uGit/BranchOldV/Arquitectura-de-Computadores-1/Proyecto1/ProcesadorUniciclo/src/Memories|D:/uGit/BranchOldV/Arquitectura-de-Computadores-1/Proyecto1/ProcesadorUniciclo/src/Memories/data_memory.sv|
+!i113 1
+R7
+Z15 !s92 -sv -work work +incdir+D:/uGit/BranchOldV/Arquitectura-de-Computadores-1/Proyecto1/ProcesadorUniciclo/src/Memories
+R9
+vdata_path
+R1
+R2
+!i10b 1
+!s100 0I`aFPoRa11R[FOjCneo:2
+IXmKYQTnAGXU:8DjU0@fY43
+R3
+!s105 data_path_sv_unit
+S1
+R0
+w1568838947
+8D:/uGit/BranchOldV/Arquitectura-de-Computadores-1/Proyecto1/ProcesadorUniciclo/src/Processor/data_path.sv
+FD:/uGit/BranchOldV/Arquitectura-de-Computadores-1/Proyecto1/ProcesadorUniciclo/src/Processor/data_path.sv
+L0 1
+R5
+r1
+!s85 0
+31
+R6
+!s107 D:/uGit/BranchOldV/Arquitectura-de-Computadores-1/Proyecto1/ProcesadorUniciclo/src/Processor/data_path.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+D:/uGit/BranchOldV/Arquitectura-de-Computadores-1/Proyecto1/ProcesadorUniciclo/src/Processor|D:/uGit/BranchOldV/Arquitectura-de-Computadores-1/Proyecto1/ProcesadorUniciclo/src/Processor/data_path.sv|
+!i113 1
+R7
+!s92 -sv -work work +incdir+D:/uGit/BranchOldV/Arquitectura-de-Computadores-1/Proyecto1/ProcesadorUniciclo/src/Processor
+R9
+vdecode_unit
+R1
+R10
+!i10b 1
+!s100 305@b`nM7caIJa59DYQ8B0
+Ia0eCSJbB[0>dU>FMFNVl70
+R3
+!s105 decode_unit_sv_unit
+S1
+R0
+R4
+8D:/uGit/BranchOldV/Arquitectura-de-Computadores-1/Proyecto1/ProcesadorUniciclo/src/Processor/DecodeUnit/decode_unit.sv
+FD:/uGit/BranchOldV/Arquitectura-de-Computadores-1/Proyecto1/ProcesadorUniciclo/src/Processor/DecodeUnit/decode_unit.sv
+L0 1
+R5
+r1
+!s85 0
+31
+R11
+!s107 D:/uGit/BranchOldV/Arquitectura-de-Computadores-1/Proyecto1/ProcesadorUniciclo/src/Processor/DecodeUnit/decode_unit.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+D:/uGit/BranchOldV/Arquitectura-de-Computadores-1/Proyecto1/ProcesadorUniciclo/src/Processor/DecodeUnit|D:/uGit/BranchOldV/Arquitectura-de-Computadores-1/Proyecto1/ProcesadorUniciclo/src/Processor/DecodeUnit/decode_unit.sv|
+!i113 1
+R7
+!s92 -sv -work work +incdir+D:/uGit/BranchOldV/Arquitectura-de-Computadores-1/Proyecto1/ProcesadorUniciclo/src/Processor/DecodeUnit
+R9
+vextend
+R1
+Z16 !s110 1568845652
+!i10b 1
+!s100 YAKQJKn^=cSWzDo3DCBVg2
+I2_j>[KCQ_VIbUOe`1Ri_H0
+R3
+!s105 extend_sv_unit
+S1
+R0
+w1568838797
+8D:/uGit/BranchOldV/Arquitectura-de-Computadores-1/Proyecto1/ProcesadorUniciclo/src/Processor/ExtendUnit/extend.sv
+FD:/uGit/BranchOldV/Arquitectura-de-Computadores-1/Proyecto1/ProcesadorUniciclo/src/Processor/ExtendUnit/extend.sv
+L0 1
+R5
+r1
+!s85 0
+31
+Z17 !s108 1568845652.000000
+!s107 D:/uGit/BranchOldV/Arquitectura-de-Computadores-1/Proyecto1/ProcesadorUniciclo/src/Processor/ExtendUnit/extend.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+D:/uGit/BranchOldV/Arquitectura-de-Computadores-1/Proyecto1/ProcesadorUniciclo/src/Processor/ExtendUnit|D:/uGit/BranchOldV/Arquitectura-de-Computadores-1/Proyecto1/ProcesadorUniciclo/src/Processor/ExtendUnit/extend.sv|
+!i113 1
+R7
+!s92 -sv -work work +incdir+D:/uGit/BranchOldV/Arquitectura-de-Computadores-1/Proyecto1/ProcesadorUniciclo/src/Processor/ExtendUnit
+R9
+vflag_module
+R1
+R2
+!i10b 1
+!s100 `:=?Hf<kRA2:YAMa859?@2
+I0S3VHd<lb_M=4JkeIeX4B1
+R3
+!s105 flag_module_sv_unit
+S1
+R0
+R4
+8D:/uGit/BranchOldV/Arquitectura-de-Computadores-1/Proyecto1/ProcesadorUniciclo/src/Processor/ALU/flag_module.sv
+FD:/uGit/BranchOldV/Arquitectura-de-Computadores-1/Proyecto1/ProcesadorUniciclo/src/Processor/ALU/flag_module.sv
+L0 1
+R5
+r1
+!s85 0
+31
+R17
+!s107 D:/uGit/BranchOldV/Arquitectura-de-Computadores-1/Proyecto1/ProcesadorUniciclo/src/Processor/ALU/flag_module.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+D:/uGit/BranchOldV/Arquitectura-de-Computadores-1/Proyecto1/ProcesadorUniciclo/src/Processor/ALU|D:/uGit/BranchOldV/Arquitectura-de-Computadores-1/Proyecto1/ProcesadorUniciclo/src/Processor/ALU/flag_module.sv|
+!i113 1
+R7
+R8
+R9
+vflip_flop_D
+R1
+R10
+!i10b 1
+!s100 W8P`_kk8aHYa^=hmUbiD>1
+IX6RDZ^oJR1oa5maeKL>lh0
+R3
+!s105 flip_flop_D_sv_unit
+S1
+R0
+R4
+8D:/uGit/BranchOldV/Arquitectura-de-Computadores-1/Proyecto1/ProcesadorUniciclo/src/Generic_Modules/flip_flop_D.sv
+FD:/uGit/BranchOldV/Arquitectura-de-Computadores-1/Proyecto1/ProcesadorUniciclo/src/Generic_Modules/flip_flop_D.sv
+L0 1
+R5
+r1
+!s85 0
+31
+R11
+!s107 D:/uGit/BranchOldV/Arquitectura-de-Computadores-1/Proyecto1/ProcesadorUniciclo/src/Generic_Modules/flip_flop_D.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+D:/uGit/BranchOldV/Arquitectura-de-Computadores-1/Proyecto1/ProcesadorUniciclo/src/Generic_Modules|D:/uGit/BranchOldV/Arquitectura-de-Computadores-1/Proyecto1/ProcesadorUniciclo/src/Generic_Modules/flip_flop_D.sv|
+!i113 1
+R7
+Z18 !s92 -sv -work work +incdir+D:/uGit/BranchOldV/Arquitectura-de-Computadores-1/Proyecto1/ProcesadorUniciclo/src/Generic_Modules
+R9
+nflip_flop_@d
+vflip_flop_D_neg
+R1
+R13
+!i10b 1
+!s100 @0_R6SY7ii8IOVB8c[XD83
+I94QVaA[o4ikXFEU8hc1MR1
+R3
+!s105 flip_flop_D_neg_sv_unit
+S1
+R0
+R4
+8D:/uGit/BranchOldV/Arquitectura-de-Computadores-1/Proyecto1/ProcesadorUniciclo/src/Generic_Modules/flip_flop_D_neg.sv
+FD:/uGit/BranchOldV/Arquitectura-de-Computadores-1/Proyecto1/ProcesadorUniciclo/src/Generic_Modules/flip_flop_D_neg.sv
+L0 1
+R5
+r1
+!s85 0
+31
+R14
+!s107 D:/uGit/BranchOldV/Arquitectura-de-Computadores-1/Proyecto1/ProcesadorUniciclo/src/Generic_Modules/flip_flop_D_neg.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+D:/uGit/BranchOldV/Arquitectura-de-Computadores-1/Proyecto1/ProcesadorUniciclo/src/Generic_Modules|D:/uGit/BranchOldV/Arquitectura-de-Computadores-1/Proyecto1/ProcesadorUniciclo/src/Generic_Modules/flip_flop_D_neg.sv|
+!i113 1
+R7
+R18
+R9
+nflip_flop_@d_neg
+vfull_adder
+R1
+R16
+!i10b 1
+!s100 QiaH=kOX3AK_5n^Il39jE1
+Il>Y3N`A@Zi9l<Di8f1N?42
+R3
+!s105 full_adder_sv_unit
+S1
+R0
+R4
+8D:/uGit/BranchOldV/Arquitectura-de-Computadores-1/Proyecto1/ProcesadorUniciclo/src/Processor/ALU/full_adder.sv
+FD:/uGit/BranchOldV/Arquitectura-de-Computadores-1/Proyecto1/ProcesadorUniciclo/src/Processor/ALU/full_adder.sv
+L0 1
+R5
+r1
+!s85 0
+31
+R17
+!s107 D:/uGit/BranchOldV/Arquitectura-de-Computadores-1/Proyecto1/ProcesadorUniciclo/src/Processor/ALU/full_adder.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+D:/uGit/BranchOldV/Arquitectura-de-Computadores-1/Proyecto1/ProcesadorUniciclo/src/Processor/ALU|D:/uGit/BranchOldV/Arquitectura-de-Computadores-1/Proyecto1/ProcesadorUniciclo/src/Processor/ALU/full_adder.sv|
+!i113 1
+R7
+R8
+R9
+vgeneric_adder
+R1
+R10
+!i10b 1
+!s100 Ba=oL9e[LVm]hgjUFf4@P2
+IIm8^V24<i2ZT6GcR?bP0G2
+R3
+!s105 generic_adder_sv_unit
+S1
+R0
+R4
+8D:/uGit/BranchOldV/Arquitectura-de-Computadores-1/Proyecto1/ProcesadorUniciclo/src/Generic_Modules/generic_adder.sv
+FD:/uGit/BranchOldV/Arquitectura-de-Computadores-1/Proyecto1/ProcesadorUniciclo/src/Generic_Modules/generic_adder.sv
+L0 1
+R5
+r1
+!s85 0
+31
+R11
+!s107 D:/uGit/BranchOldV/Arquitectura-de-Computadores-1/Proyecto1/ProcesadorUniciclo/src/Generic_Modules/generic_adder.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+D:/uGit/BranchOldV/Arquitectura-de-Computadores-1/Proyecto1/ProcesadorUniciclo/src/Generic_Modules|D:/uGit/BranchOldV/Arquitectura-de-Computadores-1/Proyecto1/ProcesadorUniciclo/src/Generic_Modules/generic_adder.sv|
+!i113 1
+R7
+R18
+R9
+vgeneric_full_adder
+R1
+R10
+!i10b 1
+!s100 oj>Xm<MXI2Pi;<MH[eo6c2
+IdC2KWn=63G[>NkdG4ZB1:3
+R3
+!s105 generic_full_adder_sv_unit
+S1
+R0
+R4
+8D:/uGit/BranchOldV/Arquitectura-de-Computadores-1/Proyecto1/ProcesadorUniciclo/src/Generic_Modules/generic_full_adder.sv
+FD:/uGit/BranchOldV/Arquitectura-de-Computadores-1/Proyecto1/ProcesadorUniciclo/src/Generic_Modules/generic_full_adder.sv
+L0 1
+R5
+r1
+!s85 0
+31
+R11
+!s107 D:/uGit/BranchOldV/Arquitectura-de-Computadores-1/Proyecto1/ProcesadorUniciclo/src/Generic_Modules/generic_full_adder.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+D:/uGit/BranchOldV/Arquitectura-de-Computadores-1/Proyecto1/ProcesadorUniciclo/src/Generic_Modules|D:/uGit/BranchOldV/Arquitectura-de-Computadores-1/Proyecto1/ProcesadorUniciclo/src/Generic_Modules/generic_full_adder.sv|
+!i113 1
+R7
+R18
+R9
+vimage_memory
+R1
+R13
+!i10b 1
+!s100 `bSeNi09jz2BOR^IBRG_N2
+IOX;M>V:XldXe0W>B7YaPZ3
+R3
+!s105 image_memory_sv_unit
+S1
+R0
+w1568838187
+8D:/uGit/BranchOldV/Arquitectura-de-Computadores-1/Proyecto1/ProcesadorUniciclo/src/Memories/image_memory.sv
+FD:/uGit/BranchOldV/Arquitectura-de-Computadores-1/Proyecto1/ProcesadorUniciclo/src/Memories/image_memory.sv
+L0 1
+R5
+r1
+!s85 0
+31
+R14
+!s107 D:/uGit/BranchOldV/Arquitectura-de-Computadores-1/Proyecto1/ProcesadorUniciclo/src/Memories/image_memory.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+D:/uGit/BranchOldV/Arquitectura-de-Computadores-1/Proyecto1/ProcesadorUniciclo/src/Memories|D:/uGit/BranchOldV/Arquitectura-de-Computadores-1/Proyecto1/ProcesadorUniciclo/src/Memories/image_memory.sv|
+!i113 1
+R7
+R15
+R9
+vinstruction_memory
+R1
+R2
+!i10b 1
+!s100 7_R^QbPk<:;a^FA>SE<OH0
+IU0kUIZKTiS6kb@F@_z@S?3
+R3
+!s105 instruction_memory_sv_unit
+S1
+R0
+w1568845639
+8D:/uGit/BranchOldV/Arquitectura-de-Computadores-1/Proyecto1/ProcesadorUniciclo/src/Memories/instruction_memory.sv
+FD:/uGit/BranchOldV/Arquitectura-de-Computadores-1/Proyecto1/ProcesadorUniciclo/src/Memories/instruction_memory.sv
+L0 1
+R5
+r1
+!s85 0
+31
+R6
+!s107 D:/uGit/BranchOldV/Arquitectura-de-Computadores-1/Proyecto1/ProcesadorUniciclo/src/Memories/instruction_memory.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+D:/uGit/BranchOldV/Arquitectura-de-Computadores-1/Proyecto1/ProcesadorUniciclo/src/Memories|D:/uGit/BranchOldV/Arquitectura-de-Computadores-1/Proyecto1/ProcesadorUniciclo/src/Memories/instruction_memory.sv|
+!i113 1
+R7
+R15
+R9
+vio_deco2
+R1
+R13
+!i10b 1
+!s100 k5_eQn3Jk=h>7>I`4IKNc2
+I?;W2SjCJF`kRmC77Qh[ZV1
+R3
+!s105 io_deco2_sv_unit
+S1
+R0
+w1568841821
+8D:/uGit/BranchOldV/Arquitectura-de-Computadores-1/Proyecto1/ProcesadorUniciclo/src/IO/io_deco2.sv
+FD:/uGit/BranchOldV/Arquitectura-de-Computadores-1/Proyecto1/ProcesadorUniciclo/src/IO/io_deco2.sv
+L0 1
+R5
+r1
+!s85 0
+31
+R14
+!s107 D:/uGit/BranchOldV/Arquitectura-de-Computadores-1/Proyecto1/ProcesadorUniciclo/src/IO/io_deco2.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+D:/uGit/BranchOldV/Arquitectura-de-Computadores-1/Proyecto1/ProcesadorUniciclo/src/IO|D:/uGit/BranchOldV/Arquitectura-de-Computadores-1/Proyecto1/ProcesadorUniciclo/src/IO/io_deco2.sv|
+!i113 1
+R7
+!s92 -sv -work work +incdir+D:/uGit/BranchOldV/Arquitectura-de-Computadores-1/Proyecto1/ProcesadorUniciclo/src/IO
+R9
+vmultiplier
+R1
+R16
+!i10b 1
+!s100 kEdThd9g@Kd=ZMc4KoT023
+IbIZz3823X3<=1WBkmE^ZA2
+R3
+!s105 multiplier_sv_unit
+S1
+R0
+R4
+8D:/uGit/BranchOldV/Arquitectura-de-Computadores-1/Proyecto1/ProcesadorUniciclo/src/Processor/ALU/multiplier.sv
+FD:/uGit/BranchOldV/Arquitectura-de-Computadores-1/Proyecto1/ProcesadorUniciclo/src/Processor/ALU/multiplier.sv
+L0 1
+R5
+r1
+!s85 0
+31
+R17
+!s107 D:/uGit/BranchOldV/Arquitectura-de-Computadores-1/Proyecto1/ProcesadorUniciclo/src/Processor/ALU/multiplier.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+D:/uGit/BranchOldV/Arquitectura-de-Computadores-1/Proyecto1/ProcesadorUniciclo/src/Processor/ALU|D:/uGit/BranchOldV/Arquitectura-de-Computadores-1/Proyecto1/ProcesadorUniciclo/src/Processor/ALU/multiplier.sv|
+!i113 1
+R7
+R8
+R9
+vmux_2_x_1
+R1
+R10
+!i10b 1
+!s100 VJBD@D]dB`Toa?_ibTM??2
+I?=TokC5Lb[SE1VkzJJ<hX0
+R3
+!s105 mux_2_x_1_sv_unit
+S1
+R0
+R4
+8D:/uGit/BranchOldV/Arquitectura-de-Computadores-1/Proyecto1/ProcesadorUniciclo/src/Generic_Modules/mux_2_x_1.sv
+FD:/uGit/BranchOldV/Arquitectura-de-Computadores-1/Proyecto1/ProcesadorUniciclo/src/Generic_Modules/mux_2_x_1.sv
+L0 1
+R5
+r1
+!s85 0
+31
+R11
+!s107 D:/uGit/BranchOldV/Arquitectura-de-Computadores-1/Proyecto1/ProcesadorUniciclo/src/Generic_Modules/mux_2_x_1.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+D:/uGit/BranchOldV/Arquitectura-de-Computadores-1/Proyecto1/ProcesadorUniciclo/src/Generic_Modules|D:/uGit/BranchOldV/Arquitectura-de-Computadores-1/Proyecto1/ProcesadorUniciclo/src/Generic_Modules/mux_2_x_1.sv|
+!i113 1
+R7
+R18
+R9
+vmux_4_x_1
+R1
+R10
+!i10b 1
+!s100 QnC0fn1[3nIOU8OzzMZnl2
+IRPLU>R0o[Xek;jK?SnNLK1
+R3
+!s105 mux_4_x_1_sv_unit
+S1
+R0
+R4
+8D:/uGit/BranchOldV/Arquitectura-de-Computadores-1/Proyecto1/ProcesadorUniciclo/src/Generic_Modules/mux_4_x_1.sv
+FD:/uGit/BranchOldV/Arquitectura-de-Computadores-1/Proyecto1/ProcesadorUniciclo/src/Generic_Modules/mux_4_x_1.sv
+L0 1
+R5
+r1
+!s85 0
+31
+R11
+!s107 D:/uGit/BranchOldV/Arquitectura-de-Computadores-1/Proyecto1/ProcesadorUniciclo/src/Generic_Modules/mux_4_x_1.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+D:/uGit/BranchOldV/Arquitectura-de-Computadores-1/Proyecto1/ProcesadorUniciclo/src/Generic_Modules|D:/uGit/BranchOldV/Arquitectura-de-Computadores-1/Proyecto1/ProcesadorUniciclo/src/Generic_Modules/mux_4_x_1.sv|
+!i113 1
+R7
+R18
+R9
+vprocessor_memories
+R1
+R13
+!i10b 1
+!s100 1ZY?Q?K[omZ<T[1d=YUIg0
+IIhAj>56cblgkKfGAH?0Vg0
+R3
+!s105 processor_memories_sv_unit
+S1
+R0
+w1568841723
+8D:/uGit/BranchOldV/Arquitectura-de-Computadores-1/Proyecto1/ProcesadorUniciclo/src/processor_memories.sv
+FD:/uGit/BranchOldV/Arquitectura-de-Computadores-1/Proyecto1/ProcesadorUniciclo/src/processor_memories.sv
+L0 1
+R5
+r1
+!s85 0
+31
+R14
+!s107 D:/uGit/BranchOldV/Arquitectura-de-Computadores-1/Proyecto1/ProcesadorUniciclo/src/processor_memories.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+D:/uGit/BranchOldV/Arquitectura-de-Computadores-1/Proyecto1/ProcesadorUniciclo/src|D:/uGit/BranchOldV/Arquitectura-de-Computadores-1/Proyecto1/ProcesadorUniciclo/src/processor_memories.sv|
+!i113 1
+R7
+Z19 !s92 -sv -work work +incdir+D:/uGit/BranchOldV/Arquitectura-de-Computadores-1/Proyecto1/ProcesadorUniciclo/src
+R9
+vprocessor_test
+R1
+R13
+!i10b 1
+!s100 OIV]8c=njYjYFTNV=@WF<3
+IgLYGDc?[1MPJ4hB`bBU@I2
+R3
+!s105 processor_test_sv_unit
+S1
+R0
+w1568841770
+8D:/uGit/BranchOldV/Arquitectura-de-Computadores-1/Proyecto1/ProcesadorUniciclo/src/processor_test.sv
+FD:/uGit/BranchOldV/Arquitectura-de-Computadores-1/Proyecto1/ProcesadorUniciclo/src/processor_test.sv
+L0 2
+R5
+r1
+!s85 0
+31
+R14
+!s107 D:/uGit/BranchOldV/Arquitectura-de-Computadores-1/Proyecto1/ProcesadorUniciclo/src/processor_test.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+D:/uGit/BranchOldV/Arquitectura-de-Computadores-1/Proyecto1/ProcesadorUniciclo/src|D:/uGit/BranchOldV/Arquitectura-de-Computadores-1/Proyecto1/ProcesadorUniciclo/src/processor_test.sv|
+!i113 1
+R7
+R19
+R9
+vregister_file
+R1
+R16
+!i10b 1
+!s100 V=3OJ_j45PnPE6YaeS1BR3
+I;]zd7gS_41>CU4cae8:z91
+R3
+!s105 register_file_sv_unit
+S1
+R0
+w1568838057
+8D:/uGit/BranchOldV/Arquitectura-de-Computadores-1/Proyecto1/ProcesadorUniciclo/src/Processor/RegisterFile/register_file.sv
+FD:/uGit/BranchOldV/Arquitectura-de-Computadores-1/Proyecto1/ProcesadorUniciclo/src/Processor/RegisterFile/register_file.sv
+L0 1
+R5
+r1
+!s85 0
+31
+R17
+!s107 D:/uGit/BranchOldV/Arquitectura-de-Computadores-1/Proyecto1/ProcesadorUniciclo/src/Processor/RegisterFile/register_file.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+D:/uGit/BranchOldV/Arquitectura-de-Computadores-1/Proyecto1/ProcesadorUniciclo/src/Processor/RegisterFile|D:/uGit/BranchOldV/Arquitectura-de-Computadores-1/Proyecto1/ProcesadorUniciclo/src/Processor/RegisterFile/register_file.sv|
+!i113 1
+R7
+!s92 -sv -work work +incdir+D:/uGit/BranchOldV/Arquitectura-de-Computadores-1/Proyecto1/ProcesadorUniciclo/src/Processor/RegisterFile
+R9

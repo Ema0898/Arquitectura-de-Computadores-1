@@ -1,4 +1,4 @@
-module io_deco2(input logic [21:0] direction, 
+module io_deco2(input logic [23:0] direction, 
 					output logic mem_enb, show_enb, original_enb, process_enb);
 
   logic mem_condition, show_condition, original_condition, process_condition;   
@@ -6,7 +6,7 @@ module io_deco2(input logic [21:0] direction,
   //assign show_condition = (direction > 100);
   
   assign mem_condition = (direction <= 96);
-  assign show_condition = (direction == 116);
+  assign show_condition = (direction <= 116);
   assign original_condition = (direction >= 120 & direction < 130);
   assign process_condition = (direction >= 130 & direction <= 140);
   
