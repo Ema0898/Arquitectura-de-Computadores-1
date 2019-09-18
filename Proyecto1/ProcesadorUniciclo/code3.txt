@@ -1,0 +1,20 @@
+MOVER r0, 0
+MOVER r1, 116
+STORE r0, [r1]
+
+MOVER r0, 1
+MOVER r1, 121
+STORE r0, [r1]
+
+loop:
+LOAD r0, [r1]
+LOAD r0, [r1]
+COMP r0, 1
+SALTOIG show
+SALTO loop
+
+show:
+MOVER r0, 1
+MOVER r2, 116
+STORE r0, [r2]
+SALTO loop

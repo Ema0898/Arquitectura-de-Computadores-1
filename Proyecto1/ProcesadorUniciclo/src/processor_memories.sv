@@ -1,11 +1,12 @@
 module processor_memories(input logic clk, reset,
-			  output logic mem_write,
+			  output logic mem_write, vga,
 			  output logic [21:0] write_data, data_adr);
 			  
   logic [21:0] pc, instr, read_data, data_mem_out;  
-  logic [7:0] img_mem_out;
-  //logic [21:0] img_mem_out;
+  logic [7:0] img_mem_out, img_mem2_out;
   logic mem_enb, show_enb, mem_read;
+  logic [21:0] mux0_out, mux1_out;
+  logic original_enb, process_enb;
   
   assign mem_read = ~instr[20] & instr[19] & instr[16];
   
@@ -13,12 +14,15 @@ module processor_memories(input logic clk, reset,
   
   instruction_memory im(pc, instr);
   data_memory dm(clk, mem_write & mem_enb, data_adr, write_data, data_mem_out);
-  RAM image(data_adr[18:0], clk, write_data[7:0], 1'b1, show_enb & mem_write, img_mem_out);
-  //image_memory image(clk, mem_write & show_enb, data_adr, write_data[7:0], img_mem_out);
+  RAM ram(data_adr[17:0], clk, write_data[7:0], 1'b1, mem_write & original_enb, img_mem_out);
+  image_memory image2(clk, mem_write & process_enb, data_adr, write_data[7:0], img_mem2_out);
   
-  io_deco deco(data_adr, mem_enb, show_enb);	
+  io_deco2 deco(data_adr, mem_enb, show_enb, original_enb, process_enb);
+ 
+  flip_flop_D #(1) ff1(clk, ~reset, show_enb & mem_write, write_data[0], vga); 
   
-  mux_2_x_1 #(22) mux0({ 14'b0, img_mem_out }, data_mem_out, mem_enb & mem_read, read_data);
-  //mux_2_x_1 #(22) mux0(data_mem_out, img_mem_out, mem_enb, read_data);
+  mux_2_x_1 #(22) mux0(22'b0, data_mem_out, mem_enb & mem_read, mux0_out);
+  mux_2_x_1 #(22) mux1(mux0_out, { 14'b0, img_mem_out }, original_enb & mem_read, mux1_out);
+  mux_2_x_1 #(22) mux2(mux1_out, { 14'b0, img_mem2_out}, process_enb & mem_read, read_data);
   
 endmodule 

@@ -1,19 +1,15 @@
 module test();
 
-	logic [3:0] a, b, c, d;
-	logic clk, reset;
+	logic [21:0] direction;
+	logic mem_enb, show_enb, show_original_enb, original_enb, process_enb;
+	logic [1:0] btn_selecc; 
 	
-	flip_flop_D #(8) DUT(clk, reset, 1'b1, {a, b}, {c, d});
+	io_deco DUT(direction, mem_enb, show_enb, show_original_enb, original_enb, process_enb, btn_selecc);
 	
-	initial begin
-		assign a = 4'b1111;
-		assign b = 4'b0000;
-		reset <= 0; #5; reset <= 1; #5 reset <= 0;
-	end
-	
-	// generate clock to sequence tests
-	always begin
-		clk <= 1; # 5; clk <= 0; # 5;
+   initial begin
+		#10 direction = 22'd50;
+		#1	$display("direction = %b, mem_enb = %b, show_enb = %b, show_original_enb = %b, original_enb = %b, process_enb = %b, btn_selecc = %b",
+						direction, mem_enb, show_enb, show_original_enb, original_enb, process_enb, btn_selecc);
 	end
 
 endmodule 

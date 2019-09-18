@@ -1,5 +1,5 @@
 Flow report for ArquiProject
-Sat Sep 14 19:51:25 2019
+Tue Sep 17 13:48:01 2019
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -40,25 +40,25 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Flow Summary                                                                  ;
 +---------------------------------+---------------------------------------------+
-; Flow Status                     ; Successful - Sat Sep 14 19:51:25 2019       ;
+; Flow Status                     ; Successful - Tue Sep 17 13:48:01 2019       ;
 ; Quartus Prime Version           ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                   ; ArquiProject                                ;
 ; Top-level Entity Name           ; top                                         ;
 ; Family                          ; Cyclone V                                   ;
 ; Device                          ; 5CSEMA5F31C6                                ;
 ; Timing Models                   ; Final                                       ;
-; Logic utilization (in ALMs)     ; N/A                                         ;
-; Total registers                 ; 1511                                        ;
-; Total pins                      ; 31                                          ;
+; Logic utilization (in ALMs)     ; 1,294 / 32,070 ( 4 % )                      ;
+; Total registers                 ; 1572                                        ;
+; Total pins                      ; 33 / 457 ( 7 % )                            ;
 ; Total virtual pins              ; 0                                           ;
-; Total block memory bits         ; 2,457,600                                   ;
-; Total DSP Blocks                ; 0                                           ;
+; Total block memory bits         ; 2,560,000 / 4,065,280 ( 63 % )              ;
+; Total DSP Blocks                ; 2 / 87 ( 2 % )                              ;
 ; Total HSSI RX PCSs              ; 0                                           ;
 ; Total HSSI PMA RX Deserializers ; 0                                           ;
 ; Total HSSI TX PCSs              ; 0                                           ;
 ; Total HSSI PMA TX Serializers   ; 0                                           ;
-; Total PLLs                      ; 0                                           ;
-; Total DLLs                      ; 0                                           ;
+; Total PLLs                      ; 0 / 6 ( 0 % )                               ;
+; Total DLLs                      ; 0 / 4 ( 0 % )                               ;
 +---------------------------------+---------------------------------------------+
 
 
@@ -67,7 +67,7 @@ refer to the applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 09/14/2019 19:51:06 ;
+; Start date & time ; 09/17/2019 13:42:03 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; ArquiProject        ;
 +-------------------+---------------------+
@@ -78,7 +78,7 @@ refer to the applicable agreement for further details.
 +-------------------------------------+----------------------------------------+---------------+-------------+----------------+
 ; Assignment Name                     ; Value                                  ; Default Value ; Entity Name ; Section Id     ;
 +-------------------------------------+----------------------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID               ; 176830149515233.156851226625694        ; --            ; --          ; --             ;
+; COMPILER_SIGNATURE_ID               ; 45015788211485.156874932300699         ; --            ; --          ; --             ;
 ; EDA_OUTPUT_DATA_FORMAT              ; Verilog Hdl                            ; --            ; --          ; eda_simulation ;
 ; EDA_SIMULATION_TOOL                 ; ModelSim-Altera (Verilog)              ; <None>        ; --          ; --             ;
 ; EDA_TIME_SCALE                      ; 1 ps                                   ; --            ; --          ; eda_simulation ;
@@ -99,8 +99,12 @@ refer to the applicable agreement for further details.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:18     ; 1.0                     ; 1045 MB             ; 00:00:36                           ;
-; Total                ; 00:00:18     ; --                      ; --                  ; 00:00:36                           ;
+; Analysis & Synthesis ; 00:01:45     ; 1.0                     ; 1046 MB             ; 00:02:01                           ;
+; Fitter               ; 00:03:31     ; 1.1                     ; 2297 MB             ; 00:06:32                           ;
+; Assembler            ; 00:00:11     ; 1.0                     ; 1035 MB             ; 00:00:11                           ;
+; Timing Analyzer      ; 00:00:23     ; 1.6                     ; 1280 MB             ; 00:00:35                           ;
+; EDA Netlist Writer   ; 00:00:03     ; 1.0                     ; 1224 MB             ; 00:00:03                           ;
+; Total                ; 00:05:53     ; --                      ; --                  ; 00:09:22                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -110,6 +114,10 @@ refer to the applicable agreement for further details.
 ; Module Name          ; Machine Hostname ; OS Name        ; OS Version ; Processor type ;
 +----------------------+------------------+----------------+------------+----------------+
 ; Analysis & Synthesis ; Inspiron-5559    ; Ubuntu 18.04.3 ; 18         ; x86_64         ;
+; Fitter               ; Inspiron-5559    ; Ubuntu 18.04.3 ; 18         ; x86_64         ;
+; Assembler            ; Inspiron-5559    ; Ubuntu 18.04.3 ; 18         ; x86_64         ;
+; Timing Analyzer      ; Inspiron-5559    ; Ubuntu 18.04.3 ; 18         ; x86_64         ;
+; EDA Netlist Writer   ; Inspiron-5559    ; Ubuntu 18.04.3 ; 18         ; x86_64         ;
 +----------------------+------------------+----------------+------------+----------------+
 
 
@@ -117,6 +125,10 @@ refer to the applicable agreement for further details.
 ; Flow Log ;
 ------------
 quartus_map --read_settings_files=on --write_settings_files=off ArquiProject -c ArquiProject
+quartus_fit --read_settings_files=off --write_settings_files=off ArquiProject -c ArquiProject
+quartus_asm --read_settings_files=off --write_settings_files=off ArquiProject -c ArquiProject
+quartus_sta ArquiProject -c ArquiProject
+quartus_eda --read_settings_files=off --write_settings_files=off ArquiProject -c ArquiProject
 
 
 

@@ -1,14 +1,14 @@
 MOVER r0, 0
 MOVER r1, 116
 STORE r0, [r1]
-MOVER r2, 0
+MOVER r2, 1
 MOVER r1, 110
 STORE r2, [r1]
 
 loop:
 MOVER r0, 110
-LOAD r1, [r0]
-COMP r1, 1
+LOAD r2, [r0]
+COMP r2, 1
 SALTOIG show
 SALTO loop
 

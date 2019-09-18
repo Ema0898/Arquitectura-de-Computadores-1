@@ -1,0 +1,13 @@
+-- begin_signature
+-- image_memory2
+-- end_signature
+WIDTH=8;
+DEPTH=2;
+
+ADDRESS_RADIX=UNS;
+DATA_RADIX=BIN;
+
+CONTENT BEGIN
+	1 :	11001010;
+	0 :	11001100;
+END;

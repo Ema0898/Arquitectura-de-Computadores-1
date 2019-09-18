@@ -3,10 +3,13 @@ module image_memory(input logic clk, we,
 						 input logic [7:0] wd,
 						 output logic [7:0] rd);
 						 
-  logic [7:0] RAM [150:0];
-  assign rd = RAM[a[21:2]]; // word aligned
+  logic [7:0] RAM [127:0];
+  //assign rd = RAM[a]; // word aligned
   
   always_ff @(negedge clk)
-   if (we) RAM[a[21:2]] <= wd;
+   if (we) RAM[a] <= wd;
+	
+  always_ff @(negedge clk)
+   if (!we) rd <= RAM[a];
 	
 endmodule 
