@@ -1,5 +1,5 @@
 Timing Analyzer report for ArquiProject
-Tue Sep 17 13:47:58 2019
+Wed Sep 18 00:47:05 2019
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -97,14 +97,16 @@ refer to the applicable agreement for further details.
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
 ; Number detected on machine ; 4           ;
-; Maximum allowed            ; 2           ;
+; Maximum allowed            ; 4           ;
 ;                            ;             ;
-; Average used               ; 1.56        ;
-; Maximum used               ; 2           ;
+; Average used               ; 2.24        ;
+; Maximum used               ; 4           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;  56.0%      ;
+;     Processor 2            ;  42.6%      ;
+;     Processor 3            ;  41.0%      ;
+;     Processor 4            ;  40.4%      ;
 +----------------------------+-------------+
 
 
@@ -124,9 +126,9 @@ refer to the applicable agreement for further details.
 +------------+-----------------+-------------------------------------------+------+
 ; Fmax       ; Restricted Fmax ; Clock Name                                ; Note ;
 +------------+-----------------+-------------------------------------------+------+
-; 28.21 MHz  ; 28.21 MHz       ; ClkDivisor:divisor|clk25Mhz               ;      ;
-; 79.74 MHz  ; 79.74 MHz       ; clk                                       ;      ;
-; 251.26 MHz ; 251.26 MHz      ; VGA:vga|ClkDivisor:VGAClkDivisor|clk25Mhz ;      ;
+; 25.62 MHz  ; 25.62 MHz       ; ClkDivisor:divisor|clk25Mhz               ;      ;
+; 70.05 MHz  ; 70.05 MHz       ; clk                                       ;      ;
+; 249.07 MHz ; 249.07 MHz      ; VGA:vga|ClkDivisor:VGAClkDivisor|clk25Mhz ;      ;
 +------------+-----------------+-------------------------------------------+------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
@@ -142,9 +144,9 @@ HTML report is unavailable in plain text report export.
 +-------------------------------------------+---------+---------------+
 ; Clock                                     ; Slack   ; End Point TNS ;
 +-------------------------------------------+---------+---------------+
-; ClkDivisor:divisor|clk25Mhz               ; -17.225 ; -1672.232     ;
-; clk                                       ; -14.624 ; -111296.955   ;
-; VGA:vga|ClkDivisor:VGAClkDivisor|clk25Mhz ; -2.980  ; -102.725      ;
+; ClkDivisor:divisor|clk25Mhz               ; -19.016 ; -4518.634     ;
+; clk                                       ; -16.915 ; -130126.921   ;
+; VGA:vga|ClkDivisor:VGAClkDivisor|clk25Mhz ; -3.015  ; -107.788      ;
 +-------------------------------------------+---------+---------------+
 
 
@@ -154,8 +156,8 @@ HTML report is unavailable in plain text report export.
 ; Clock                                     ; Slack ; End Point TNS ;
 +-------------------------------------------+-------+---------------+
 ; clk                                       ; 0.375 ; 0.000         ;
-; VGA:vga|ClkDivisor:VGAClkDivisor|clk25Mhz ; 0.717 ; 0.000         ;
-; ClkDivisor:divisor|clk25Mhz               ; 0.809 ; 0.000         ;
+; VGA:vga|ClkDivisor:VGAClkDivisor|clk25Mhz ; 0.853 ; 0.000         ;
+; ClkDivisor:divisor|clk25Mhz               ; 1.052 ; 0.000         ;
 +-------------------------------------------+-------+---------------+
 
 
@@ -176,9 +178,9 @@ No paths to report.
 +-------------------------------------------+--------+---------------+
 ; Clock                                     ; Slack  ; End Point TNS ;
 +-------------------------------------------+--------+---------------+
-; clk                                       ; -2.636 ; -34244.868    ;
-; VGA:vga|ClkDivisor:VGAClkDivisor|clk25Mhz ; -2.225 ; -56.752       ;
-; ClkDivisor:divisor|clk25Mhz               ; -0.394 ; -69.131       ;
+; clk                                       ; -2.636 ; -33801.231    ;
+; VGA:vga|ClkDivisor:VGAClkDivisor|clk25Mhz ; -2.225 ; -53.851       ;
+; ClkDivisor:divisor|clk25Mhz               ; -0.443 ; -178.696      ;
 +-------------------------------------------+--------+---------------+
 
 
@@ -193,9 +195,9 @@ No synchronizer chains to report.
 +------------+-----------------+-------------------------------------------+------+
 ; Fmax       ; Restricted Fmax ; Clock Name                                ; Note ;
 +------------+-----------------+-------------------------------------------+------+
-; 28.28 MHz  ; 28.28 MHz       ; ClkDivisor:divisor|clk25Mhz               ;      ;
-; 79.8 MHz   ; 79.8 MHz        ; clk                                       ;      ;
-; 251.76 MHz ; 251.76 MHz      ; VGA:vga|ClkDivisor:VGAClkDivisor|clk25Mhz ;      ;
+; 25.9 MHz   ; 25.9 MHz        ; ClkDivisor:divisor|clk25Mhz               ;      ;
+; 72.99 MHz  ; 72.99 MHz       ; clk                                       ;      ;
+; 248.51 MHz ; 248.51 MHz      ; VGA:vga|ClkDivisor:VGAClkDivisor|clk25Mhz ;      ;
 +------------+-----------------+-------------------------------------------+------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
@@ -205,9 +207,9 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +-------------------------------------------+---------+---------------+
 ; Clock                                     ; Slack   ; End Point TNS ;
 +-------------------------------------------+---------+---------------+
-; ClkDivisor:divisor|clk25Mhz               ; -17.182 ; -1647.148     ;
-; clk                                       ; -14.332 ; -107049.177   ;
-; VGA:vga|ClkDivisor:VGAClkDivisor|clk25Mhz ; -2.972  ; -101.989      ;
+; ClkDivisor:divisor|clk25Mhz               ; -18.806 ; -4462.889     ;
+; clk                                       ; -16.449 ; -125580.257   ;
+; VGA:vga|ClkDivisor:VGAClkDivisor|clk25Mhz ; -3.024  ; -104.362      ;
 +-------------------------------------------+---------+---------------+
 
 
@@ -216,9 +218,9 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +-------------------------------------------+-------+---------------+
 ; Clock                                     ; Slack ; End Point TNS ;
 +-------------------------------------------+-------+---------------+
-; clk                                       ; 0.390 ; 0.000         ;
-; VGA:vga|ClkDivisor:VGAClkDivisor|clk25Mhz ; 0.714 ; 0.000         ;
-; ClkDivisor:divisor|clk25Mhz               ; 0.829 ; 0.000         ;
+; clk                                       ; 0.373 ; 0.000         ;
+; VGA:vga|ClkDivisor:VGAClkDivisor|clk25Mhz ; 0.775 ; 0.000         ;
+; ClkDivisor:divisor|clk25Mhz               ; 1.027 ; 0.000         ;
 +-------------------------------------------+-------+---------------+
 
 
@@ -239,9 +241,9 @@ No paths to report.
 +-------------------------------------------+--------+---------------+
 ; Clock                                     ; Slack  ; End Point TNS ;
 +-------------------------------------------+--------+---------------+
-; clk                                       ; -2.636 ; -34326.508    ;
-; VGA:vga|ClkDivisor:VGAClkDivisor|clk25Mhz ; -2.225 ; -56.687       ;
-; ClkDivisor:divisor|clk25Mhz               ; -0.394 ; -64.622       ;
+; clk                                       ; -2.636 ; -33793.876    ;
+; VGA:vga|ClkDivisor:VGAClkDivisor|clk25Mhz ; -2.225 ; -53.869       ;
+; ClkDivisor:divisor|clk25Mhz               ; -0.401 ; -166.769      ;
 +-------------------------------------------+--------+---------------+
 
 
@@ -256,9 +258,9 @@ No synchronizer chains to report.
 +-------------------------------------------+---------+---------------+
 ; Clock                                     ; Slack   ; End Point TNS ;
 +-------------------------------------------+---------+---------------+
-; ClkDivisor:divisor|clk25Mhz               ; -10.143 ; -996.459      ;
-; clk                                       ; -8.529  ; -67362.392    ;
-; VGA:vga|ClkDivisor:VGAClkDivisor|clk25Mhz ; -1.378  ; -43.856       ;
+; ClkDivisor:divisor|clk25Mhz               ; -10.964 ; -2616.049     ;
+; clk                                       ; -9.784  ; -76729.268    ;
+; VGA:vga|ClkDivisor:VGAClkDivisor|clk25Mhz ; -1.488  ; -50.056       ;
 +-------------------------------------------+---------+---------------+
 
 
@@ -267,9 +269,9 @@ No synchronizer chains to report.
 +-------------------------------------------+-------+---------------+
 ; Clock                                     ; Slack ; End Point TNS ;
 +-------------------------------------------+-------+---------------+
-; clk                                       ; 0.136 ; 0.000         ;
-; ClkDivisor:divisor|clk25Mhz               ; 0.360 ; 0.000         ;
-; VGA:vga|ClkDivisor:VGAClkDivisor|clk25Mhz ; 0.366 ; 0.000         ;
+; clk                                       ; 0.165 ; 0.000         ;
+; VGA:vga|ClkDivisor:VGAClkDivisor|clk25Mhz ; 0.393 ; 0.000         ;
+; ClkDivisor:divisor|clk25Mhz               ; 0.523 ; 0.000         ;
 +-------------------------------------------+-------+---------------+
 
 
@@ -290,9 +292,9 @@ No paths to report.
 +-------------------------------------------+--------+---------------+
 ; Clock                                     ; Slack  ; End Point TNS ;
 +-------------------------------------------+--------+---------------+
-; clk                                       ; -2.636 ; -33469.315    ;
-; VGA:vga|ClkDivisor:VGAClkDivisor|clk25Mhz ; -1.702 ; -32.840       ;
-; ClkDivisor:divisor|clk25Mhz               ; -0.096 ; -1.735        ;
+; clk                                       ; -2.636 ; -33425.606    ;
+; VGA:vga|ClkDivisor:VGAClkDivisor|clk25Mhz ; -1.702 ; -32.338       ;
+; ClkDivisor:divisor|clk25Mhz               ; -0.168 ; -12.543       ;
 +-------------------------------------------+--------+---------------+
 
 
@@ -307,21 +309,21 @@ No synchronizer chains to report.
 +-------------------------------------------+--------+---------------+
 ; Clock                                     ; Slack  ; End Point TNS ;
 +-------------------------------------------+--------+---------------+
-; ClkDivisor:divisor|clk25Mhz               ; -9.154 ; -891.971      ;
-; clk                                       ; -7.446 ; -57551.009    ;
-; VGA:vga|ClkDivisor:VGAClkDivisor|clk25Mhz ; -1.195 ; -38.243       ;
+; ClkDivisor:divisor|clk25Mhz               ; -9.984 ; -2373.447     ;
+; clk                                       ; -8.620 ; -66729.069    ;
+; VGA:vga|ClkDivisor:VGAClkDivisor|clk25Mhz ; -1.314 ; -42.432       ;
 +-------------------------------------------+--------+---------------+
 
 
-+-------------------------------------------------------------------+
-; Fast 1100mV 0C Model Hold Summary                                 ;
-+-------------------------------------------+-------+---------------+
-; Clock                                     ; Slack ; End Point TNS ;
-+-------------------------------------------+-------+---------------+
-; clk                                       ; 0.007 ; 0.000         ;
-; VGA:vga|ClkDivisor:VGAClkDivisor|clk25Mhz ; 0.318 ; 0.000         ;
-; ClkDivisor:divisor|clk25Mhz               ; 0.334 ; 0.000         ;
-+-------------------------------------------+-------+---------------+
++--------------------------------------------------------------------+
+; Fast 1100mV 0C Model Hold Summary                                  ;
++-------------------------------------------+--------+---------------+
+; Clock                                     ; Slack  ; End Point TNS ;
++-------------------------------------------+--------+---------------+
+; clk                                       ; -0.011 ; -0.014        ;
+; VGA:vga|ClkDivisor:VGAClkDivisor|clk25Mhz ; 0.308  ; 0.000         ;
+; ClkDivisor:divisor|clk25Mhz               ; 0.472  ; 0.000         ;
++-------------------------------------------+--------+---------------+
 
 
 -----------------------------------------
@@ -341,9 +343,9 @@ No paths to report.
 +-------------------------------------------+--------+---------------+
 ; Clock                                     ; Slack  ; End Point TNS ;
 +-------------------------------------------+--------+---------------+
-; clk                                       ; -2.636 ; -33525.633    ;
+; clk                                       ; -2.636 ; -33462.104    ;
 ; VGA:vga|ClkDivisor:VGAClkDivisor|clk25Mhz ; -1.702 ; -32.338       ;
-; ClkDivisor:divisor|clk25Mhz               ; -0.048 ; -0.629        ;
+; ClkDivisor:divisor|clk25Mhz               ; -0.114 ; -7.017        ;
 +-------------------------------------------+--------+---------------+
 
 
@@ -353,20 +355,20 @@ No paths to report.
 No synchronizer chains to report.
 
 
-+-------------------------------------------------------------------------------------------------------------+
-; Multicorner Timing Analysis Summary                                                                         ;
-+--------------------------------------------+-------------+-------+----------+---------+---------------------+
-; Clock                                      ; Setup       ; Hold  ; Recovery ; Removal ; Minimum Pulse Width ;
-+--------------------------------------------+-------------+-------+----------+---------+---------------------+
-; Worst-case Slack                           ; -17.225     ; 0.007 ; N/A      ; N/A     ; -2.636              ;
-;  ClkDivisor:divisor|clk25Mhz               ; -17.225     ; 0.334 ; N/A      ; N/A     ; -0.394              ;
-;  VGA:vga|ClkDivisor:VGAClkDivisor|clk25Mhz ; -2.980      ; 0.318 ; N/A      ; N/A     ; -2.225              ;
-;  clk                                       ; -14.624     ; 0.007 ; N/A      ; N/A     ; -2.636              ;
-; Design-wide TNS                            ; -113071.912 ; 0.0   ; 0.0      ; 0.0     ; -34447.817          ;
-;  ClkDivisor:divisor|clk25Mhz               ; -1672.232   ; 0.000 ; N/A      ; N/A     ; -69.131             ;
-;  VGA:vga|ClkDivisor:VGAClkDivisor|clk25Mhz ; -102.725    ; 0.000 ; N/A      ; N/A     ; -56.752             ;
-;  clk                                       ; -111296.955 ; 0.000 ; N/A      ; N/A     ; -34326.508          ;
-+--------------------------------------------+-------------+-------+----------+---------+---------------------+
++--------------------------------------------------------------------------------------------------------------+
+; Multicorner Timing Analysis Summary                                                                          ;
++--------------------------------------------+-------------+--------+----------+---------+---------------------+
+; Clock                                      ; Setup       ; Hold   ; Recovery ; Removal ; Minimum Pulse Width ;
++--------------------------------------------+-------------+--------+----------+---------+---------------------+
+; Worst-case Slack                           ; -19.016     ; -0.011 ; N/A      ; N/A     ; -2.636              ;
+;  ClkDivisor:divisor|clk25Mhz               ; -19.016     ; 0.472  ; N/A      ; N/A     ; -0.443              ;
+;  VGA:vga|ClkDivisor:VGAClkDivisor|clk25Mhz ; -3.024      ; 0.308  ; N/A      ; N/A     ; -2.225              ;
+;  clk                                       ; -16.915     ; -0.011 ; N/A      ; N/A     ; -2.636              ;
+; Design-wide TNS                            ; -134753.343 ; -0.014 ; 0.0      ; 0.0     ; -34033.778          ;
+;  ClkDivisor:divisor|clk25Mhz               ; -4518.634   ; 0.000  ; N/A      ; N/A     ; -178.696            ;
+;  VGA:vga|ClkDivisor:VGAClkDivisor|clk25Mhz ; -107.788    ; 0.000  ; N/A      ; N/A     ; -53.869             ;
+;  clk                                       ; -130126.921 ; -0.014 ; N/A      ; N/A     ; -33801.231          ;
++--------------------------------------------+-------------+--------+----------+---------+---------------------+
 
 
 +----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -405,17 +407,18 @@ No synchronizer chains to report.
 +-------------+--------------+-------------------+-------------------------+-------------------------+---------------+---------------------+----------------+------------------+--------+------------------+------------------------+------------------------+--------------+---------------+-----------------+-------+---------------------+--------------------+---------------+-----------------+-------------+
 
 
-+-----------------------------------------------------------+
-; Input Transition Times                                    ;
-+--------+--------------+-----------------+-----------------+
-; Pin    ; I/O Standard ; 10-90 Rise Time ; 90-10 Fall Time ;
-+--------+--------------+-----------------+-----------------+
-; reset  ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; clk    ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; btn[1] ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; btn[2] ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; btn[0] ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-+--------+--------------+-----------------+-----------------+
++-------------------------------------------------------------+
+; Input Transition Times                                      ;
++----------+--------------+-----------------+-----------------+
+; Pin      ; I/O Standard ; 10-90 Rise Time ; 90-10 Fall Time ;
++----------+--------------+-----------------+-----------------+
+; original ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; reset    ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; clk      ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; btn[1]   ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; btn[2]   ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; btn[0]   ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
++----------+--------------+-----------------+-----------------+
 
 
 +------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -562,35 +565,35 @@ No synchronizer chains to report.
 +-------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------+
-; Setup Transfers                                                                                                                      ;
-+-------------------------------------------+-------------------------------------------+-----------+----------+------------+----------+
-; From Clock                                ; To Clock                                  ; RR Paths  ; FR Paths ; RF Paths   ; FF Paths ;
-+-------------------------------------------+-------------------------------------------+-----------+----------+------------+----------+
-; clk                                       ; clk                                       ; 4         ; 0        ; 7278       ; 0        ;
-; ClkDivisor:divisor|clk25Mhz               ; clk                                       ; 81750     ; 2489     ; 1696283495 ; 51658820 ;
-; VGA:vga|ClkDivisor:VGAClkDivisor|clk25Mhz ; clk                                       ; 0         ; 0        ; 15362      ; 0        ;
-; clk                                       ; ClkDivisor:divisor|clk25Mhz               ; 615       ; 2112     ; 2460       ; 8448     ;
-; ClkDivisor:divisor|clk25Mhz               ; ClkDivisor:divisor|clk25Mhz               ; 164007555 ; 4991038  ; 653908379  ; 19891629 ;
-; VGA:vga|ClkDivisor:VGAClkDivisor|clk25Mhz ; ClkDivisor:divisor|clk25Mhz               ; 1718      ; 0        ; 6872       ; 0        ;
-; VGA:vga|ClkDivisor:VGAClkDivisor|clk25Mhz ; VGA:vga|ClkDivisor:VGAClkDivisor|clk25Mhz ; 911       ; 0        ; 0          ; 0        ;
-+-------------------------------------------+-------------------------------------------+-----------+----------+------------+----------+
++-----------------------------------------------------------------------------------------------------------------------------------------+
+; Setup Transfers                                                                                                                         ;
++-------------------------------------------+-------------------------------------------+-----------+----------+--------------+-----------+
+; From Clock                                ; To Clock                                  ; RR Paths  ; FR Paths ; RF Paths     ; FF Paths  ;
++-------------------------------------------+-------------------------------------------+-----------+----------+--------------+-----------+
+; clk                                       ; clk                                       ; 4         ; 0        ; 16456        ; 0         ;
+; ClkDivisor:divisor|clk25Mhz               ; clk                                       ; 1058544   ; 17656    ; > 2147483647 ; 150729482 ;
+; VGA:vga|ClkDivisor:VGAClkDivisor|clk25Mhz ; clk                                       ; 0         ; 0        ; 51996        ; 0         ;
+; clk                                       ; ClkDivisor:divisor|clk25Mhz               ; 3         ; 946      ; 33           ; 10406     ;
+; ClkDivisor:divisor|clk25Mhz               ; ClkDivisor:divisor|clk25Mhz               ; 435748315 ; 7326066  ; > 2147483647 ; 82441152  ;
+; VGA:vga|ClkDivisor:VGAClkDivisor|clk25Mhz ; ClkDivisor:divisor|clk25Mhz               ; 1702      ; 0        ; 18722        ; 0         ;
+; VGA:vga|ClkDivisor:VGAClkDivisor|clk25Mhz ; VGA:vga|ClkDivisor:VGAClkDivisor|clk25Mhz ; 932       ; 0        ; 0            ; 0         ;
++-------------------------------------------+-------------------------------------------+-----------+----------+--------------+-----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------+
-; Hold Transfers                                                                                                                       ;
-+-------------------------------------------+-------------------------------------------+-----------+----------+------------+----------+
-; From Clock                                ; To Clock                                  ; RR Paths  ; FR Paths ; RF Paths   ; FF Paths ;
-+-------------------------------------------+-------------------------------------------+-----------+----------+------------+----------+
-; clk                                       ; clk                                       ; 4         ; 0        ; 7278       ; 0        ;
-; ClkDivisor:divisor|clk25Mhz               ; clk                                       ; 81750     ; 2489     ; 1696283495 ; 51658820 ;
-; VGA:vga|ClkDivisor:VGAClkDivisor|clk25Mhz ; clk                                       ; 0         ; 0        ; 15362      ; 0        ;
-; clk                                       ; ClkDivisor:divisor|clk25Mhz               ; 615       ; 2112     ; 2460       ; 8448     ;
-; ClkDivisor:divisor|clk25Mhz               ; ClkDivisor:divisor|clk25Mhz               ; 164007555 ; 4991038  ; 653908379  ; 19891629 ;
-; VGA:vga|ClkDivisor:VGAClkDivisor|clk25Mhz ; ClkDivisor:divisor|clk25Mhz               ; 1718      ; 0        ; 6872       ; 0        ;
-; VGA:vga|ClkDivisor:VGAClkDivisor|clk25Mhz ; VGA:vga|ClkDivisor:VGAClkDivisor|clk25Mhz ; 911       ; 0        ; 0          ; 0        ;
-+-------------------------------------------+-------------------------------------------+-----------+----------+------------+----------+
++-----------------------------------------------------------------------------------------------------------------------------------------+
+; Hold Transfers                                                                                                                          ;
++-------------------------------------------+-------------------------------------------+-----------+----------+--------------+-----------+
+; From Clock                                ; To Clock                                  ; RR Paths  ; FR Paths ; RF Paths     ; FF Paths  ;
++-------------------------------------------+-------------------------------------------+-----------+----------+--------------+-----------+
+; clk                                       ; clk                                       ; 4         ; 0        ; 16456        ; 0         ;
+; ClkDivisor:divisor|clk25Mhz               ; clk                                       ; 1058544   ; 17656    ; > 2147483647 ; 150729482 ;
+; VGA:vga|ClkDivisor:VGAClkDivisor|clk25Mhz ; clk                                       ; 0         ; 0        ; 51996        ; 0         ;
+; clk                                       ; ClkDivisor:divisor|clk25Mhz               ; 3         ; 946      ; 33           ; 10406     ;
+; ClkDivisor:divisor|clk25Mhz               ; ClkDivisor:divisor|clk25Mhz               ; 435748315 ; 7326066  ; > 2147483647 ; 82441152  ;
+; VGA:vga|ClkDivisor:VGAClkDivisor|clk25Mhz ; ClkDivisor:divisor|clk25Mhz               ; 1702      ; 0        ; 18722        ; 0         ;
+; VGA:vga|ClkDivisor:VGAClkDivisor|clk25Mhz ; VGA:vga|ClkDivisor:VGAClkDivisor|clk25Mhz ; 932       ; 0        ; 0            ; 0         ;
++-------------------------------------------+-------------------------------------------+-----------+----------+--------------+-----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
 
@@ -613,10 +616,10 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 +---------------------------------+-------+------+
 ; Illegal Clocks                  ; 0     ; 0    ;
 ; Unconstrained Clocks            ; 0     ; 0    ;
-; Unconstrained Input Ports       ; 4     ; 4    ;
-; Unconstrained Input Port Paths  ; 158   ; 158  ;
+; Unconstrained Input Ports       ; 5     ; 5    ;
+; Unconstrained Input Port Paths  ; 2684  ; 2684 ;
 ; Unconstrained Output Ports      ; 28    ; 28   ;
-; Unconstrained Output Port Paths ; 3803  ; 3803 ;
+; Unconstrained Output Port Paths ; 8291  ; 8291 ;
 +---------------------------------+-------+------+
 
 
@@ -639,6 +642,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 ; btn[0]     ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; btn[1]     ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; btn[2]     ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; original   ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; reset      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
 +------------+--------------------------------------------------------------------------------------+
 
@@ -687,6 +691,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 ; btn[0]     ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; btn[1]     ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; btn[2]     ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; original   ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; reset      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
 +------------+--------------------------------------------------------------------------------------+
 
@@ -733,11 +738,11 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 Info: *******************************************************************
 Info: Running Quartus Prime Timing Analyzer
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Tue Sep 17 13:47:35 2019
+    Info: Processing started: Wed Sep 18 00:46:47 2019
 Info: Command: quartus_sta ArquiProject -c ArquiProject
 Info: qsta_default_script.tcl version: #1
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
+Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (21077): Low junction temperature is 0 degrees C
 Info (21077): High junction temperature is 85 degrees C
 Critical Warning (332012): Synopsys Design Constraints File file not found: 'ArquiProject.sdc'. A Synopsys Design Constraints File is required by the Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
@@ -752,108 +757,108 @@ Info: Found TIMING_ANALYZER_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
 Info: Analyzing Slow 1100mV 85C Model
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
-Info (332146): Worst-case setup slack is -17.225
+Info (332146): Worst-case setup slack is -19.016
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):   -17.225           -1672.232 ClkDivisor:divisor|clk25Mhz 
-    Info (332119):   -14.624         -111296.955 clk 
-    Info (332119):    -2.980            -102.725 VGA:vga|ClkDivisor:VGAClkDivisor|clk25Mhz 
+    Info (332119):   -19.016           -4518.634 ClkDivisor:divisor|clk25Mhz 
+    Info (332119):   -16.915         -130126.921 clk 
+    Info (332119):    -3.015            -107.788 VGA:vga|ClkDivisor:VGAClkDivisor|clk25Mhz 
 Info (332146): Worst-case hold slack is 0.375
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
     Info (332119):     0.375               0.000 clk 
-    Info (332119):     0.717               0.000 VGA:vga|ClkDivisor:VGAClkDivisor|clk25Mhz 
-    Info (332119):     0.809               0.000 ClkDivisor:divisor|clk25Mhz 
+    Info (332119):     0.853               0.000 VGA:vga|ClkDivisor:VGAClkDivisor|clk25Mhz 
+    Info (332119):     1.052               0.000 ClkDivisor:divisor|clk25Mhz 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
 Info (332146): Worst-case minimum pulse width slack is -2.636
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -2.636          -34244.868 clk 
-    Info (332119):    -2.225             -56.752 VGA:vga|ClkDivisor:VGAClkDivisor|clk25Mhz 
-    Info (332119):    -0.394             -69.131 ClkDivisor:divisor|clk25Mhz 
+    Info (332119):    -2.636          -33801.231 clk 
+    Info (332119):    -2.225             -53.851 VGA:vga|ClkDivisor:VGAClkDivisor|clk25Mhz 
+    Info (332119):    -0.443            -178.696 ClkDivisor:divisor|clk25Mhz 
 Info: Analyzing Slow 1100mV 0C Model
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
-Info (332146): Worst-case setup slack is -17.182
+Info (332146): Worst-case setup slack is -18.806
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):   -17.182           -1647.148 ClkDivisor:divisor|clk25Mhz 
-    Info (332119):   -14.332         -107049.177 clk 
-    Info (332119):    -2.972            -101.989 VGA:vga|ClkDivisor:VGAClkDivisor|clk25Mhz 
-Info (332146): Worst-case hold slack is 0.390
+    Info (332119):   -18.806           -4462.889 ClkDivisor:divisor|clk25Mhz 
+    Info (332119):   -16.449         -125580.257 clk 
+    Info (332119):    -3.024            -104.362 VGA:vga|ClkDivisor:VGAClkDivisor|clk25Mhz 
+Info (332146): Worst-case hold slack is 0.373
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.390               0.000 clk 
-    Info (332119):     0.714               0.000 VGA:vga|ClkDivisor:VGAClkDivisor|clk25Mhz 
-    Info (332119):     0.829               0.000 ClkDivisor:divisor|clk25Mhz 
+    Info (332119):     0.373               0.000 clk 
+    Info (332119):     0.775               0.000 VGA:vga|ClkDivisor:VGAClkDivisor|clk25Mhz 
+    Info (332119):     1.027               0.000 ClkDivisor:divisor|clk25Mhz 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
 Info (332146): Worst-case minimum pulse width slack is -2.636
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -2.636          -34326.508 clk 
-    Info (332119):    -2.225             -56.687 VGA:vga|ClkDivisor:VGAClkDivisor|clk25Mhz 
-    Info (332119):    -0.394             -64.622 ClkDivisor:divisor|clk25Mhz 
+    Info (332119):    -2.636          -33793.876 clk 
+    Info (332119):    -2.225             -53.869 VGA:vga|ClkDivisor:VGAClkDivisor|clk25Mhz 
+    Info (332119):    -0.401            -166.769 ClkDivisor:divisor|clk25Mhz 
 Info: Analyzing Fast 1100mV 85C Model
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
-Info (332146): Worst-case setup slack is -10.143
+Info (332146): Worst-case setup slack is -10.964
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):   -10.143            -996.459 ClkDivisor:divisor|clk25Mhz 
-    Info (332119):    -8.529          -67362.392 clk 
-    Info (332119):    -1.378             -43.856 VGA:vga|ClkDivisor:VGAClkDivisor|clk25Mhz 
-Info (332146): Worst-case hold slack is 0.136
+    Info (332119):   -10.964           -2616.049 ClkDivisor:divisor|clk25Mhz 
+    Info (332119):    -9.784          -76729.268 clk 
+    Info (332119):    -1.488             -50.056 VGA:vga|ClkDivisor:VGAClkDivisor|clk25Mhz 
+Info (332146): Worst-case hold slack is 0.165
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.136               0.000 clk 
-    Info (332119):     0.360               0.000 ClkDivisor:divisor|clk25Mhz 
-    Info (332119):     0.366               0.000 VGA:vga|ClkDivisor:VGAClkDivisor|clk25Mhz 
+    Info (332119):     0.165               0.000 clk 
+    Info (332119):     0.393               0.000 VGA:vga|ClkDivisor:VGAClkDivisor|clk25Mhz 
+    Info (332119):     0.523               0.000 ClkDivisor:divisor|clk25Mhz 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
 Info (332146): Worst-case minimum pulse width slack is -2.636
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -2.636          -33469.315 clk 
-    Info (332119):    -1.702             -32.840 VGA:vga|ClkDivisor:VGAClkDivisor|clk25Mhz 
-    Info (332119):    -0.096              -1.735 ClkDivisor:divisor|clk25Mhz 
+    Info (332119):    -2.636          -33425.606 clk 
+    Info (332119):    -1.702             -32.338 VGA:vga|ClkDivisor:VGAClkDivisor|clk25Mhz 
+    Info (332119):    -0.168             -12.543 ClkDivisor:divisor|clk25Mhz 
 Info: Analyzing Fast 1100mV 0C Model
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
-Info (332146): Worst-case setup slack is -9.154
+Info (332146): Worst-case setup slack is -9.984
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -9.154            -891.971 ClkDivisor:divisor|clk25Mhz 
-    Info (332119):    -7.446          -57551.009 clk 
-    Info (332119):    -1.195             -38.243 VGA:vga|ClkDivisor:VGAClkDivisor|clk25Mhz 
-Info (332146): Worst-case hold slack is 0.007
+    Info (332119):    -9.984           -2373.447 ClkDivisor:divisor|clk25Mhz 
+    Info (332119):    -8.620          -66729.069 clk 
+    Info (332119):    -1.314             -42.432 VGA:vga|ClkDivisor:VGAClkDivisor|clk25Mhz 
+Info (332146): Worst-case hold slack is -0.011
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.007               0.000 clk 
-    Info (332119):     0.318               0.000 VGA:vga|ClkDivisor:VGAClkDivisor|clk25Mhz 
-    Info (332119):     0.334               0.000 ClkDivisor:divisor|clk25Mhz 
+    Info (332119):    -0.011              -0.014 clk 
+    Info (332119):     0.308               0.000 VGA:vga|ClkDivisor:VGAClkDivisor|clk25Mhz 
+    Info (332119):     0.472               0.000 ClkDivisor:divisor|clk25Mhz 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
 Info (332146): Worst-case minimum pulse width slack is -2.636
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -2.636          -33525.633 clk 
+    Info (332119):    -2.636          -33462.104 clk 
     Info (332119):    -1.702             -32.338 VGA:vga|ClkDivisor:VGAClkDivisor|clk25Mhz 
-    Info (332119):    -0.048              -0.629 ClkDivisor:divisor|clk25Mhz 
+    Info (332119):    -0.114              -7.017 ClkDivisor:divisor|clk25Mhz 
 Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
 Info: Quartus Prime Timing Analyzer was successful. 0 errors, 6 warnings
-    Info: Peak virtual memory: 1280 megabytes
-    Info: Processing ended: Tue Sep 17 13:47:58 2019
-    Info: Elapsed time: 00:00:23
-    Info: Total CPU time (on all processors): 00:00:35
+    Info: Peak virtual memory: 5256 megabytes
+    Info: Processing ended: Wed Sep 18 00:47:05 2019
+    Info: Elapsed time: 00:00:18
+    Info: Total CPU time (on all processors): 00:00:32
 
 

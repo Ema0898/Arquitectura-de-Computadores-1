@@ -1,7 +1,9 @@
 module instruction_memory(input logic [21:0] a,
 								  output logic [21:0] rd);								  
 								  
-  logic [21:0] memory [100:0];  
+  logic [21:0] memory [129];
+	initial
+		$readmemb("instructions.dat", memory);  
   
   /*assign memory[0] = 22'b1001101000000010001000; // MOVER R1, #8
   assign memory[1] = 22'b1001101000000010001000; // MOVER R1, #8
@@ -101,23 +103,23 @@ module instruction_memory(input logic [21:0] a,
  
   
   // Prueba boton leyendo de memoria  
-  assign memory[0] = 22'b1001101000000000000000;
-  assign memory[1] = 22'b1001101000000000000000;
-  assign memory[2] = 22'b1001101000000011110100;
-  assign memory[3] = 22'b1011101000100000000000;
-  assign memory[4] = 22'b1001101000000000000001;
-  assign memory[5] = 22'b1001101000000011111001;
-  assign memory[6] = 22'b1011101000100000000000;
-  assign memory[7] = 22'b1001101000000111101000;
-  assign memory[8] = 22'b1011111000100000000000;
-  assign memory[9] = 22'b1011111001100100000000;
-  assign memory[10] = 22'b1000110001000000000000;
-  assign memory[11] = 22'b0100000000000000000000;
-  assign memory[12] = 22'b1101111111111111100100;
-  assign memory[13] = 22'b1001101000000000000001;
-  assign memory[14] = 22'b1001101000000101110100;
-  assign memory[15] = 22'b1011101001000000000000;
-  assign memory[16] = 22'b1101111111111111010100;
+//  assign memory[0] = 22'b1001101000000000000000;
+//  assign memory[1] = 22'b1001101000000000000000;
+//  assign memory[2] = 22'b1001101000000011110100;
+//  assign memory[3] = 22'b1011101000100000000000;
+//  assign memory[4] = 22'b1001101000000000000001;
+//  assign memory[5] = 22'b1001101000000011111001;
+//  assign memory[6] = 22'b1011101000100000000000;
+//  assign memory[7] = 22'b1001101000000111101000;
+//  assign memory[8] = 22'b1011111000100000000000;
+//  assign memory[9] = 22'b1011111001100100000000;
+//  assign memory[10] = 22'b1000110001000000000000;
+//  assign memory[11] = 22'b0100000000000000000000;
+//  assign memory[12] = 22'b1101111111111111100100;
+//  assign memory[13] = 22'b1001101000000000000001;
+//  assign memory[14] = 22'b1001101000000101110100;
+//  assign memory[15] = 22'b1011101001000000000000;
+//  assign memory[16] = 22'b1101111111111111010100;
   
   // Prueba boton leyendo de memoria 2
   

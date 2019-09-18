@@ -1,0 +1,44 @@
+# Reading D:/intelFPGA_lite/18.1/modelsim_ase/tcl/vsim/pref.tcl
+# do ArquiProject_run_msim_rtl_verilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 10.5b Lib Mapping Utility 2016.10 Oct  5 2016
+# vmap work rtl_work 
+# Copying D:/intelFPGA_lite/18.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vlog -sv -work work +incdir+D:/uGit/Arquitectura-de-Computadores-1/Proyecto1/ProcesadorUniciclo/src/Processor/ALU {D:/uGit/Arquitectura-de-Computadores-1/Proyecto1/ProcesadorUniciclo/src/Processor/ALU/multiplier.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 01:03:14 on Sep 18,2019
+# vlog -reportprogress 300 -sv -work work "+incdir+D:/uGit/Arquitectura-de-Computadores-1/Proyecto1/ProcesadorUniciclo/src/Processor/ALU" D:/uGit/Arquitectura-de-Computadores-1/Proyecto1/ProcesadorUniciclo/src/Processor/ALU/multiplier.sv 
+# -- Compiling module multiplier
+# 
+# Top level modules:
+# 	multiplier
+# End time: 01:03:14 on Sep 18,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+D:/uGit/Arquitectura-de-Computadores-1/Proyecto1/ProcesadorUniciclo/src {D:/uGit/Arquitectura-de-Computadores-1/Proyecto1/ProcesadorUniciclo/src/test.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 01:03:14 on Sep 18,2019
+# vlog -reportprogress 300 -sv -work work "+incdir+D:/uGit/Arquitectura-de-Computadores-1/Proyecto1/ProcesadorUniciclo/src" D:/uGit/Arquitectura-de-Computadores-1/Proyecto1/ProcesadorUniciclo/src/test.sv 
+# -- Compiling module test
+# 
+# Top level modules:
+# 	test
+# End time: 01:03:14 on Sep 18,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+vsim work.test
+# vsim work.test 
+# Start time: 01:03:29 on Sep 18,2019
+# Loading sv_std.std
+# Loading work.test
+# Loading work.multiplier
+add wave -position end sim:/test/*
+run
+# a = 01100100, b = 11111111, s = 10011100, cout = 1
+# End time: 01:08:01 on Sep 18,2019, Elapsed time: 0:04:32
+# Errors: 0, Warnings: 0

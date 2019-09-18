@@ -116,6 +116,10 @@
 					"strict" : false
 				},
 				{
+					"name" : "original",
+					"strict" : false
+				},
+				{
 					"name" : "reset",
 					"strict" : false
 				},

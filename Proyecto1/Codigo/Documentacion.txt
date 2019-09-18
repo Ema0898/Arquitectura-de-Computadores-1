@@ -3,8 +3,14 @@ r1 - 400 | stackConvolution
 r2 - kernel
 r3 - imagen sin procesar
 r4 - imagen procesada
-r5 - 0 | offset
+r5 - 127 | offset
 r6 - Movimiento horizontal
 r7 - Movimiento vertical
 r9 - pixelActual
 r10 - convolution
+
+(50 * 80 + 3) * 40
+
+1 1 1 ... 1
+1 1 1
+1 1 1

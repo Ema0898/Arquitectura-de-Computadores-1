@@ -20,14 +20,14 @@ iniciarAlgoritmo:
   MOVER r0, 116
   MOVER r1, 0
   STORE r1, [r0]
-  MOVER r5, 0
+  MOVER r5, 127
   MOVER r0, 0
   MOVER r1, 100
   SUM r1, r1, 100
   SUM r1, r1, 100
   SUM r1, r1, 100
   MOVER r3, 120
-  MOVER r4, 83
+  MOVER r4, 80
   MUL r4, r4, 50
   SUM r4, r4, 3
   MUL r4, r4, 40
@@ -48,7 +48,7 @@ procesarImagenIni:
   SUM r1, r1, 100
   SUM r1, r1, 100
   SUM r1, r1, 100
-  MOVER r5, 0
+  MOVER r5, 127
 
 procesarImagen:
   COMP r7, r1
@@ -70,10 +70,11 @@ llenarFilaFinal:
   SUM r0, r0, 1
   SALTO llenarFilaFinal
 
-  finalizar:
-    MOVER r0, 116
-    MOVER r1, 1
-    STORE r1, [r0]
+finalizar:
+  MOVER r0, 116
+  MOVER r1, 1
+  STORE r1, [r0]
+  SALTO esperarInput
 
 llenarPixelFinal:
   STORE r5, [r4]
@@ -81,11 +82,12 @@ llenarPixelFinal:
   SUM r7, r7, 1
   SUM r3, r3, 2
   MOVER r6, 0
+  SALTO procesarImagen
 
 llenarPixelInicial:
   STORE r5, [r4]
   SUM r4, r4, 1
-  SUM r6, r6, 1
+  SUM r6, r6, 2
   SALTO procesarImagen
 
 convolucion:
@@ -141,7 +143,7 @@ convolucion:
   LOAD r9, [r3, r5]
   MUL r10, r0, r9
   SUM r1, r1, r10
-  STORE r10, [r4]
+  STORE r1, [r4]
   SUM r3, r3, 1
   SUM r4, r4, 1
   SUM r6, r6, 1

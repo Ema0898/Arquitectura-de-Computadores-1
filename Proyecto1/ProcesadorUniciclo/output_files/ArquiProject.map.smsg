@@ -1,1 +1,1 @@
-Warning (10268): Verilog HDL information at ClkDivisor.sv(8): always construct contains both blocking and non-blocking assignments File: /home/ema0898/Programas/Quartus/ArquiProjectRespaldo/src/VGA/FrequencyDividers/ClkDivisor.sv Line: 8
+Warning (10268): Verilog HDL information at ClkDivisor.sv(8): always construct contains both blocking and non-blocking assignments File: D:/uGit/Arquitectura-de-Computadores-1/Proyecto1/ProcesadorUniciclo/src/VGA/FrequencyDividers/ClkDivisor.sv Line: 8
