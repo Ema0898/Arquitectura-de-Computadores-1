@@ -17,6 +17,9 @@ esperarInput:
   SALTO esperarInput
 
 iniciarAlgoritmo:
+  MOVER r0, 116
+  MOVER r1, 0
+  STORE r1, [r0]
   MOVER r5, 0
   MOVER r0, 0
   MOVER r1, 100
@@ -61,11 +64,16 @@ llenarFilaFinalIni:
 
 llenarFilaFinal:
   COMP r0, r1
-  SALTOIG esperarInput
+  SALTOIG finalizar
   STORE r5, [r4]
   SUM r4, r4, 1
   SUM r0, r0, 1
   SALTO llenarFilaFinal
+
+  finalizar:
+    MOVER r0, 116
+    MOVER r1, 1
+    STORE r1, [r0]
 
 llenarPixelFinal:
   STORE r5, [r4]
