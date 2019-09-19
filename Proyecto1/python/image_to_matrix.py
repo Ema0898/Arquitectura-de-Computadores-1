@@ -1,6 +1,6 @@
 from PIL import Image
 
-f= open("image.txt","w+")
+f= open("image1.txt","w+")
 
 img = Image.open('image.png').convert('L')  # convert image to 8-bit grayscale
 WIDTH, HEIGHT = img.size
@@ -14,10 +14,10 @@ data = [data[offset:offset+WIDTH] for offset in range(0, WIDTH*HEIGHT, WIDTH)]
 
 c=0
 
-for i in range(480):
-    for j in range(640):
+for i in range(100):
+    for j in range(400):
         
-        f.write(format(c, 'x')+":"+"\t"+format(data[i][j],'08b')+";"+"\n")
+        f.write(format(data[i][j],'08b')+"\n")
         c+=1
 
 

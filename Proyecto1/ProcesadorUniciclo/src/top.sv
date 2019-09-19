@@ -22,7 +22,7 @@ module top(input logic clk, reset, original,
   instruction_memory im(pc, instr);
   data_memory dm(clk, mem_write & mem_enb, data_adr, write_data, data_mem_out); 
   
-  //RAM ram(original_image_mem_address, clk, 8'b0, 1'b1, 1'b0, original_image_mem_out);  
+  //RAM ram(original_image_mem_address, clk, 8'b0, 1'b1, mem_write & original_enb, original_image_mem_out);  
   //RAM2 ram2(proccess_image_mem_address, clk, write_data[7:0], 1'b1, mem_write & process_enb, proccess_image_mem_out);
   
   image_memory_controller image_controller(clk, 1'b0, original_image_mem_address, 8'b0, original_image_mem_out);

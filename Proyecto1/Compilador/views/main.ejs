@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <link rel="shortcut icon" href="https://pullzone-ce1.netdna-ssl.com/spanish/wp-content/uploads/2019/03/favicon.png" />
+  <link rel="stylesheet" href="/stylesheets/main.css">
+
+  <script
+			  src="https://code.jquery.com/jquery-3.4.1.min.js"
+			  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+			  crossorigin="anonymous"></script>
+
+  <!--Import Google Icon Font-->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+            
+  <title>Compilador en línea</title>
+</head>
+<body style="background-color:wheat;">
+
+  <div class="container" style="margin-top: 20%;">
+    <h1 style="text-align: center;">Compilador de Arqui</h1>
+    <div style="width:100%" class="center-align">
+      <form action="#">
+          <div class="file-field input-field">
+            <div class="btn pulse waves-effect waves-light">
+              <span>Subir archivo</span>
+              <input type="file" id='fileText'>
+            </div>
+            <div class="file-path-wrapper">
+              <input class="file-path validate" type="text">
+            </div>
+          </div>
+        </form>
+    </div>
+    <div class="lds-dual-ring" hidden></div>
+  </div>
+
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script src="scripts/lib/FileSaver.min.js"></script>
+  <script src="scripts/fileProcessing.js"></script>
+  <script src="scripts/main.js"></script>
+</body>
+</html>
