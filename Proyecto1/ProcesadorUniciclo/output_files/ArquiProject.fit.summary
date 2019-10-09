@@ -1,13 +1,23 @@
+<<<<<<< HEAD
 Fitter Status : Successful - Tue Sep 17 13:47:21 2019
+=======
+Fitter Status : Successful - Wed Sep 18 22:48:35 2019
+>>>>>>> c9ba90840e60ad14c5f5ff539c15feeba067e3e4
 Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 Revision Name : ArquiProject
 Top-level Entity Name : top
 Family : Cyclone V
 Device : 5CSEMA5F31C6
 Timing Models : Final
+<<<<<<< HEAD
 Logic utilization (in ALMs) : 1,294 / 32,070 ( 4 % )
 Total registers : 1572
 Total pins : 33 / 457 ( 7 % )
+=======
+Logic utilization (in ALMs) : 914 / 32,070 ( 3 % )
+Total registers : 343
+Total pins : 34 / 457 ( 7 % )
+>>>>>>> c9ba90840e60ad14c5f5ff539c15feeba067e3e4
 Total virtual pins : 0
 Total block memory bits : 2,560,000 / 4,065,280 ( 63 % )
 Total RAM Blocks : 320 / 397 ( 81 % )

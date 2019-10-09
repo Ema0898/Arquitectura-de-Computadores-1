@@ -1,0 +1,15 @@
+{
+  "name": "arquicompi",
+  "version": "1.0.0",
+  "description": "Compilador en linea para ISA custom",
+  "main": "app.js",
+  "scripts": {
+    "test": "node app.js"
+  },
+  "author": "Sebastian Rivera Soto",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^2.7.1",
+    "express": "^4.17.1"
+  }
+}

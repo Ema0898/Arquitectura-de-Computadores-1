@@ -15,12 +15,19 @@ module processor_memories(input logic clk, reset,
   instruction_memory im(pc, instr);
   data_memory dm(clk, mem_write & mem_enb, data_adr, write_data, data_mem_out);
   //RAM ram(data_adr[17:0], clk, write_data[7:0], 1'b1, mem_write & original_enb, img_mem_out);
+<<<<<<< HEAD
   //image_memory image2(clk, mem_write & process_enb, data_adr, write_data[7:0], img_mem2_out);
+=======
+  image_memory image2(clk, mem_write & process_enb, data_adr, write_data[7:0], img_mem2_out);
+>>>>>>> c9ba90840e60ad14c5f5ff539c15feeba067e3e4
   
   io_deco2 deco(data_adr, mem_enb, show_enb, original_enb, process_enb);
  
   flip_flop_D #(1) ff1(clk, ~reset, show_enb & mem_write, write_data[0], vga); 
   
   mux_2_x_1 #(24) mux0(24'b0, data_mem_out, mem_enb & mem_read, read_data);
+<<<<<<< HEAD
   
+=======
+>>>>>>> c9ba90840e60ad14c5f5ff539c15feeba067e3e4
 endmodule 

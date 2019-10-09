@@ -1,5 +1,5 @@
 module image_memory(input logic clk, we,
-						 input logic [21:0] a, 
+						 input logic [23:0] a, 
 						 input logic [7:0] wd,
 						 output logic [7:0] rd);
 						 

@@ -1,5 +1,9 @@
 Flow report for ArquiProject
+<<<<<<< HEAD
 Wed Sep 18 10:06:07 2019
+=======
+Wed Sep 18 22:49:09 2019
+>>>>>>> c9ba90840e60ad14c5f5ff539c15feeba067e3e4
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -40,25 +44,43 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Flow Summary                                                                  ;
 +---------------------------------+---------------------------------------------+
+<<<<<<< HEAD
 ; Flow Status                     ; Successful - Wed Sep 18 10:06:07 2019       ;
+=======
+; Flow Status                     ; Successful - Wed Sep 18 22:49:09 2019       ;
+>>>>>>> c9ba90840e60ad14c5f5ff539c15feeba067e3e4
 ; Quartus Prime Version           ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                   ; ArquiProject                                ;
 ; Top-level Entity Name           ; top                                         ;
 ; Family                          ; Cyclone V                                   ;
 ; Device                          ; 5CSEMA5F31C6                                ;
 ; Timing Models                   ; Final                                       ;
+<<<<<<< HEAD
 ; Logic utilization (in ALMs)     ; N/A                                         ;
 ; Total registers                 ; 118                                         ;
 ; Total pins                      ; 34                                          ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 1,280,000                                   ;
 ; Total DSP Blocks                ; 2                                           ;
+=======
+; Logic utilization (in ALMs)     ; 914 / 32,070 ( 3 % )                        ;
+; Total registers                 ; 343                                         ;
+; Total pins                      ; 34 / 457 ( 7 % )                            ;
+; Total virtual pins              ; 0                                           ;
+; Total block memory bits         ; 2,560,000 / 4,065,280 ( 63 % )              ;
+; Total DSP Blocks                ; 2 / 87 ( 2 % )                              ;
+>>>>>>> c9ba90840e60ad14c5f5ff539c15feeba067e3e4
 ; Total HSSI RX PCSs              ; 0                                           ;
 ; Total HSSI PMA RX Deserializers ; 0                                           ;
 ; Total HSSI TX PCSs              ; 0                                           ;
 ; Total HSSI PMA TX Serializers   ; 0                                           ;
+<<<<<<< HEAD
 ; Total PLLs                      ; 0                                           ;
 ; Total DLLs                      ; 0                                           ;
+=======
+; Total PLLs                      ; 0 / 6 ( 0 % )                               ;
+; Total DLLs                      ; 0 / 4 ( 0 % )                               ;
+>>>>>>> c9ba90840e60ad14c5f5ff539c15feeba067e3e4
 +---------------------------------+---------------------------------------------+
 
 
@@ -67,7 +89,11 @@ refer to the applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
+<<<<<<< HEAD
 ; Start date & time ; 09/18/2019 10:04:23 ;
+=======
+; Start date & time ; 09/18/2019 22:45:05 ;
+>>>>>>> c9ba90840e60ad14c5f5ff539c15feeba067e3e4
 ; Main task         ; Compilation         ;
 ; Revision Name     ; ArquiProject        ;
 +-------------------+---------------------+
@@ -78,7 +104,11 @@ refer to the applicable agreement for further details.
 +-------------------------------------+----------------------------------------+---------------+-------------+----------------+
 ; Assignment Name                     ; Value                                  ; Default Value ; Entity Name ; Section Id     ;
 +-------------------------------------+----------------------------------------+---------------+-------------+----------------+
+<<<<<<< HEAD
 ; COMPILER_SIGNATURE_ID               ; 45015788211485.156882266312221         ; --            ; --          ; --             ;
+=======
+; COMPILER_SIGNATURE_ID               ; 70975884092299.156886830411372         ; --            ; --          ; --             ;
+>>>>>>> c9ba90840e60ad14c5f5ff539c15feeba067e3e4
 ; EDA_OUTPUT_DATA_FORMAT              ; Verilog Hdl                            ; --            ; --          ; eda_simulation ;
 ; EDA_SIMULATION_TOOL                 ; ModelSim-Altera (Verilog)              ; <None>        ; --          ; --             ;
 ; EDA_TIME_SCALE                      ; 1 ps                                   ; --            ; --          ; eda_simulation ;
@@ -99,6 +129,7 @@ refer to the applicable agreement for further details.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
+<<<<<<< HEAD
 ; Analysis & Synthesis ; 00:01:44     ; 1.0                     ; 1024 MB             ; 00:02:02                           ;
 ; Total                ; 00:01:44     ; --                      ; --                  ; 00:02:02                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
@@ -111,12 +142,41 @@ refer to the applicable agreement for further details.
 +----------------------+------------------+----------------+------------+----------------+
 ; Analysis & Synthesis ; Inspiron-5559    ; Ubuntu 18.04.3 ; 18         ; x86_64         ;
 +----------------------+------------------+----------------+------------+----------------+
+=======
+; Analysis & Synthesis ; 00:01:08     ; 1.0                     ; 4949 MB             ; 00:01:17                           ;
+; Fitter               ; 00:02:22     ; 1.3                     ; 6668 MB             ; 00:04:16                           ;
+; Assembler            ; 00:00:10     ; 1.0                     ; 4902 MB             ; 00:00:10                           ;
+; Timing Analyzer      ; 00:00:17     ; 2.2                     ; 5247 MB             ; 00:00:29                           ;
+; EDA Netlist Writer   ; 00:00:03     ; 1.0                     ; 4812 MB             ; 00:00:02                           ;
+; Total                ; 00:04:00     ; --                      ; --                  ; 00:06:14                           ;
++----------------------+--------------+-------------------------+---------------------+------------------------------------+
+
+
++------------------------------------------------------------------------------------+
+; Flow OS Summary                                                                    ;
++----------------------+------------------+------------+------------+----------------+
+; Module Name          ; Machine Hostname ; OS Name    ; OS Version ; Processor type ;
++----------------------+------------------+------------+------------+----------------+
+; Analysis & Synthesis ; DESKTOP-193AGCT  ; Windows 10 ; 10.0       ; x86_64         ;
+; Fitter               ; DESKTOP-193AGCT  ; Windows 10 ; 10.0       ; x86_64         ;
+; Assembler            ; DESKTOP-193AGCT  ; Windows 10 ; 10.0       ; x86_64         ;
+; Timing Analyzer      ; DESKTOP-193AGCT  ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; DESKTOP-193AGCT  ; Windows 10 ; 10.0       ; x86_64         ;
++----------------------+------------------+------------+------------+----------------+
+>>>>>>> c9ba90840e60ad14c5f5ff539c15feeba067e3e4
 
 
 ------------
 ; Flow Log ;
 ------------
 quartus_map --read_settings_files=on --write_settings_files=off ArquiProject -c ArquiProject
+<<<<<<< HEAD
+=======
+quartus_fit --read_settings_files=off --write_settings_files=off ArquiProject -c ArquiProject
+quartus_asm --read_settings_files=off --write_settings_files=off ArquiProject -c ArquiProject
+quartus_sta ArquiProject -c ArquiProject
+quartus_eda --read_settings_files=off --write_settings_files=off ArquiProject -c ArquiProject
+>>>>>>> c9ba90840e60ad14c5f5ff539c15feeba067e3e4
 
 
 

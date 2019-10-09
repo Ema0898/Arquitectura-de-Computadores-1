@@ -1,13 +1,24 @@
+<<<<<<< HEAD
 Analysis & Synthesis Status : Successful - Wed Sep 18 10:06:07 2019
+=======
+Analysis & Synthesis Status : Successful - Wed Sep 18 22:46:12 2019
+>>>>>>> c9ba90840e60ad14c5f5ff539c15feeba067e3e4
 Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 Revision Name : ArquiProject
 Top-level Entity Name : top
 Family : Cyclone V
 Logic utilization (in ALMs) : N/A
+<<<<<<< HEAD
 Total registers : 118
 Total pins : 34
 Total virtual pins : 0
 Total block memory bits : 1,280,000
+=======
+Total registers : 342
+Total pins : 34
+Total virtual pins : 0
+Total block memory bits : 2,560,000
+>>>>>>> c9ba90840e60ad14c5f5ff539c15feeba067e3e4
 Total DSP Blocks : 2
 Total HSSI RX PCSs : 0
 Total HSSI PMA RX Deserializers : 0

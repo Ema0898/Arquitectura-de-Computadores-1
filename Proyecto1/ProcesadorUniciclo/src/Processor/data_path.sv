@@ -13,8 +13,13 @@ module data_path(input clk, rst,
 	logic [1:0] imm_src, alu_control;
 	logic [3:0] alu_flags;
 					  
+<<<<<<< HEAD
 	generic_adder #(24) adder1(pc, 24'b000000000000000000000100, 1'b0, pc_plus_4, carry_out);
    generic_adder #(24) adder2(pc_plus_4, 24'b000000000000000000000100, 1'b0, pc_plus_8, carry_out1);
+=======
+	generic_adder #(24) adder1(pc, 24'b0000000000000000000100, 1'b0, pc_plus_4, carry_out);
+   generic_adder #(24) adder2(pc_plus_4, 24'b0000000000000000000100, 1'b0, pc_plus_8, carry_out1);
+>>>>>>> c9ba90840e60ad14c5f5ff539c15feeba067e3e4
 	
 	mux_2_x_1 #(24) mux0(pc_plus_4, read_data_mux, pc_src, pc_mux);
 	mux_2_x_1 #(24) mux1(alu_result_dir, read_data, mem_reg, read_data_mux);

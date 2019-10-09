@@ -1,6 +1,10 @@
 <sld_project_info>
   <project>
+<<<<<<< HEAD
     <hash md5_digest_80b="e0757ab4ab7dba700dba"/>
+=======
+    <hash md5_digest_80b="277199d84900860ceadf"/>
+>>>>>>> c9ba90840e60ad14c5f5ff539c15feeba067e3e4
   </project>
   <file_info>
     <file device="5CSEMA5F31C6" path="ArquiProject.sof" usercode="0xFFFFFFFF"/>

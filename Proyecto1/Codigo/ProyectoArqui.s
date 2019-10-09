@@ -1,5 +1,6 @@
 esperarInput:
   MOVER r2, 0
+  MOVER r2, 0
   MOVER r1, 104
   LOAD r0, [r1]
   COMP r0, 1
@@ -143,6 +144,16 @@ convolucion:
   LOAD r9, [r3, r5]
   MUL r10, r0, r9
   SUM r1, r1, r10
+  MOVER r8, 0
+  COMP r1, r8
+  MOVERNEG r1, 0
+  SUM r8, r8, 100
+  SUM r8, r8, 100
+  SUM r8, r8, 55
+  COMP r1, r8
+  MOVERMQ r1, 100
+  SUMMQ r1, r1, 100
+  SUMMQ r1, r1, 55
   STORE r1, [r4]
   SUM r3, r3, 1
   SUM r4, r4, 1
